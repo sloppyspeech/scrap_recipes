@@ -1,0 +1,8 @@
+*.vscode
+get-pip.py
+ev_scraprecipes
+*.csv
+*.json
+*.bk*
+*.log
+testcode
