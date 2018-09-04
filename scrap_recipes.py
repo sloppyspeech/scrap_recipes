@@ -32,13 +32,21 @@ def get_recipes_list(base_url,output_file,url2skip):
             raw_url=mainUrl+str(recipe_pageindex)
             logger.debug('get_recipes_list')
             logger.debug('raw_url:'+raw_url)
+            #
+            #Open the raw url
             opened_url=req.get(raw_url)
             souped_up=soup(opened_url.content,'html.parser')
+            #
+            #Get the list of recipes on this page
             for recipe_span in souped_up.find_all('span',attrs={'class':'rcc_recipename'}):
                 span_children=recipe_span.findChildren('a',recursive=False)[0]
                 recipe_url=span_children.get('href')
                 indiv_recipe_url=base_url+recipe_url
+                #
+                #Remove unwanted commas from recipe name
                 indiv_recipe_name=span_children.get_text().replace(',','')
+                #
+                #Check and remove any unwanted recipes
                 if recipe_url in url2skip:
                     logger.debug('Skipping '+indiv_recipe_url)
                 else:
@@ -48,9 +56,11 @@ def create_recipes_json(input_file,output_file):
     logger.debug('create_recipes_json ')
     logger.debug('Input file :'+input_file)
     logger.debug('Output file :'+output_file)
+    #
     df=pd.read_csv(input_file)
     records=[]
     for key,grp in df.groupby('recipe_name'):
+        #Create a dict of all ingredients
         records.append({
         "Recipe":
             {   "Name":key,
