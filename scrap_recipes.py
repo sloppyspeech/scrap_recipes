@@ -9,6 +9,9 @@ import logging
 
 
 def get_ingredient_by_recipe(recipe_name,recipe_url,output_file):
+    '''
+        Get the list of ingredients from individual recipes
+    '''
     requrl=req.get(recipe_url)
     # requrl.raise_for_status()
     souped=soup(requrl.content,'html.parser')
@@ -25,6 +28,9 @@ def get_ingredient_by_recipe(recipe_name,recipe_url,output_file):
         output_file.write('{0},{1},{2}\n'.format(recipe_name,ingrd_text,recipe_url))
 
 def get_recipes_list(base_url,output_file,url2skip):
+    '''
+        Get the list of recipes from a particular page
+    '''
     mainUrl=base_url+'recipes-for-indian-veg-recipes-2?pageindex='
     with open(output_file,'w') as out_file:
         out_file.write('recipe_name,quantity,measurement_unit,ingredient,recipe_url\n')
@@ -53,6 +59,9 @@ def get_recipes_list(base_url,output_file,url2skip):
                     get_ingredient_by_recipe(indiv_recipe_name,indiv_recipe_url,out_file)
 
 def create_recipes_json(input_file,output_file):
+    '''
+        Create recipe/ingredient list json from csv created earlier
+    '''
     logger.debug('create_recipes_json ')
     logger.debug('Input file :'+input_file)
     logger.debug('Output file :'+output_file)
