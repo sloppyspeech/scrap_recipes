@@ -16,13 +16,13 @@ python3.6 scrap_recipes.py y
 This will scrap the website and generate csv and json output
 
 ###### Load via Logstash to ES
-use the name of the output json file above and update the allrecipes_2es.conf
+use the name of the output json file above and update the allrecipes_2es.conf and then run the logstash to load as follows
 ```
 logstash -f ./allrecipes_2es.conf
 ```
 
 ###### Load via Python to ES
-update the name of the json file in load_json_2es.py
+update the name of the json file in script load_json_2es.py and then run 
 ```
 python3.6 load_json_2es.py
 ````
