@@ -1,7 +1,7 @@
 # scrap_recipes
 ##### Test script to scrap few recipes from https://tarladalal.com. Output is in csv and json formats.
 
-##### Supports Python 3.6
+##### Test Only On Python 3.6
 ###### Run as follows 
 ```
 python3.6 -m venv <env_name>
