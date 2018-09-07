@@ -17,6 +17,8 @@ def get_ingredient_by_recipe(recipe_name,recipe_url,output_file):
     souped=soup(requrl.content,'html.parser')
     logger.debug('get_ingredient_by_recipe for :'+recipe_name)
     logger.debug('recipe_url:'+recipe_url)
+    
+    #get all the ingredients on the page
     for rec_ing in souped.findAll('span',attrs={'itemprop':'recipeIngredient'}):
         ingrd_text=rec_ing.get_text().replace(',','').replace('"','')
         if  ingrd_text[0].isdigit():
@@ -99,8 +101,8 @@ if __name__=='__main__':
     
     #Setting the threshold of logger to DEBUG
     logger.setLevel(logging.DEBUG)
-
     logger.debug('Scrapping Started with argument '+sys.argv[1])
+    
     #scrap the data with option "y", if csv already exists, just create the json
     if sys.argv[1] == 'y':
         get_recipes_list('https://www.tarladalal.com/',csv_filename,url2skip)
