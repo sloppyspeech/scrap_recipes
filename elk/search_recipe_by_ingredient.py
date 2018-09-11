@@ -13,7 +13,7 @@ args = parser.parse_args()
 es = Elasticsearch([{'host': 'localhost', 'port': 9200}])
 value_to_search = args.ingredient
 search_object = {
-    'size': 10,
+    'size': 1000,
     '_source': ['Recipe.Name', 'Recipe.Url'],
     'query': {
         'match': {
@@ -21,16 +21,10 @@ search_object = {
         }
     }
 }
-recipes = [
-    key['_source'] for key in es.search(
+recipes =sorted( [
+    key['_source']['Recipe']['Name'] for key in es.search(
         'allrecipes', body=json.dumps(search_object))['hits']['hits']
-]
-print(json.dumps(recipes))
-recipes = [
-    key['_source'] for key in es.search(
-        'allrecipes_py', body=json.dumps(search_object))['hits']['hits']
-]
-print(json.dumps(recipes))
+])
+for idx,recipe in enumerate(recipes):
+    print("{0}) {1}".format(str(idx),recipe))
 
-# for i in recipes:
-#     print(i)
