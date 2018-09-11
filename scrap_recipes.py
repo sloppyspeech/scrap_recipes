@@ -9,11 +9,16 @@ import logging
 
 
 def get_ingredient_by_recipe(recipe_name,recipe_url,output_file):
+    '''
+        Get the list of ingredients from individual recipes
+    '''
     requrl=req.get(recipe_url)
     # requrl.raise_for_status()
     souped=soup(requrl.content,'html.parser')
     logger.debug('get_ingredient_by_recipe for :'+recipe_name)
     logger.debug('recipe_url:'+recipe_url)
+    
+    #get all the ingredients on the page
     for rec_ing in souped.findAll('span',attrs={'itemprop':'recipeIngredient'}):
         ingrd_text=rec_ing.get_text().replace(',','').replace('"','')
         if  ingrd_text[0].isdigit():
@@ -25,6 +30,9 @@ def get_ingredient_by_recipe(recipe_name,recipe_url,output_file):
         output_file.write('{0},{1},{2}\n'.format(recipe_name,ingrd_text,recipe_url))
 
 def get_recipes_list(base_url,output_file,url2skip):
+    '''
+        Get the list of recipes from a particular page
+    '''
     mainUrl=base_url+'recipes-for-indian-veg-recipes-2?pageindex='
     with open(output_file,'w') as out_file:
         out_file.write('recipe_name,quantity,measurement_unit,ingredient,recipe_url\n')
@@ -32,25 +40,38 @@ def get_recipes_list(base_url,output_file,url2skip):
             raw_url=mainUrl+str(recipe_pageindex)
             logger.debug('get_recipes_list')
             logger.debug('raw_url:'+raw_url)
+            #
+            #Open the raw url
             opened_url=req.get(raw_url)
             souped_up=soup(opened_url.content,'html.parser')
+            #
+            #Get the list of recipes on this page
             for recipe_span in souped_up.find_all('span',attrs={'class':'rcc_recipename'}):
                 span_children=recipe_span.findChildren('a',recursive=False)[0]
                 recipe_url=span_children.get('href')
                 indiv_recipe_url=base_url+recipe_url
+                #
+                #Remove unwanted commas from recipe name
                 indiv_recipe_name=span_children.get_text().replace(',','')
+                #
+                #Check and remove any unwanted recipes
                 if recipe_url in url2skip:
                     logger.debug('Skipping '+indiv_recipe_url)
                 else:
                     get_ingredient_by_recipe(indiv_recipe_name,indiv_recipe_url,out_file)
 
 def create_recipes_json(input_file,output_file):
+    '''
+        Create recipe/ingredient list json from csv created earlier
+    '''
     logger.debug('create_recipes_json ')
     logger.debug('Input file :'+input_file)
     logger.debug('Output file :'+output_file)
+    #
     df=pd.read_csv(input_file)
     records=[]
     for key,grp in df.groupby('recipe_name'):
+        #Create a dict of all ingredients
         records.append({
         "Recipe":
             {   "Name":key,
@@ -80,8 +101,8 @@ if __name__=='__main__':
     
     #Setting the threshold of logger to DEBUG
     logger.setLevel(logging.DEBUG)
-
     logger.debug('Scrapping Started with argument '+sys.argv[1])
+    
     #scrap the data with option "y", if csv already exists, just create the json
     if sys.argv[1] == 'y':
         get_recipes_list('https://www.tarladalal.com/',csv_filename,url2skip)
