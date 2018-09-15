@@ -37,7 +37,8 @@ def get_ingredients_by_recipe(opened_recipe_urls,output_file):
 
 def get_recipes_list(base_url,output_file,url2skip):
     mainUrl=base_url+'recipes-for-indian-veg-recipes-2?pageindex='
-    indiv_recipes,indv_recipe_ingr,opened_urls,thread_s,recipe_pages,recipe_pages_opened=[],[],[],[],[],[]
+    indiv_recipes,indv_recipe_ingr,opened_urls=[],[],[]
+    thread_s,recipe_pages,recipe_pages_opened=[],[],[]
     recipe_cntr=0
 
     for i in range(1):
