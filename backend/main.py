@@ -63,7 +63,7 @@ async def api_search_recipes(
     ingredient: str = Query(None, description="Legacy ingredient filter"),
     include_ingredients: list[str] = Query(None, description="Ingredients to include"),
     exclude_ingredients: list[str] = Query(None, description="Ingredients to exclude"),
-    tag: str = Query("", description="Tag filter"),
+    tag: str = Query("", description="Tag filter (comma separated)"),
     cal_min: float = Query(None, description="Minimum calories"),
     cal_max: float = Query(None, description="Maximum calories"),
     nutrient: str = Query("", description="Nutrient field name (e.g. proteinContent)"),
@@ -77,11 +77,16 @@ async def api_search_recipes(
     if ingredient and ingredient not in incl:
         incl.append(ingredient)
 
+    # Parse tags from comma-separated string
+    tag_list = []
+    if tag:
+        tag_list = [t.strip() for t in tag.split(',') if t.strip()]
+
     result = await search_recipes(
         q=q,
         include_ingredients=incl,
         exclude_ingredients=exclude_ingredients,
-        tag=tag,
+        tags=tag_list,
         cal_min=cal_min, cal_max=cal_max,
         nutrient=nutrient, nutrient_max=nutrient_max,
         page=page, page_size=page_size,
@@ -99,11 +104,16 @@ async def api_search_natural(req: NaturalSearchRequest):
     filters = await extract_search_filters(req.query)
     
     # 2. Execute search with extracted filters
+    # Wrap single tag in list if present
+    tags = []
+    if filters.get("tag"):
+        tags.append(filters["tag"])
+
     result = await search_recipes(
         q=filters.get("q", ""),
         include_ingredients=filters.get("include_ingredients", []),
         exclude_ingredients=filters.get("exclude_ingredients", []),
-        tag=filters.get("tag", ""),
+        tags=tags,
         cal_min=filters.get("cal_min"),
         cal_max=filters.get("cal_max"),
         page=1, # Always start at page 1 for natural search

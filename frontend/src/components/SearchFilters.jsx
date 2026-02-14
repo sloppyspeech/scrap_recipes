@@ -13,6 +13,7 @@ const MotionBox = motion(Box);
 export default function SearchFilters({ tags = [], onSearch }) {
     const [query, setQuery] = useState('');
     const [ingredient, setIngredient] = useState('');
+    const [queryTag, setQueryTag] = useState('');
     const [selectedTags, setSelectedTags] = useState([]);
     const [calRange, setCalRange] = useState([0, 2000]);
     const { isOpen, onToggle } = useDisclosure();
@@ -139,22 +140,52 @@ export default function SearchFilters({ tags = [], onSearch }) {
                             </RangeSlider>
                         </Box>
 
-                        {/* Tag selector */}
+                        {/* Tag selector - Searchable & Multi-select */}
                         <Box>
-                            <Text fontSize="sm" fontWeight="600" mb={2}>Tags</Text>
-                            <Select
-                                placeholder="Add a tag filter..."
+                            <Text fontSize="sm" fontWeight="600" mb={2}>Filter by Tags</Text>
+
+                            <Input
+                                placeholder="Search tags to add..."
+                                value={queryTag}
+                                onChange={(e) => setQueryTag(e.target.value)}
                                 size="sm"
-                                onChange={(e) => { if (e.target.value) addTag(e.target.value); e.target.value = ''; }}
+                                mb={2}
+                            />
+
+                            <Box
+                                maxH="150px"
+                                overflowY="auto"
+                                border="1px solid"
+                                borderColor={borderColor}
+                                borderRadius="md"
+                                bg={useColorModeValue('gray.50', 'gray.700')}
                             >
-                                {tags.map(t => (
-                                    <option key={t.name} value={t.name}>
-                                        {t.name} ({t.count})
-                                    </option>
-                                ))}
-                            </Select>
+                                {tags
+                                    .filter(t =>
+                                        !selectedTags.includes(t.name) &&
+                                        t.name.toLowerCase().includes(queryTag.toLowerCase())
+                                    )
+                                    .sort((a, b) => a.name.localeCompare(b.name))
+                                    .map(t => (
+                                        <Box
+                                            key={t.name}
+                                            px={3}
+                                            py={2}
+                                            cursor="pointer"
+                                            _hover={{ bg: useColorModeValue('saffron.100', 'whiteAlpha.200') }}
+                                            onClick={() => {
+                                                addTag(t.name);
+                                                setQueryTag('');
+                                            }}
+                                        >
+                                            <Text fontSize="sm">{t.name} <Text as="span" color="gray.500" fontSize="xs">({t.count})</Text></Text>
+                                        </Box>
+                                    ))}
+                                {tags.length === 0 && <Text p={2} fontSize="sm" color="gray.500">No tags available</Text>}
+                            </Box>
+
                             {selectedTags.length > 0 && (
-                                <Wrap mt={2}>
+                                <Wrap mt={3}>
                                     {selectedTags.map(t => (
                                         <WrapItem key={t}>
                                             <Tag size="md" colorScheme="saffron" borderRadius="full">

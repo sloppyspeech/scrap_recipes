@@ -201,28 +201,54 @@ def _scale_quantity_string(qty: str, ratio: float) -> str:
 
 async def extract_search_filters(query: str) -> dict:
     """Use LLM to extract structured search filters from natural language query."""
+    
+    # Heuristic: If query is simple, bypass LLM to prevent hallucinations.
+    # Simple = short, no complex keywords.
+    complex_keywords = [
+        "with", "without", "no", "exclude", "include", "less", "more", 
+        "under", "over", "calories", "protein", "carb", "fat", "sugar",
+        "free", "vegan", "vegetarian", "keto", "paleo"
+    ]
+    
+    is_complex = False
+    
+    # Check for keywords
+    q_lower = query.lower()
+    if any(k in q_lower for k in complex_keywords):
+        is_complex = True
+        
+    # Check for numbers (calories, quantities)
+    if re.search(r'\d', query):
+        is_complex = True
+        
+    # Check length (long queries likely need parsing)
+    if len(query.split()) > 3:
+        is_complex = True
+
+    if not is_complex:
+        # Return strict text search for simple queries
+        # This fixes "Drinks" -> "Paneer" hallucination issues
+        return {"q": query.strip()}
+
     system = (
         "You are a search query parser for a recipe database. "
         "Extract search filters from the user's natural language query. "
-        "Return ONLY a valid JSON object used for filtering. "
+        "Return ONLY a valid JSON object. "
         "Fields: "
-        "'q' (string, main search term like recipe name), "
-        "'include_ingredients' (list of strings, ingredients to INCLUDE), "
-        "'exclude_ingredients' (list of strings, ingredients to EXCLUDE), "
-        "'cal_max' (number, maximum calories, null if unspecified), "
+        "'q' (string, main search term), "
+        "'include_ingredients' (list of strings), "
+        "'exclude_ingredients' (list of strings), "
+        "'cal_max' (number, null if unspecified), "
         "'tag' (string, e.g. 'Gluten Free', null if unspecified). "
         "Rules:\n"
-        "- If a field is not mentioned, set it to null.\n"
-        "- Do NOT return 'None' as a string.\n"
-        "- Do NOT halluncinate ingredients not present in the query.\n"
-        "Example inputs:\n"
-        "- 'dosa with ragi' -> {'q': 'dosa', 'include_ingredients': ['ragi']}\n"
-        "- 'no onion garlic recipes' -> {'exclude_ingredients': ['onion', 'garlic']}\n"
-        "- 'under 500 calories' -> {'cal_max': 500}\n"
-        "- 'simple paneer curry' -> {'q': 'paneer curry'}\n"
+        "- Use ONLY information found in the query.\n"
+        "- 'q' should be the CLEAN dish name or category (e.g. 'soup', 'drinks'). REMOVE extracted ingredients from 'q'.\n"
+        "- 'include_ingredients': Extract ingredients mentioned with 'with', 'and', etc.\n"
+        "- 'tag' is ONLY for dietary tags (e.g. 'Vegan', 'Keto'). Do NOT put categories here.\n"
+        "- Example: 'drink with apple' -> q='drink', include_ingredients=['apple'], tag=null\n"
     )
     
-    prompt = f"Parse this query: '{query}'"
+    prompt = f"Query: '{query}'\nExtract JSON:"
     
     try:
         response = await chat_completion(prompt, system=system)

@@ -101,7 +101,7 @@ async def search_recipes(
     q: str = "",
     include_ingredients: list[str] = None,
     exclude_ingredients: list[str] = None,
-    tag: str = "",
+    tags: list[str] = None,
     cal_min: float = None,
     cal_max: float = None,
     nutrient: str = "",
@@ -118,10 +118,20 @@ async def search_recipes(
         params = []
 
         if q:
-            conditions.append("r.id IN (SELECT rowid FROM recipes_fts WHERE recipes_fts MATCH ?)")
-            # FTS5 query: escape special chars and add prefix matching
+            # FTS5 query for names (extract words)
             fts_query = q.replace('"', '').strip() + '*'
+            
+            # Tag partial match
+            tag_query = f"%{q.strip()}%"
+
+            conditions.append(f"""
+                (r.id IN (SELECT rowid FROM recipes_fts WHERE recipes_fts MATCH ?)
+                 OR r.id IN (SELECT rt.recipe_id FROM recipe_tags rt 
+                             JOIN tags t ON rt.tag_id = t.id 
+                             WHERE t.name LIKE ?))
+            """)
             params.append(fts_query)
+            params.append(tag_query)
 
         # Handle multiple included ingredients (AND logic)
         if include_ingredients:
@@ -149,16 +159,17 @@ async def search_recipes(
                 fts_ing = ing.replace('"', '').strip() + '*'
                 params.append(fts_ing)
 
-        # Legacy single ingredient support (optional, for existing UI if not updated)
-        # We can just ignore 'ingredient' param if not passed, or merge it.
-        # But for now, let's assume the caller uses include_ingredients.
-
-        if tag:
-            conditions.append(
-                "r.id IN (SELECT rt.recipe_id FROM recipe_tags rt "
-                "JOIN tags t ON t.id = rt.tag_id WHERE t.name LIKE ?)"
-            )
-            params.append(f"%{tag}%")
+        # Handle multiple tags (AND logic)
+        if tags:
+            for t_name in tags:
+                if not t_name or not t_name.strip():
+                    continue
+                conditions.append(
+                    "r.id IN (SELECT recipe_id FROM recipe_tags rt "
+                    "JOIN tags t ON rt.tag_id = t.id "
+                    "WHERE t.name = ?)"
+                )
+                params.append(t_name)
 
         if cal_min is not None:
             conditions.append("r.calories_numeric >= ?")

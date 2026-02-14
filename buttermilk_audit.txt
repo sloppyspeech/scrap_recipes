@@ -1,0 +1,14 @@
+Query: 'buttermilk'
+Total: 6
+- Buttermilk Rasam Recipe (South Indian Mor Rasam)
+  Tags: ['Mixer', 'Pan', 'Saute', 'Indian Dinner', 'Indian Comfort Foods', 'Comfort Indian Soups']
+- Chaas Recipe (Indian Buttermilk)
+  Tags: ['Indian Veg Recipes', 'Indian Drinks (Chai, Lassi & More)', 'Indian drinks , Indian Sharbats', 'Gujarati', 'Indian Dinner', 'North Indian Dinner', 'Indian Breakfast', 'Gujarati Dinner', 'Quick Breakfast (Veg Breakfast )']
+- Chaas Recipe (Plain Indian Buttermilk)
+  Tags: ['Indian Veg Recipes', 'North Indian Vegetarian Food', 'Punjabi', 'Indian Drinks (Chai, Lassi & More)', 'Indian drinks , Indian Sharbats', 'Gujarati', 'Gujarati  Drinks', 'Punjabi Breakfast']
+- Low Fat Chaas Recipe (Indian Low Fat Buttermilk For Ibs)
+  Tags: ['Indian Veg Recipes', 'Indian Drinks (Chai, Lassi & More)', 'Indian drinks , Indian Sharbats', 'Gujarati', 'Gujarati  Drinks', 'Fatty Liver Diet', 'Calcium Rich Indian', 'Calcium Rich Indian Breakfast']
+- Masala Chaas Recipe (Spiced Buttermilk)
+  Tags: ['Indian Veg Recipes', 'Mixer', 'Indian Drinks (Chai, Lassi & More)', 'Indian drinks , Indian Sharbats', 'No Cook Indian', 'Gujarati', 'Gujarati  Drinks', 'Healthy Indian Drinks and Juices']
+- More Kuzhambu Recipe (South Indian Doodhi Buttermilk Curry)
+  Tags: ['Pan', 'Saute', 'kadai Indian', 'Indian Dal and Kadhi', 'Kadhi recipes from all across India']
