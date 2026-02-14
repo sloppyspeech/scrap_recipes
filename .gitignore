@@ -1,11 +1,76 @@
-*.vscode
-get-pip.py
-ev_scraprecipes
-*.csv
-*.json
-*.bk*
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.env
+.venv/
+.euv_scrap_recipes/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Node.js / Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+frontend/.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database
+*.db
+*.sqlite3
+backend/recipes.db
+*.db-journal
+
+# VS Code
+.vscode/
+
+# Project specific
+backend/__pycache__/
 *.log
-testcode
-.euv_scrap_recipes
-recipe_all.csv
+*.html
 recipe_all.json
+recipe_all.csv
+recipes
+recipes_all_from_p1_*.csv

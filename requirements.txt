@@ -2,6 +2,7 @@ astroid
 beautifulsoup4
 bs4
 certifi
+cloudscraper
 chardet
 idna
 isort
