@@ -6,3 +6,6 @@ ev_scraprecipes
 *.bk*
 *.log
 testcode
+.euv_scrap_recipes
+recipe_all.csv
+recipe_all.json

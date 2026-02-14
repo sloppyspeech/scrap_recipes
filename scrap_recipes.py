@@ -19,7 +19,7 @@ def get_ingredient_by_recipe(recipe_name,recipe_url,output_file):
     logger.debug('recipe_url:'+recipe_url)
     
     #get all the ingredients on the page
-    for rec_ing in souped.findAll('span',attrs={'itemprop':'recipeIngredient'}):
+    for rec_ing in souped.findAll('div',attrs={'class':'ingredients'}):
         ingrd_text=rec_ing.get_text().replace(',','').replace('"','')
         if  ingrd_text[0].isdigit():
             ingrd_text=','.join(ingrd_text.split(' ',2)).strip(' ')
@@ -33,11 +33,11 @@ def get_recipes_list(base_url,output_file,url2skip):
     '''
         Get the list of recipes from a particular page
     '''
-    mainUrl=base_url+'recipes-for-indian-veg-recipes-2?pageindex='
+    mainUrl=base_url+'recipes-for-indian-veg-recipes-2?page='
     with open(output_file,'w') as out_file:
         out_file.write('recipe_name,quantity,measurement_unit,ingredient,recipe_url\n')
         for recipe_pageindex in tqdm(range(1)):
-            raw_url=mainUrl+str(recipe_pageindex)
+            raw_url=mainUrl+str(recipe_pageindex+2)
             logger.debug('get_recipes_list')
             logger.debug('raw_url:'+raw_url)
             #
@@ -46,7 +46,7 @@ def get_recipes_list(base_url,output_file,url2skip):
             souped_up=soup(opened_url.content,'html.parser')
             #
             #Get the list of recipes on this page
-            for recipe_span in souped_up.find_all('span',attrs={'class':'rcc_recipename'}):
+            for recipe_span in souped_up.find_all('div',attrs={'class':'recipe-title'}):
                 span_children=recipe_span.findChildren('a',recursive=False)[0]
                 recipe_url=span_children.get('href')
                 indiv_recipe_url=base_url+recipe_url
@@ -85,25 +85,30 @@ def create_recipes_json(input_file,output_file):
         out_file.write(json.dumps(records))
         # out_file.write(json.dumps(records,indent=4))
 
-if __name__=='__main__':
-    # url2skip=('Mutter-Paneer-Delicious-11529r')
-    url2skip=()
-    csv_filename='recipe_all.csv'
-    json_filename='recipe_all.json'
+if __name__ == '__main__':
+    try:
+        # url2skip=('Mutter-Paneer-Delicious-11529r')
+        url2skip = ()
+        csv_filename = 'recipe_all.csv'
+        json_filename = 'recipe_all.json'
 
-    #Logger settings
-    logging.basicConfig(filename="scrap_recipes.log",
-                        format='%(asctime)s [%(levelname)s] %(message)s',
-                        filemode='w')
+        # Logger settings
+        logging.basicConfig(
+            filename=r".\scrap_recipes.log",
+            format="%(asctime)s [%(levelname)s] %(message)s",
+            filemode="w",
+            level=logging.DEBUG
+        )
 
-    #Creating an object
-    logger=logging.getLogger('scrappy')
-    
-    #Setting the threshold of logger to DEBUG
-    logger.setLevel(logging.DEBUG)
-    logger.debug('Scrapping Started with argument '+sys.argv[1])
-    
-    #scrap the data with option "y", if csv already exists, just create the json
-    if sys.argv[1] == 'y':
-        get_recipes_list('https://www.tarladalal.com/',csv_filename,url2skip)
-    create_recipes_json(csv_filename,json_filename)
+        # Creating an object
+        logger = logging.getLogger('scrappy')
+
+        logger.debug('Scrapping Started with argument ' + sys.argv[1])
+
+        # Scrap the data with option "y", if csv already exists, just create the json
+        if sys.argv[1] == 'y':
+            get_recipes_list('https://www.tarladalal.com/', csv_filename, url2skip)
+        create_recipes_json(csv_filename, json_filename)
+    except Exception as e:
+        logging.error("An error occurred: %s", str(e))
+        sys.exit(1)
