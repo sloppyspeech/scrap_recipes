@@ -99,7 +99,8 @@ async def init_db():
 
 async def search_recipes(
     q: str = "",
-    ingredient: str = "",
+    include_ingredients: list[str] = None,
+    exclude_ingredients: list[str] = None,
     tag: str = "",
     cal_min: float = None,
     cal_max: float = None,
@@ -122,14 +123,35 @@ async def search_recipes(
             fts_query = q.replace('"', '').strip() + '*'
             params.append(fts_query)
 
-        if ingredient:
-            conditions.append(
-                "r.id IN (SELECT recipe_id FROM ingredients i2 "
-                "JOIN ingredients_fts ON ingredients_fts.rowid = i2.id "
-                "WHERE ingredients_fts MATCH ?)"
-            )
-            fts_ing = ingredient.replace('"', '').strip() + '*'
-            params.append(fts_ing)
+        # Handle multiple included ingredients (AND logic)
+        if include_ingredients:
+            for ing in include_ingredients:
+                if not ing.strip():
+                    continue
+                conditions.append(
+                    "r.id IN (SELECT recipe_id FROM ingredients i2 "
+                    "JOIN ingredients_fts ON ingredients_fts.rowid = i2.id "
+                    "WHERE ingredients_fts MATCH ?)"
+                )
+                fts_ing = ing.replace('"', '').strip() + '*'
+                params.append(fts_ing)
+
+        # Handle excluded ingredients (NOT IN logic)
+        if exclude_ingredients:
+            for ing in exclude_ingredients:
+                if not ing.strip():
+                    continue
+                conditions.append(
+                    "r.id NOT IN (SELECT recipe_id FROM ingredients i3 "
+                    "JOIN ingredients_fts ON ingredients_fts.rowid = i3.id "
+                    "WHERE ingredients_fts MATCH ?)"
+                )
+                fts_ing = ing.replace('"', '').strip() + '*'
+                params.append(fts_ing)
+
+        # Legacy single ingredient support (optional, for existing UI if not updated)
+        # We can just ignore 'ingredient' param if not passed, or merge it.
+        # But for now, let's assume the caller uses include_ingredients.
 
         if tag:
             conditions.append(

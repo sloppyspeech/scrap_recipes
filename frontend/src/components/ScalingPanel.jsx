@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
     Box, VStack, HStack, Text, NumberInput, NumberInputField, NumberInputStepper,
     NumberIncrementStepper, NumberDecrementStepper, Button, Switch, FormControl,
@@ -20,6 +20,35 @@ export default function ScalingPanel({ recipeId, ingredients = [], makes = '' })
 
     const bg = useColorModeValue('white', 'gray.800');
     const tableBg = useColorModeValue('orange.50', 'whiteAlpha.50');
+
+    // Initialize with original recipe data
+    const initialize = () => {
+        let originalQty = 4; // Default fallback
+        if (makes) {
+            const match = makes.match(/(\d+)/);
+            if (match) {
+                originalQty = parseInt(match[1], 10);
+            }
+        }
+        setTargetServings(originalQty);
+
+        if (ingredients && ingredients.length > 0) {
+            setScaledIngredients(ingredients);
+            setScaleInfo({
+                mode: 'original',
+                target_servings: originalQty,
+                model: 'Original Recipe'
+            });
+        }
+    };
+
+    useEffect(() => {
+        initialize();
+    }, [makes, ingredients]);
+
+    const handleReset = () => {
+        initialize();
+    };
 
     const handleScale = async () => {
         setLoading(true);
@@ -89,14 +118,23 @@ export default function ScalingPanel({ recipeId, ingredients = [], makes = '' })
                     </FormControl>
 
                     <Box pt={6}>
-                        <Button
-                            colorScheme="saffron"
-                            onClick={handleScale}
-                            isLoading={loading}
-                            loadingText="Scaling..."
-                        >
-                            Scale
-                        </Button>
+                        <HStack>
+                            <Button
+                                colorScheme="saffron"
+                                onClick={handleScale}
+                                isLoading={loading}
+                                loadingText="Scaling..."
+                            >
+                                Scale
+                            </Button>
+                            <Button
+                                variant="ghost"
+                                onClick={handleReset}
+                                isDisabled={loading}
+                            >
+                                Reset
+                            </Button>
+                        </HStack>
                     </Box>
                 </HStack>
 

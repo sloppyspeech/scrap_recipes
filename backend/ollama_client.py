@@ -139,38 +139,113 @@ def _parse_serving_count(s: str) -> float | None:
 
 
 def _scale_quantity_string(qty: str, ratio: float) -> str:
-    """Scale a quantity string like '1 1/2 cups' by a ratio."""
-    if not qty or qty.strip() == "":
+    """Scale a quantity string like '1 1/2 cups' or '1 / 2 cup' by a ratio."""
+    if not qty or not qty.strip():
         return qty
 
-    # Handle compound fractions: "1 1/2", "2 3/4"
-    # Pattern: optional_whole optional_fraction rest
-    pattern = r'^(\d+)?\s*(\d+/\d+)?\s*(.*)$'
-    match = re.match(pattern, qty.strip())
-    if not match:
+    # 1. Normalize fractions with spaces: "1 / 2" -> "1/2", "1 /2" -> "1/2"
+    # This fixes the user reported issue with "1 /2 cup"
+    qty_norm = re.sub(r'(\d+)\s*/\s*(\d+)', r'\1/\2', qty.strip())
+
+    val = 0.0
+    rest = ""
+    found = False
+
+    # 2. Try matching different number patterns at the start
+    
+    # Case A: Mixed fraction "1 1/2"
+    match = re.match(r'^(\d+)\s+(\d+/\d+)\s*(.*)$', qty_norm)
+    if match:
+        whole, frac, r = match.groups()
+        n, d = map(float, frac.split('/'))
+        val = float(whole) + (n / d)
+        rest = r
+        found = True
+    else:
+        # Case B: Simple fraction "1/2"
+        match = re.match(r'^(\d+/\d+)\s*(.*)$', qty_norm)
+        if match:
+            frac, r = match.groups()
+            n, d = map(float, frac.split('/'))
+            val = n / d
+            rest = r
+            found = True
+        else:
+            # Case C: Decimal or Integer "1.5" or "2"
+            match = re.match(r'^(\d*\.?\d+)\s*(.*)$', qty_norm)
+            if match:
+                num, r = match.groups()
+                # Skip if it looks like a list item number "1." followed by text? 
+                # Ideally we assume quantity starts with amount.
+                val = float(num)
+                rest = r
+                found = True
+
+    if not found:
         return qty
 
-    whole_str, frac_str, rest = match.groups()
-
-    value = 0.0
-    has_number = False
-
-    if whole_str:
-        value += float(whole_str)
-        has_number = True
-
-    if frac_str:
-        num, den = frac_str.split('/')
-        value += float(num) / float(den)
-        has_number = True
-
-    if not has_number:
-        return qty
-
-    scaled = value * ratio
+    # 3. Scale and Format
+    scaled_val = val * ratio
 
     # Format nicely
-    if scaled == int(scaled):
-        return f"{int(scaled)} {rest}".strip()
+    # If very close to an integer, display as integer
+    if abs(scaled_val - round(scaled_val)) < 0.01:
+        val_str = str(int(round(scaled_val)))
     else:
-        return f"{scaled:.1f} {rest}".strip()
+        # Show up to 2 decimal places, update to simple fraction if common?
+        # For now, just decimal is safer than reconstructing fractions
+        val_str = f"{scaled_val:.2f}".rstrip('0').rstrip('.')
+    
+    return f"{val_str} {rest}".strip()
+
+
+async def extract_search_filters(query: str) -> dict:
+    """Use LLM to extract structured search filters from natural language query."""
+    system = (
+        "You are a search query parser for a recipe database. "
+        "Extract search filters from the user's natural language query. "
+        "Return ONLY a valid JSON object used for filtering. "
+        "Fields: "
+        "'q' (string, main search term like recipe name), "
+        "'include_ingredients' (list of strings, ingredients to INCLUDE), "
+        "'exclude_ingredients' (list of strings, ingredients to EXCLUDE), "
+        "'cal_max' (number, maximum calories, null if unspecified), "
+        "'tag' (string, e.g. 'Gluten Free', null if unspecified). "
+        "Rules:\n"
+        "- If a field is not mentioned, set it to null.\n"
+        "- Do NOT return 'None' as a string.\n"
+        "- Do NOT halluncinate ingredients not present in the query.\n"
+        "Example inputs:\n"
+        "- 'dosa with ragi' -> {'q': 'dosa', 'include_ingredients': ['ragi']}\n"
+        "- 'no onion garlic recipes' -> {'exclude_ingredients': ['onion', 'garlic']}\n"
+        "- 'under 500 calories' -> {'cal_max': 500}\n"
+        "- 'simple paneer curry' -> {'q': 'paneer curry'}\n"
+    )
+    
+    prompt = f"Parse this query: '{query}'"
+    
+    try:
+        response = await chat_completion(prompt, system=system)
+        
+        # Find JSON object in response
+        data = {}
+        json_match = re.search(r'\{[\s\S]*\}', response)
+        if json_match:
+            data = json.loads(json_match.group())
+        else:
+            data = json.loads(response)
+            
+        # Clean up data
+        if data.get("tag") == "None" or data.get("tag") == "":
+            data["tag"] = None
+        if data.get("cal_max") == 0:
+            data["cal_max"] = None
+        if data.get("cal_min") == 0:
+            data["cal_min"] = None
+            
+        return data
+        
+    except Exception as e:
+        print(f"LLM Extraction failed: {e}")
+        # Fallback: treat entire query as text search
+        return {"q": query}

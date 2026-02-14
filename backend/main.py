@@ -11,7 +11,7 @@ import httpx
 from backend.database import init_db, search_recipes, get_recipe_by_id, get_all_tags
 from backend.ollama_client import (
     summarize_recipe, scale_with_llm, scale_algorithmically,
-    list_models, get_active_model, set_active_model,
+    list_models, get_active_model, set_active_model, extract_search_filters,
     OLLAMA_BASE_URL
 )
 
@@ -51,12 +51,18 @@ class ModelRequest(BaseModel):
     model: str
 
 
+class NaturalSearchRequest(BaseModel):
+    query: str
+
+
 # ─── Search Endpoints ──────────────────────────────────────────────
 
 @app.get("/api/recipes/search")
 async def api_search_recipes(
     q: str = Query("", description="Recipe name search"),
-    ingredient: str = Query("", description="Ingredient name search"),
+    ingredient: str = Query(None, description="Legacy ingredient filter"),
+    include_ingredients: list[str] = Query(None, description="Ingredients to include"),
+    exclude_ingredients: list[str] = Query(None, description="Ingredients to exclude"),
     tag: str = Query("", description="Tag filter"),
     cal_min: float = Query(None, description="Minimum calories"),
     cal_max: float = Query(None, description="Maximum calories"),
@@ -66,13 +72,49 @@ async def api_search_recipes(
     page_size: int = Query(20, ge=1, le=100),
 ):
     """Search recipes with multiple filters."""
+    # Merge legacy ingredient param into include_ingredients
+    incl = include_ingredients or []
+    if ingredient and ingredient not in incl:
+        incl.append(ingredient)
+
     result = await search_recipes(
-        q=q, ingredient=ingredient, tag=tag,
+        q=q,
+        include_ingredients=incl,
+        exclude_ingredients=exclude_ingredients,
+        tag=tag,
         cal_min=cal_min, cal_max=cal_max,
         nutrient=nutrient, nutrient_max=nutrient_max,
         page=page, page_size=page_size,
     )
     return result
+
+
+@app.post("/api/recipes/search/natural")
+async def api_search_natural(req: NaturalSearchRequest):
+    """
+    Parse a natural language query using LLM and return search results.
+    Example: "dosa with ragi but no rice"
+    """
+    # 1. Parse query with LLM
+    filters = await extract_search_filters(req.query)
+    
+    # 2. Execute search with extracted filters
+    result = await search_recipes(
+        q=filters.get("q", ""),
+        include_ingredients=filters.get("include_ingredients", []),
+        exclude_ingredients=filters.get("exclude_ingredients", []),
+        tag=filters.get("tag", ""),
+        cal_min=filters.get("cal_min"),
+        cal_max=filters.get("cal_max"),
+        page=1, # Always start at page 1 for natural search
+        page_size=20
+    )
+    
+    # Return both results and the inferred filters (so UI can show them)
+    return {
+        "results": result,
+        "inferred_filters": filters
+    }
 
 
 @app.get("/api/recipes/{recipe_id}")
