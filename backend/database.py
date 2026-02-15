@@ -44,12 +44,25 @@ CREATE TABLE IF NOT EXISTS recipe_tags (
     PRIMARY KEY (recipe_id, tag_id)
 );
 
+CREATE TABLE IF NOT EXISTS categories (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL UNIQUE
+);
+
+CREATE TABLE IF NOT EXISTS recipe_categories (
+    recipe_id INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+    category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE,
+    PRIMARY KEY (recipe_id, category_id)
+);
+
 CREATE INDEX IF NOT EXISTS idx_recipes_name ON recipes(name);
 CREATE INDEX IF NOT EXISTS idx_recipes_calories ON recipes(calories_numeric);
 CREATE INDEX IF NOT EXISTS idx_ingredients_name ON ingredients(name);
 CREATE INDEX IF NOT EXISTS idx_ingredients_recipe ON ingredients(recipe_id);
 CREATE INDEX IF NOT EXISTS idx_recipe_tags_recipe ON recipe_tags(recipe_id);
 CREATE INDEX IF NOT EXISTS idx_recipe_tags_tag ON recipe_tags(tag_id);
+CREATE INDEX IF NOT EXISTS idx_recipe_categories_recipe ON recipe_categories(recipe_id);
+CREATE INDEX IF NOT EXISTS idx_recipe_categories_category ON recipe_categories(category_id);
 """
 
 FTS_SQL = """
@@ -102,6 +115,7 @@ async def search_recipes(
     include_ingredients: list[str] = None,
     exclude_ingredients: list[str] = None,
     tags: list[str] = None,
+    category: str = "",
     cal_min: float = None,
     cal_max: float = None,
     nutrient: str = "",
@@ -170,6 +184,14 @@ async def search_recipes(
                     "WHERE t.name = ?)"
                 )
                 params.append(t_name)
+
+        if category:
+            conditions.append(
+                "r.id IN (SELECT recipe_id FROM recipe_categories rc "
+                "JOIN categories c ON rc.category_id = c.id "
+                "WHERE c.name = ?)"
+            )
+            params.append(category)
 
         if cal_min is not None:
             conditions.append("r.calories_numeric >= ?")
@@ -288,6 +310,14 @@ async def get_recipe_by_id(recipe_id: int):
         tag_rows = await cursor.fetchall()
         recipe["tags"] = [t[0] for t in tag_rows]
 
+        # Get categories
+        cursor = await db.execute(
+            "SELECT c.name FROM categories c JOIN recipe_categories rc ON c.id = rc.category_id WHERE rc.recipe_id = ?",
+            [recipe_id]
+        )
+        cat_rows = await cursor.fetchall()
+        recipe["categories"] = [c[0] for c in cat_rows]
+
         return recipe
     finally:
         await db.close()
@@ -301,6 +331,21 @@ async def get_all_tags():
             "SELECT t.name, COUNT(rt.recipe_id) as count FROM tags t "
             "JOIN recipe_tags rt ON t.id = rt.tag_id "
             "GROUP BY t.name ORDER BY count DESC"
+        )
+        rows = await cursor.fetchall()
+        return [{"name": row[0], "count": row[1]} for row in rows]
+    finally:
+        await db.close()
+
+
+async def get_all_categories():
+    """Get all unique categories."""
+    db = await get_db()
+    try:
+        cursor = await db.execute(
+            "SELECT c.name, COUNT(rc.recipe_id) as count FROM categories c "
+            "JOIN recipe_categories rc ON c.id = rc.category_id "
+            "GROUP BY c.name ORDER BY c.name ASC"
         )
         rows = await cursor.fetchall()
         return [{"name": row[0], "count": row[1]} for row in rows]

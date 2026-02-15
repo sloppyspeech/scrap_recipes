@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from contextlib import asynccontextmanager
 import httpx
 
-from backend.database import init_db, search_recipes, get_recipe_by_id, get_all_tags
+from backend.database import init_db, search_recipes, get_recipe_by_id, get_all_tags, get_all_categories
 from backend.ollama_client import (
     summarize_recipe, scale_with_llm, scale_algorithmically,
     list_models, get_active_model, set_active_model, extract_search_filters,
@@ -65,6 +65,7 @@ async def api_search_recipes(
     include_ingredients: list[str] = Query(None, description="Ingredients to include"),
     exclude_ingredients: list[str] = Query(None, description="Ingredients to exclude"),
     tag: str = Query("", description="Tag filter (comma separated)"),
+    category: str = Query("", description="Category filter"),
     cal_min: float = Query(None, description="Minimum calories"),
     cal_max: float = Query(None, description="Maximum calories"),
     nutrient: str = Query("", description="Nutrient field name (e.g. proteinContent)"),
@@ -88,6 +89,7 @@ async def api_search_recipes(
         include_ingredients=incl,
         exclude_ingredients=exclude_ingredients,
         tags=tag_list,
+        category=category,
         cal_min=cal_min, cal_max=cal_max,
         nutrient=nutrient, nutrient_max=nutrient_max,
         page=page, page_size=page_size,
@@ -218,6 +220,12 @@ async def api_get_recipe(recipe_id: int):
 async def api_get_tags():
     """List all tags with recipe counts."""
     return await get_all_tags()
+
+
+@app.get("/api/categories")
+async def api_get_categories():
+    """List all categories with recipe counts."""
+    return await get_all_categories()
 
 
 # ─── Ollama Integration Endpoints ──────────────────────────────────

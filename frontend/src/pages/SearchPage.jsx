@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import SearchFilters from '../components/SearchFilters';
 import RecipeCard from '../components/RecipeCard';
-import { searchRecipes, searchRecipesNatural, getTags } from '../api/client';
+import { searchRecipes, searchRecipesNatural, getTags, getCategories } from '../api/client';
 
 const MotionBox = motion(Box);
 
@@ -18,6 +18,7 @@ export default function SearchPage() {
     const navigate = useNavigate();
     const [recipes, setRecipes] = useState([]);
     const [tags, setTags] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [pageSize, setPageSize] = useState(20);
     const [total, setTotal] = useState(0);
     const [page, setPage] = useState(1);
@@ -34,6 +35,7 @@ export default function SearchPage() {
 
     useEffect(() => {
         getTags().then(setTags).catch(console.error);
+        getCategories().then(setCategories).catch(console.error);
         // Initial load - classic search
         doSearch({}, 1, 20);
     }, []);
@@ -229,7 +231,7 @@ export default function SearchPage() {
                     </VStack>
                 </MotionBox>
             ) : (
-                <SearchFilters tags={tags} onSearch={handleSearch} />
+                <SearchFilters tags={tags} categories={categories} onSearch={handleSearch} />
             )}
 
             {/* Results */}

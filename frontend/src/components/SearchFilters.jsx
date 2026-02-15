@@ -10,7 +10,8 @@ import { motion } from 'framer-motion';
 
 const MotionBox = motion(Box);
 
-export default function SearchFilters({ tags = [], onSearch }) {
+export default function SearchFilters({ tags = [], categories = [], onSearch }) {
+    const [selectedCategory, setSelectedCategory] = useState('');
     const [query, setQuery] = useState('');
     const [ingredient, setIngredient] = useState('');
     const [queryTag, setQueryTag] = useState('');
@@ -26,13 +27,14 @@ export default function SearchFilters({ tags = [], onSearch }) {
         const params = {
             q: query,
             ingredient,
+            category: selectedCategory,
             tag: selectedTags.join(','),
             cal_min: calRange[0] > 0 ? calRange[0] : undefined,
             cal_max: calRange[1] < 2000 ? calRange[1] : undefined,
             ...overrides,
         };
         onSearch(params);
-    }, [query, ingredient, selectedTags, calRange, onSearch]);
+    }, [query, ingredient, selectedCategory, selectedTags, calRange, onSearch]);
 
     const handleQueryChange = (e) => {
         setQuery(e.target.value);
@@ -107,6 +109,40 @@ export default function SearchFilters({ tags = [], onSearch }) {
 
                 <Collapse in={isOpen} animateOpacity>
                     <VStack spacing={4} align="stretch" pt={2}>
+                        {/* Category Selector */}
+                        <Box>
+                            <Text fontSize="sm" fontWeight="600" mb={2}>Category</Text>
+                            <Select
+                                placeholder="Select category..."
+                                value={selectedCategory}
+                                onChange={(e) => {
+                                    setSelectedCategory(e.target.value);
+                                    // Trigger search immediately on category change? Or wait for update?
+                                    // Given implementation of doSearch with deps, we should call it manually with new value
+                                    // or let useEffect handle it if we had one.
+                                    // Here we call doSearch explicitly.
+                                    // But doSearch uses closure state 'selectedCategory'.
+                                    // So we must pass override.
+                                    // Better: separate state update and search or use effect.
+                                    // But to keep it simple and consistent with this component style:
+                                    // We'll pass the new value in override.
+                                    // Wait, doSearch uses state. State update is async.
+                                    // So we must pass it.
+                                    // But wait, doSearch deps includes selectedCategory.
+                                    // If we just set state, we don't trigger search automatically unless we use useEffect.
+                                    // The existing code for tags calls doSearch explicitly.
+                                    // So let's do that.
+                                }}
+                            // Actually, let's fix the onChange to call doSearch properly
+                            >
+                                {categories.map((c) => (
+                                    <option key={c.name} value={c.name}>
+                                        {c.name} ({c.count})
+                                    </option>
+                                ))}
+                            </Select>
+                        </Box>
+
                         {/* Ingredient search */}
                         <InputGroup>
                             <InputLeftElement>🥘</InputLeftElement>

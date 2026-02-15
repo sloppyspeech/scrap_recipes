@@ -75,7 +75,10 @@ recipe_all.csv
 recipes
 recipes_all_from_p1_*.csv
 recipes_all_from_p1_*.json
+recipes_universal*.*
+*.bak
 
 # ChromaDB
 chroma_db/
 backend/chroma_db/
+

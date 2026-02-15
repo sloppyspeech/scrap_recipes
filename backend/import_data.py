@@ -7,6 +7,7 @@ import sqlite3
 import os
 import sys
 import re
+import argparse
 
 # Path configuration
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -76,12 +77,25 @@ def import_recipes():
             PRIMARY KEY (recipe_id, tag_id)
         );
 
+        CREATE TABLE IF NOT EXISTS categories (
+            id   INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL UNIQUE
+        );
+
+        CREATE TABLE IF NOT EXISTS recipe_categories (
+            recipe_id INTEGER NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+            category_id INTEGER NOT NULL REFERENCES categories(id) ON DELETE CASCADE,
+            PRIMARY KEY (recipe_id, category_id)
+        );
+
         CREATE INDEX IF NOT EXISTS idx_recipes_name ON recipes(name);
         CREATE INDEX IF NOT EXISTS idx_recipes_calories ON recipes(calories_numeric);
         CREATE INDEX IF NOT EXISTS idx_ingredients_name ON ingredients(name);
         CREATE INDEX IF NOT EXISTS idx_ingredients_recipe ON ingredients(recipe_id);
         CREATE INDEX IF NOT EXISTS idx_recipe_tags_recipe ON recipe_tags(recipe_id);
         CREATE INDEX IF NOT EXISTS idx_recipe_tags_tag ON recipe_tags(tag_id);
+        CREATE INDEX IF NOT EXISTS idx_recipe_categories_recipe ON recipe_categories(recipe_id);
+        CREATE INDEX IF NOT EXISTS idx_recipe_categories_category ON recipe_categories(category_id);
     """)
 
     # Create FTS tables
@@ -184,6 +198,35 @@ def import_recipes():
                 (recipe_id, tag_cache[tag_name])
             )
 
+        # Insert categories
+        # Cache: name -> id
+        if 'category_cache' not in locals():
+            category_cache = {}
+            category_count = 0
+
+        for cat_name in recipe.get("Categories", []):
+            cat_name = cat_name.strip()
+            if not cat_name:
+                continue
+
+            if cat_name not in category_cache:
+                try:
+                    cursor.execute("INSERT INTO categories (name) VALUES (?)", (cat_name,))
+                    category_cache[cat_name] = cursor.lastrowid
+                    category_count += 1
+                except sqlite3.IntegrityError:
+                    cursor.execute("SELECT id FROM categories WHERE name = ?", (cat_name,))
+                    res = cursor.fetchone()
+                    if res:
+                        category_cache[cat_name] = res[0]
+                    else:
+                        continue # Should not happen
+
+            cursor.execute(
+                "INSERT OR IGNORE INTO recipe_categories (recipe_id, category_id) VALUES (?, ?)",
+                (recipe_id, category_cache[cat_name])
+            )
+
     conn.commit()
     conn.close()
 
@@ -191,9 +234,19 @@ def import_recipes():
     print(f"   Recipes:     {recipe_count}")
     print(f"   Ingredients: {ingredient_count}")
     print(f"   Tags:        {tag_count}")
+    print(f"   Categories:  {category_count if 'category_count' in locals() else 0}")
     print(f"   Skipped:     {skipped}")
     print(f"   DB path:     {DB_PATH}")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Import recipes from JSON to SQLite')
+    parser.add_argument('json_file', nargs='?', default=JSON_FILE,
+                        help='Path to JSON file to import (default: configured in script)')
+    args = parser.parse_args()
+    
+    # Override JSON_FILE global if arg provided
+    if args.json_file:
+        JSON_FILE = args.json_file
+        
     import_recipes()

@@ -20,6 +20,9 @@ export const getRecipe = (id) =>
 export const getTags = () =>
     api.get('/tags').then((r) => r.data);
 
+export const getCategories = () =>
+    api.get('/categories').then((r) => r.data);
+
 // ─── Ollama ─────────────────────────────────────
 export const summarizeRecipe = (id) =>
     api.post(`/recipes/${id}/summarize`).then((r) => r.data);

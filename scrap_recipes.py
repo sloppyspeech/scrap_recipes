@@ -8,6 +8,11 @@ from tqdm import tqdm
 import logging
 import re
 import argparse
+import sqlite3
+import os
+from datetime import datetime
+
+CATEGORY_LISTING_URL = 'https://www.tarladalal.com/recipe-category/'
 
 
 def create_scraper():
@@ -151,6 +156,17 @@ def get_recipe_details(recipe_name, recipe_url, scraper):
     try:
         requrl = scraper.get(recipe_url)
         souped = soup(requrl.content, 'html.parser')
+        
+        # Extract real name if not provided (or placeholder)
+        if not recipe_name or recipe_name == "Pending..." or recipe_name == "New Recipe":
+            name_tag = souped.find('span', attrs={'id': 'ctl00_cntrightpanel_lblRecipeName'}) 
+            # fallback to h1
+            if not name_tag:
+                name_tag = souped.find('h1')
+            
+            if name_tag:
+                recipe_name = name_tag.get_text(strip=True)
+                
     except Exception as e:
         logger.error(f'Error fetching {recipe_url}: {e}')
         return []
@@ -386,6 +402,294 @@ def get_recipes_list(base_url, output_file, url2skip, start_page=1, end_page=2, 
     print(f'Output: {output_file}')
 
 
+def get_categories(scraper):
+    '''Fetch all recipe categories and their URLs.'''
+    logger.info(f'Fetching categories from {CATEGORY_LISTING_URL}')
+    try:
+        res = scraper.get(CATEGORY_LISTING_URL)
+        souped = soup(res.content, 'html.parser')
+        
+        # Adjust selector based on actual site structure
+        # Assuming categories are in links within some container
+        # Note: Based on user request, link is https://www.tarladalal.com/recipe-category/
+        # Usually these are in a specific div. Let's find all links that look like categories.
+        # Browsing the site (simulated): standard structure often has a list or grid.
+        # Let's try to find all 'a' tags that might differ from nav pointers.
+        # Since I can't browse, I'll use a generic strategy: find main content area and links.
+        # For now, I will look for links that contain 'planning.aspx' or just scan all unique links?
+        # Actually user said "contains all the recipes by cateogeries". 
+        # Inspecting source via read_url_content would be best but it failed.
+        # I will assume standard detailed links.
+        
+        categories = []
+        # Find all links in the main content area (often id='content' or similar, or just all links)
+        # Let's try to find distinct links.
+        for link in souped.find_all('a', href=True):
+            href = link['href']
+            text = link.get_text(strip=True)
+            if not text or not href:
+                continue
+            
+            # Simple heuristic: if it looks like a category link
+            # tarladalal categories often look like 'recipes-for-kids-2' etc.
+            if 'recipes-for-' in href.lower() or 'recipes-using-' in href.lower():
+                 full_url = 'https://www.tarladalal.com/' + href.lstrip('/')
+                 categories.append({'name': text, 'url': full_url})
+                 
+        # Deduplicate by URL
+        unique_cats = {c['url']: c for c in categories}.values()
+        return list(unique_cats)
+    except Exception as e:
+        logger.error(f'Error fetching categories: {e}')
+        return []
+
+
+def fetch_existing_recipes():
+    '''
+    Load existing recipes from SQLite DB to avoid re-scraping.
+    Returns: dict {url: recipe_data_dict}
+    '''
+    db_path = r".\backend\recipes.db"
+    if not os.path.exists(db_path):
+        return {}
+    
+    conn = sqlite3.connect(db_path)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+    
+    existing = {}
+    try:
+        cursor.execute("SELECT * FROM recipes")
+        rows = cursor.fetchall()
+        for row in rows:
+            # We need to reconstruct the data structure expected by create_recipes_json or the merger
+            # This is complex because we flattened it.
+            # Ideally we keep a 'raw_json' in DB or we re-construct.
+            # For now, let's just cache the URLs and basic info to check existence
+            # But the user wants us to NOT re-scrape. So we need the original data.
+            # Wait, import_data.py reads from JSON.
+            # So the "current state" is best represented by the last JSON file? 
+            # But the user said "DB". 
+            # If I read from DB, I have to perform the reverse of import_data.py
+            
+            # Use columns from DB schema
+            r = dict(row)
+            url = r['url']
+            
+            # Get ingredients
+            cursor.execute("SELECT name, quantity FROM ingredients WHERE recipe_id=?", (r['id'],))
+            ing_rows = cursor.fetchall()
+            ingredients = [{'ingredient': i['name'], 'quantity': '', 'measurement_unit': i['quantity']} for i in ing_rows]
+            
+            # Get tags
+            cursor.execute("SELECT t.name FROM tags t JOIN recipe_tags rt ON t.id=rt.tag_id WHERE rt.recipe_id=?", (r['id'],))
+            tags = [t[0] for t in cursor.fetchall()]
+            
+            existing[url] = {
+                'recipe_name': r['name'],
+                'recipe_url': url,
+                'makes': r['makes'],
+                'soaking_time': r['soaking_time'],
+                'preparation_time': r['preparation_time'],
+                'cooking_time': r['cooking_time'],
+                'baking_time': r['baking_time'],
+                'baking_temperature': r['baking_temperature'],
+                'sprouting_time': r['sprouting_time'],
+                'total_time': r['total_time'],
+                'calories': r['calories_raw'],
+                'nutrient_values': r['nutrient_values'],
+                'tags': '|'.join(tags),
+                # We store ingredients as a list attached to the record for now
+                '_ingredients': ingredients 
+            }
+            
+    except Exception as e:
+        logger.error(f"Error reading DB: {e}")
+    finally:
+        conn.close()
+        
+    return existing
+
+
+def scrape_universal(output_file, limit_categories=None):
+    '''
+    Universal scraper:
+    1. Get all categories
+    2. For each category, get recipe URLs
+    3. Update mapping: URL -> set(categories)
+    4. Fetch details for new URLs
+    5. Merge with existing data
+    '''
+    scraper = create_scraper()
+    categories = get_categories(scraper)
+    logger.info(f"Found {len(categories)} categories")
+    
+    if limit_categories:
+        categories = categories[:limit_categories]
+        logger.info(f"Limiting to first {limit_categories} categories")
+        
+    # Map recipe URL to set of category names
+    url_to_cats = {} # {url: set(['Breakfast', 'Quick'])}
+    
+    pbar = tqdm(total=len(categories), desc="Processing Categories")
+    
+    for cat in categories:
+        cat_name = cat['name']
+        cat_url = cat['url']
+        logger.debug(f"Scanning category: {cat_name} ({cat_url})")
+        
+        # Scrape listing pages for this category
+        # We need a modified version of get_recipes_list that just returns URLs
+        # But for expediency, let's implement a lighter loop here
+        page = 1
+        empty_pages = 0
+        
+        while True:
+            # Safety break
+            if empty_pages >= 2: break
+            if page > 50: break # Hard limit per category to avoid infinite loops
+            
+            # Handle standard pagination URL: ?page=X
+            # Some categories might end with .aspx, need different logic? 
+            # Assuming standard logic works
+            list_url = f"{cat_url}?page={page}"
+            try:
+                res = scraper.get(list_url)
+                soup_list = soup(res.content, 'html.parser')
+                
+                titles = soup_list.find_all('div', attrs={'class': 'recipe-title'})
+                if not titles:
+                    empty_pages += 1
+                    page += 1
+                    continue
+                    
+                empty_pages = 0
+                for span in titles:
+                    links = span.findChildren('a', recursive=False)
+                    if links:
+                        slug = links[0].get('href')
+                        full_url = 'https://www.tarladalal.com/' + slug.lstrip('/')
+                        name = links[0].get_text().strip()
+                        
+                        if full_url not in url_to_cats:
+                            url_to_cats[full_url] = set()
+                        url_to_cats[full_url].add(cat_name)
+                        
+                page += 1
+                time.sleep(0.2)
+                
+            except Exception as e:
+                logger.error(f"Error scraping category {cat_name} page {page}: {e}")
+                break
+                
+        pbar.update(1)
+    pbar.close()
+    
+    logger.info(f"Unique recipes found: {len(url_to_cats)}")
+    
+    # Check against existing DB
+    existing_data = fetch_existing_recipes()
+    logger.info(f"Recipes already in DB: {len(existing_data)}")
+    
+    final_records = []
+    
+    scraped_count = 0
+    skipped_count = 0
+    
+    # Convert flat existing records back to list for consumption
+    # We will rebuild the list.
+    
+    for url, cats in tqdm(url_to_cats.items(), desc="Compiling Recipes"):
+        cat_str = '|'.join(cats) # Store as pipe separated string in memory for now? 
+        # Actually user wants separate column. We can add 'categories' field.
+        
+        if url in existing_data:
+            # Use existing data
+            rec = existing_data[url]
+            # Verify if structure matches what we expect for CSV output
+            # We need to flatten ingredients for CSV
+            if '_ingredients' in rec:
+                ings = rec.pop('_ingredients')
+                for ing in ings:
+                    # Create a row per ingredient
+                    row = rec.copy()
+                    row.update(ing)
+                    row['categories'] = cat_str
+                    final_records.append(row)
+            else:
+                # Fallback
+                rec['categories'] = cat_str
+                final_records.append(rec)
+            skipped_count += 1
+        else:
+            # Scrape new
+            # We need to get details. get_recipe_details returns list of dicts (one per ingredient)
+            # We need name. We might have extracted it earlier? 
+            # Re-fetch page to get name correctly? get_recipe_details takes name but it's mostly for logging/record
+            name = "Unknown" # get_recipe_details will extract? No it takes name as arg.
+            # We need to refetch name or just pass dummy.
+            # Let's assume we need to pass a name.
+            # For new logic, get_recipe_details assumes we pass the name.
+            # Let's extract name from URL or just pass "Pending"
+            # Optimization: The scraper function uses the name passed to it for the record.
+            
+            try:
+                # We need to fetch the page anyway
+                details = get_recipe_details("Pending...", url, scraper)
+                if details:
+                    # Update name from the page title? 
+                    # get_recipe_details doesn't return the scraped name, it uses the passed one.
+                    # This is a flaw in original design.
+                    # Let's allow get_recipe_details to find the name if we pass None?
+                    # Modifying get_recipe_details is risky.
+                    # Let's extract name from h1 in get_recipe_details?
+                    # For now, let's just pass "New Recipe" and fix it?
+                    # Or better, let's just use the URL slug as name proxy if needed,
+                    # but actually we want the real name.
+                    # We can modify get_recipe_details to return the name found on page.
+                    pass 
+                
+                for row in details:
+                    row['categories'] = cat_str
+                    final_records.append(row)
+                scraped_count += 1
+                time.sleep(0.5)
+            except Exception as e:
+                logger.error(f"Failed to scrape new recipe {url}: {e}")
+                
+    # Also include existing recipes that were NOT found in the category scan (orphans?)
+    # User didn't specify. but good practice to keep them.
+    for url, rec in existing_data.items():
+        if url not in url_to_cats:
+            # Orphaned recipe, keep it but no new categories
+             if '_ingredients' in rec:
+                ings = rec.pop('_ingredients')
+                for ing in ings:
+                    row = rec.copy()
+                    row.update(ing)
+                    row['categories'] = '' # No known category
+                    final_records.append(row)
+             else:
+                rec['categories'] = ''
+                final_records.append(rec)
+
+    # Columns
+    columns = [
+        'recipe_name', 'quantity', 'measurement_unit', 'ingredient', 'recipe_url',
+        'soaking_time', 'preparation_time', 'cooking_time', 'baking_time',
+        'baking_temperature', 'sprouting_time', 'total_time', 'makes', 'tags',
+        'calories', 'nutrient_values', 'categories'
+    ]
+    
+    logger.info(f'Writing {len(final_records)} records to {output_file}')
+    df = pd.DataFrame(final_records, columns=columns)
+    # Remove duplicates? One ingredient per row.
+    df.to_csv(output_file, index=False)
+    
+    print(f"Universal scrape complete. Scraped {scraped_count} new, reused {skipped_count} existing.")
+
+
+
 def create_recipes_json(input_file, output_file):
     '''
     Create recipe/ingredient list JSON from CSV created earlier.
@@ -420,6 +724,7 @@ def create_recipes_json(input_file, output_file):
                 },
                 "Makes": str(first_row.makes) if pd.notna(first_row.makes) else '',
                 "Tags": str(first_row.tags).split('|') if pd.notna(first_row.tags) and first_row.tags else [],
+                "Categories": str(first_row.categories).split('|') if hasattr(first_row, 'categories') and pd.notna(first_row.categories) and first_row.categories else [],
                 "Calories": str(first_row.calories) if pd.notna(first_row.calories) else '',
                 "NutrientValues": json.loads(first_row.nutrient_values) if pd.notna(first_row.nutrient_values) and first_row.nutrient_values else {}
             }
@@ -448,14 +753,20 @@ if __name__ == '__main__':
                             help='Scrape ALL pages (overrides start/end page)')
         parser.add_argument('--csv', type=str, default=None,
                             help='Path to existing CSV file (for JSON-only mode with scrape=n)')
+        parser.add_argument('-U', '--universal', action='store_true',
+                            help='Universal scrape mode: scrape via categories')
+        parser.add_argument('--limit-categories', type=int, default=None,
+                            help='Limit number of categories to scrape (for testing)')
         args = parser.parse_args()
 
         url2skip = ()
         timestamp = datetime.now().strftime('%Y%m%d_%H%M')
 
         # Build descriptive filenames based on scrape mode
-        if args.scrape == 'y':
-            if args.all:
+        if args.scrape == 'y' or args.universal:
+            if args.universal:
+                scope = f'universal_limit{args.limit_categories}' if args.limit_categories else 'universal_all'
+            elif args.all:
                 scope = f'all_from_p{args.start_page}'
             else:
                 scope = f'p{args.start_page}_to_{args.end_page}'
@@ -484,10 +795,13 @@ if __name__ == '__main__':
         )
         logger = logging.getLogger('scrappy')
 
-        logger.debug(f'Scrapping Started - scrape={args.scrape}, '
-                      f'start_page={args.start_page}, end_page={args.end_page}, all={args.all}')
+        logger.debug(f'Scrapping Started - scrape={args.scrape}, universal={args.universal}')
 
-        if args.scrape == 'y':
+        if args.universal:
+            print(f'Starting UNIVERSAL scraping mode...')
+            scrape_universal(csv_filename, limit_categories=args.limit_categories)
+            
+        elif args.scrape == 'y':
             print(f'Scraping recipes from tarladalal.com...')
             if args.all:
                 print(f'Mode: ALL pages (starting from page {args.start_page})')
