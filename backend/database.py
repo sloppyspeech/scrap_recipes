@@ -313,7 +313,7 @@ async def get_all_recipes():
     db = await get_db()
     try:
         # Get basic info
-        cursor = await db.execute("SELECT id, name FROM recipes")
+        cursor = await db.execute("SELECT id, name, url FROM recipes")
         rows = await cursor.fetchall()
         
         recipes = []
@@ -321,6 +321,7 @@ async def get_all_recipes():
             recipe = {
                 "id": row[0],
                 "name": row[1],
+                "url": row[2],
                 "ingredients": [],
                 "tags": []
             }

@@ -1,51 +1,35 @@
-import json
 import os
 import asyncio
 import numpy as np
 from typing import List, Dict, Any
-from backend.ollama_client import get_embedding, OLLAMA_BASE_URL
-import httpx
+import chromadb
+from chromadb.config import Settings
+from backend.ollama_client import get_embedding
 
-EMBEDDINGS_FILE = os.path.join(os.path.dirname(__file__), "recipe_embeddings.json")
+CHROMA_DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
 
 class RAGSystem:
     def __init__(self):
-        self.embeddings = {}
-        self.vectors = None
-        self.ids = []
+        # Initialize ChromaDB persistent client
+        self.client = chromadb.PersistentClient(path=CHROMA_DB_DIR)
+        
+        # Create or get collection with cosine similarity space
+        self.collection = self.client.get_or_create_collection(
+            name="recipes",
+            metadata={"hnsw:space": "cosine"}
+        )
+        
         self.indexing_status = {
             "is_indexing": False,
             "processed": 0,
             "total": 0,
             "message": "Idle"
         }
-        self._load_embeddings()
-
-    def _load_embeddings(self):
-        """Load embeddings from disk into memory."""
-        if os.path.exists(EMBEDDINGS_FILE):
-            try:
-                with open(EMBEDDINGS_FILE, "r") as f:
-                    self.embeddings = json.load(f)
-                
-                # Pre-convert to numpy array for fast cosine similarity
-                if self.embeddings:
-                    self.ids = list(self.embeddings.keys())
-                    # Convert list of lists to numpy array
-                    self.vectors = np.array([self.embeddings[id] for id in self.ids], dtype=np.float32)
-                    
-                    # Normalize vectors for cosine similarity (dot product of normalized vectors)
-                    norms = np.linalg.norm(self.vectors, axis=1, keepdims=True)
-                    # Avoid division by zero
-                    norms[norms == 0] = 1
-                    self.vectors = self.vectors / norms
-                    
-                print(f"Loaded {len(self.embeddings)} recipe embeddings.")
-            except Exception as e:
-                print(f"Failed to load embeddings: {e}")
-                self.embeddings = {}
-        else:
-            print("No embeddings file found. RAG search will not work until indexed.")
+        
+        # We don't need to load all embeddings into memory anymore!
+        # Just check count
+        count = self.collection.count()
+        print(f"RAG initialized. Collection has {count} documents.")
 
     async def index_recipes(self, recipes: List[Dict[str, Any]]):
         if self.indexing_status["is_indexing"]:
@@ -59,7 +43,25 @@ class RAGSystem:
             "message": "Starting indexing..."
         }
         
-        new_embeddings = {}
+        # Clear existing collection to ensure fresh start (optional, but good for "Refresh")
+        # In a real system we might upsert diffs, but "Refresh" implies rebuilt.
+        # Faster to delete and recreate usage?
+        # self.client.delete_collection("recipes")
+        # self.collection = self.client.create_collection(...)
+        # But for now, we'll just upsert and maybe checking for deletions is too complex for this step.
+        # Let's just upsert. If user wants full clear, we can add a flag later.
+        # Actually, if recipes were deleted from DB, they remain in Chroma. 
+        # For a clean "Refresh", let's clear it.
+        try:
+            print("Clearing existing collection...")
+            self.client.delete_collection("recipes")
+            self.collection = self.client.get_or_create_collection(
+                name="recipes",
+                metadata={"hnsw:space": "cosine"}
+            )
+        except Exception as e:
+            print(f"Error resetting collection: {e}")
+
         semaphore = asyncio.Semaphore(5)  # Limit concurrency to avoid overloading Ollama
 
         async def process_recipe(recipe):
@@ -72,44 +74,62 @@ class RAGSystem:
                 try:
                     embedding = await get_embedding(text)
                     if embedding:
-                        return str(recipe['id']), embedding
+                        return {
+                            "id": str(recipe['id']),
+                            "embedding": embedding,
+                            "metadata": {
+                                "name": recipe['name'],
+                                "url": recipe['url']
+                            },
+                            "document": text
+                        }
                 except Exception as e:
                     print(f"Failed to embed recipe {recipe['id']}: {e}")
             return None
 
         print(f"Indexing {len(recipes)} recipes with parallelism...")
         
-        # Process in batches to show progress
         batch_size = 50
         total = len(recipes)
         
         try:
             for i in range(0, total, batch_size):
                 batch = recipes[i : i + batch_size]
+                
+                # 1. Generate embeddings in parallel
                 tasks = [process_recipe(r) for r in batch]
                 results = await asyncio.gather(*tasks)
                 
+                # 2. Prepare batch for Chroma
+                ids = []
+                embeddings = []
+                metadatas = []
+                documents = []
+                
                 for res in results:
                     if res:
-                        r_id, emb = res
-                        new_embeddings[r_id] = emb
+                        ids.append(res["id"])
+                        embeddings.append(res["embedding"])
+                        metadatas.append(res["metadata"])
+                        documents.append(res["document"])
+                
+                if ids:
+                    # 3. Insert into Chroma (offload to thread as it can be blocking)
+                    await asyncio.to_thread(
+                        self.collection.upsert,
+                        ids=ids,
+                        embeddings=embeddings,
+                        metadatas=metadatas,
+                        documents=documents
+                    )
                 
                 processed_count = min(i + batch_size, total)
                 self.indexing_status["processed"] = processed_count
                 self.indexing_status["message"] = f"Processed {processed_count}/{total}"
                 print(f"Processed {processed_count}/{total}")
 
-            # Save to disk
-            print("Saving embeddings to disk...")
-            self.indexing_status["message"] = "Saving to disk..."
-            with open(EMBEDDINGS_FILE, "w") as f:
-                json.dump(new_embeddings, f)
-                
-            # Reload
-            self._load_embeddings()
-            
             self.indexing_status["message"] = "Completed"
-            return len(new_embeddings)
+            return self.collection.count()
             
         except Exception as e:
             self.indexing_status["message"] = f"Failed: {str(e)}"
@@ -119,14 +139,24 @@ class RAGSystem:
             self.indexing_status["is_indexing"] = False
 
     def reload_embeddings(self):
-        """Force reload of embeddings from disk"""
-        self._load_embeddings()
+        """No-op for ChromaDB as it is persistent."""
+        pass
+
+    @property
+    def vectors(self):
+        """Mock property for backward compatibility check in main.py"""
+        if self.collection.count() > 0:
+            return [1] # Just truthy
+        return None
+        
+    @property
+    def ids(self):
+        """Mock property for backward compatibility"""
+        # We shouldn't access this directly usually, but logging uses it
+        return [f"count: {self.collection.count()}"]
 
     async def search(self, query: str, top_k: int = 100) -> List[int]:
         """Search for recipes semantically similar to query. Returns list of recipe IDs."""
-        if self.vectors is None or len(self.vectors) == 0:
-            return []
-
         try:
             # 1. Embed query
             query_embedding = await get_embedding(query)
@@ -134,29 +164,31 @@ class RAGSystem:
                 print("Failed to get query embedding")
                 return []
             
-            q_vec = np.array(query_embedding, dtype=np.float32)
-            q_norm = np.linalg.norm(q_vec)
-            if q_norm == 0:
+            # 2. Query Chroma (offload to thread)
+            results = await asyncio.to_thread(
+                self.collection.query,
+                query_embeddings=[query_embedding],
+                n_results=top_k,
+                include=["distances"] 
+            )
+            
+            # results is dict: {'ids': [['id1', ...]], 'distances': [[0.1, ...]], ...}
+            if not results['ids'] or not results['ids'][0]:
                 return []
-            q_vec = q_vec / q_norm
-
-            # 2. Cosine Similarity
-            # (N, D) dot (D,) -> (N,)
-            scores = np.dot(self.vectors, q_vec)
+                
+            found_ids = results['ids'][0]
+            distances = results['distances'][0]
             
-            # 3. Get top K
-            # argsort returns indices of sorted array (ascending by default)
-            top_indices = np.argsort(scores)[::-1][:top_k]
+            final_ids = []
             
-            results = []
-            for idx in top_indices:
-                score = scores[idx]
-                recipe_id = int(self.ids[idx])
-                # Filter out low relevance if needed, e.g. score > 0.45
-                if score > 0.45:
-                    results.append(recipe_id)
+            for r_id, dist in zip(found_ids, distances):
+                # Cosine Distance = 1 - Similarity
+                # We want Similarity > 0.45
+                # So 1 - Distance > 0.45  =>  Distance < 0.55
+                if dist < 0.55:
+                    final_ids.append(int(r_id))
             
-            return results
+            return final_ids
             
         except Exception as e:
             print(f"RAG Search failed: {e}")
