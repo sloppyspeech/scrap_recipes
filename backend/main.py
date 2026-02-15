@@ -2,7 +2,7 @@
 FastAPI application for the Recipe UI.
 Provides search, recipe details, Ollama-powered summarization/scaling, and admin endpoints.
 """
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from contextlib import asynccontextmanager
@@ -12,6 +12,7 @@ from backend.database import init_db, search_recipes, get_recipe_by_id, get_all_
 from backend.ollama_client import (
     summarize_recipe, scale_with_llm, scale_algorithmically,
     list_models, get_active_model, set_active_model, extract_search_filters,
+    get_active_embedding_model, set_active_embedding_model,
     OLLAMA_BASE_URL
 )
 
@@ -94,36 +95,113 @@ async def api_search_recipes(
     return result
 
 
+
+from backend.rag import rag_system
+
+class NaturalSearchRequest(BaseModel):
+    query: str
+    page: int = 1
+    page_size: int = 20
+
 @app.post("/api/recipes/search/natural")
 async def api_search_natural(req: NaturalSearchRequest):
     """
-    Parse a natural language query using LLM and return search results.
-    Example: "dosa with ragi but no rice"
+    Perform RAG-based search:
+    1. Retrieve relevant recipes using vector search.
+    2. Generate a natural language answer using LLM with retrieved recipes as context.
     """
-    # 1. Parse query with LLM
-    filters = await extract_search_filters(req.query)
+    # 1. Retrieval
+    # Fetch more results to allow for pagination (e.g. up to 200)
+    limit = 200  
+    all_recipe_ids = await rag_system.search(req.query, top_k=limit)
     
-    # 2. Execute search with extracted filters
-    # Wrap single tag in list if present
-    tags = []
-    if filters.get("tag"):
-        tags.append(filters["tag"])
+    # Calculate pagination slices
+    total_found = len(all_recipe_ids)
+    start_idx = (req.page - 1) * req.page_size
+    end_idx = start_idx + req.page_size
+    
+    # Slice IDs for the current page
+    paged_recipe_ids = all_recipe_ids[start_idx:end_idx]
+    
+    # Fetch full details for the PAGE results
+    paged_recipes = []
+    for r_id in paged_recipe_ids:
+        r = await get_recipe_by_id(r_id)
+        if r:
+            paged_recipes.append(r)
+            
+    if not all_recipe_ids:
+        return {
+            "results": {"recipes": [], "total": 0, "page": req.page, "page_size": req.page_size},
+            "answer": "I couldn't find any recipes matching your description."
+        }
 
-    result = await search_recipes(
-        q=filters.get("q", ""),
-        include_ingredients=filters.get("include_ingredients", []),
-        exclude_ingredients=filters.get("exclude_ingredients", []),
-        tags=tags,
-        cal_min=filters.get("cal_min"),
-        cal_max=filters.get("cal_max"),
-        page=1, # Always start at page 1 for natural search
-        page_size=20
-    )
+    # 2. Generation (Answer)
+    # Use top 5 results for context regardless of pagination
+    context_ids = all_recipe_ids[:5]
+    context_recipes = []
+    for r_id in context_ids:
+        # Avoid fetching if already fetched for page (optimization)
+        found = False
+        for r in paged_recipes:
+            if r['id'] == r_id:
+                context_recipes.append(r)
+                found = True
+                break
+        if not found:
+            r = await get_recipe_by_id(r_id)
+            if r:
+                context_recipes.append(r)
+
+    # Construct context from top recipes
+    context_parts = []
+    for r in context_recipes:
+        # Format ingredients list
+        ings = ", ".join([f"{i['quantity']} {i['name']}" for i in r['ingredients'][:8]])
+        if len(r['ingredients']) > 8:
+            ings += "..."
+            
+        context_parts.append(
+            f"Recipe: {r['name']}\n"
+            f"Description: A {r.get('makes', '')} dish. "
+            f"Time: {r['times'].get('total_time', 'N/A')}. "
+            f"Calories: {r.get('calories', 'N/A')}. "
+            f"Ingredients: {ings}"
+        )
+
+    context_str = "\n\n".join(context_parts)
+
+    # Use the active model to generate answer
+    from backend.ollama_client import chat_completion
+    prompt = f"""
+You are a helpful culinary assistant.
+Answer the user's query based ONLY on the following recipes.
+If the recipes aren't relevant, say so, but suggest the best option from the list.
+Do not invent recipes.
+
+User Query: {req.query}
+
+Context Recipes:
+{context_str}
+
+Answer:
+    """
     
-    # Return both results and the inferred filters (so UI can show them)
+    try:
+        answer = await chat_completion(prompt)
+    except Exception as e:
+        answer = "I found some recipes but couldn't generate an answer."
+        print(f"Generation failed: {e}")
+
+    # Return standard search result structure + the answer
     return {
-        "results": result,
-        "inferred_filters": filters
+        "results": {
+            "recipes": paged_recipes,
+            "total": total_found,
+            "page": req.page,
+            "page_size": req.page_size
+        },
+        "answer": answer
     }
 
 
@@ -227,14 +305,48 @@ async def api_scale_recipe(recipe_id: int, req: ScaleRequest):
 async def api_list_models():
     """List available Ollama models."""
     models = await list_models()
-    return {"models": models, "active_model": get_active_model()}
+    return {
+        "models": models, 
+        "active_model": get_active_model(),
+        "active_embedding_model": get_active_embedding_model()
+    }
 
 
 @app.post("/api/admin/model")
 async def api_set_model(req: ModelRequest):
     """Set the active Ollama model."""
     set_active_model(req.model)
-    return {"active_model": get_active_model()}
+    return {"status": "success", "active_model": get_active_model()}
+
+
+@app.post("/api/admin/embedding-model")
+async def api_set_embedding_model(req: ModelRequest):
+    """Set the active Embedding model."""
+    set_active_embedding_model(req.model)
+    return {"status": "success", "active_embedding_model": get_active_embedding_model()}
+
+
+@app.post("/api/admin/refresh-embeddings")
+async def api_refresh_embeddings(background_tasks: BackgroundTasks):
+    """Trigger background re-indexing of all recipes."""
+    if rag_system.indexing_status["is_indexing"]:
+        return {"status": "error", "message": "Indexing already in progress"}
+    
+    # Fetch all recipes to index
+    # We need to import get_all_recipes inside or ensure it's imported at top
+    from backend.database import get_all_recipes
+    all_recipes = await get_all_recipes()
+    
+    # Run in background
+    background_tasks.add_task(rag_system.index_recipes, all_recipes)
+    
+    return {"status": "success", "message": "Indexing started in background"}
+
+
+@app.get("/api/admin/refresh-status")
+async def api_refresh_status():
+    """Get current indexing status."""
+    return rag_system.indexing_status
 
 
 @app.get("/api/admin/settings")
@@ -242,5 +354,17 @@ async def api_get_settings():
     """Get current admin settings."""
     return {
         "active_model": get_active_model(),
+        "active_embedding_model": get_active_embedding_model(),
         "ollama_url": OLLAMA_BASE_URL,
+        "rag_status": "loaded" if rag_system.vectors is not None else "empty"
     }
+
+
+@app.post("/api/system/reload-index")
+async def api_reload_index():
+    """Force reload of the RAG index from disk."""
+    try:
+        rag_system.reload_embeddings()
+        return {"status": "success", "message": f"Index reloaded. Loaded {len(rag_system.ids)} vectors."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))

@@ -306,3 +306,42 @@ async def get_all_tags():
         return [{"name": row[0], "count": row[1]} for row in rows]
     finally:
         await db.close()
+
+
+async def get_all_recipes():
+    """Get all recipes with ingredients and tags for indexing."""
+    db = await get_db()
+    try:
+        # Get basic info
+        cursor = await db.execute("SELECT id, name FROM recipes")
+        rows = await cursor.fetchall()
+        
+        recipes = []
+        for row in rows:
+            recipe = {
+                "id": row[0],
+                "name": row[1],
+                "ingredients": [],
+                "tags": []
+            }
+            # Get ingredients for this recipe
+            ing_cursor = await db.execute(
+                "SELECT name FROM ingredients WHERE recipe_id = ?", 
+                [row[0]]
+            )
+            ing_rows = await ing_cursor.fetchall()
+            recipe["ingredients"] = [{"name": r[0]} for r in ing_rows]
+            
+            # Get tags
+            tag_cursor = await db.execute(
+                "SELECT t.name FROM tags t JOIN recipe_tags rt ON t.id = rt.tag_id WHERE rt.recipe_id = ?",
+                [row[0]]
+            )
+            tag_rows = await tag_cursor.fetchall()
+            recipe["tags"] = [t[0] for t in tag_rows]
+            
+            recipes.append(recipe)
+            
+        return recipes
+    finally:
+        await db.close()

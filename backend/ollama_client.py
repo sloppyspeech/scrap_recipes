@@ -11,6 +11,7 @@ DEFAULT_MODEL = "lfm2.5-thinking:latest"
 
 # Global active model (can be changed via admin API)
 _active_model = DEFAULT_MODEL
+_active_embedding_model = "nomic-embed-text"
 
 
 def get_active_model() -> str:
@@ -20,6 +21,15 @@ def get_active_model() -> str:
 def set_active_model(model: str):
     global _active_model
     _active_model = model
+
+
+def get_active_embedding_model() -> str:
+    return _active_embedding_model
+
+
+def set_active_embedding_model(model: str):
+    global _active_embedding_model
+    _active_embedding_model = model
 
 
 async def list_models() -> list[dict]:
@@ -55,6 +65,22 @@ async def chat_completion(prompt: str, model: str = None, system: str = None) ->
         resp.raise_for_status()
         data = resp.json()
         return data.get("message", {}).get("content", "")
+
+
+async def get_embedding(text: str, model: str = None) -> list[float]:
+    """Get vector embedding for a text using Ollama."""
+    model = model or get_active_embedding_model()
+    async with httpx.AsyncClient(timeout=30.0) as client:
+        resp = await client.post(
+            f"{OLLAMA_BASE_URL}/api/embeddings",
+            json={
+                "model": model,
+                "prompt": text,
+            }
+        )
+        resp.raise_for_status()
+        data = resp.json()
+        return data.get("embedding", [])
 
 
 async def summarize_recipe(page_text: str, recipe_name: str) -> str:

@@ -1,10 +1,12 @@
 import { useState, useEffect, useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     Box, Container, SimpleGrid, Heading, Text, HStack, Button, Spinner,
     VStack, useColorModeValue, Center, Textarea, Badge, FormControl,
     FormLabel, Switch, Icon, Divider
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import SearchFilters from '../components/SearchFilters';
 import RecipeCard from '../components/RecipeCard';
 import { searchRecipes, searchRecipesNatural, getTags } from '../api/client';
@@ -12,17 +14,19 @@ import { searchRecipes, searchRecipesNatural, getTags } from '../api/client';
 const MotionBox = motion(Box);
 
 export default function SearchPage() {
+    const location = useLocation();
+    const navigate = useNavigate();
     const [recipes, setRecipes] = useState([]);
     const [tags, setTags] = useState([]);
+    const [pageSize, setPageSize] = useState(20);
     const [total, setTotal] = useState(0);
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const [searchParams, setSearchParams] = useState({});
 
-    // Smart Search State
+    const [aiAnswer, setAiAnswer] = useState('');
     const [isSmartMode, setIsSmartMode] = useState(false);
     const [smartQuery, setSmartQuery] = useState('');
-    const [inferredFilters, setInferredFilters] = useState(null);
 
     const gradientStart = useColorModeValue('saffron.400', 'saffron.200');
     const gradientEnd = useColorModeValue('spice.500', 'spice.300');
@@ -31,15 +35,24 @@ export default function SearchPage() {
     useEffect(() => {
         getTags().then(setTags).catch(console.error);
         // Initial load - classic search
-        doSearch({});
+        doSearch({}, 1, 20);
     }, []);
 
-    const doSearch = useCallback(async (params, pageNum = 1) => {
+    const doSearch = useCallback(async (params, pageNum = 1, pSize = pageSize) => {
         setLoading(true);
         try {
-            const result = await searchRecipes({ ...params, page: pageNum, page_size: 20 });
-            setRecipes(result.recipes);
-            setTotal(result.total);
+            // Check if we are in smart mode or if this is a classic search
+            // If params are empty and smartQuery is set, it might be a smart search pagination
+            if (isSmartMode && smartQuery) {
+                const result = await searchRecipesNatural(smartQuery, { page: pageNum, page_size: pSize });
+                setRecipes(result.results.recipes);
+                setTotal(result.results.total);
+                setAiAnswer(result.answer);
+            } else {
+                const result = await searchRecipes({ ...params, page: pageNum, page_size: pSize });
+                setRecipes(result.recipes);
+                setTotal(result.total);
+            }
             setPage(pageNum);
             setSearchParams(params);
         } catch (err) {
@@ -47,31 +60,53 @@ export default function SearchPage() {
         } finally {
             setLoading(false);
         }
-    }, []);
+    }, [pageSize, isSmartMode, smartQuery]);
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        if (params.get('reset') === 'true') {
+            setIsSmartMode(false);
+            setSmartQuery('');
+            setAiAnswer('');
+            setRecipes([]);
+            setTotal(0);
+            setPage(1);
+            setSearchParams({});
+
+            // Explicitly run default classic search to avoid stale state in doSearch
+            setLoading(true);
+            searchRecipes({ page: 1, page_size: 20 })
+                .then(result => {
+                    setRecipes(result.recipes);
+                    setTotal(result.total);
+                })
+                .catch(err => console.error('Reset search failed:', err))
+                .finally(() => setLoading(false));
+
+            navigate('/', { replace: true });
+        }
+    }, [location.search, navigate]);
 
     const handleSearch = useCallback((params) => {
-        setInferredFilters(null); // Clear smart filters if using classic
-        doSearch(params, 1);
-    }, [doSearch]);
+        doSearch(params, 1, pageSize);
+    }, [doSearch, pageSize]);
 
     const handleSmartSearch = async () => {
         if (!smartQuery.trim()) return;
-        setLoading(true);
-        try {
-            const result = await searchRecipesNatural(smartQuery);
-            setRecipes(result.results.recipes);
-            setTotal(result.results.total);
-            setPage(1);
-            setInferredFilters(result.inferred_filters);
-            setSearchParams(result.inferred_filters); // Enable pagination using these filters
-        } catch (err) {
-            console.error('Smart search failed:', err);
-        } finally {
-            setLoading(false);
-        }
+        doSearch({}, 1, pageSize);
     };
 
-    const totalPages = Math.ceil(total / 20);
+    const handlePageChange = (newPage) => {
+        doSearch(searchParams, newPage, pageSize);
+    };
+
+    const handlePageSizeChange = (e) => {
+        const newSize = parseInt(e.target.value);
+        setPageSize(newSize);
+        doSearch(searchParams, 1, newSize);
+    };
+
+    const totalPages = Math.ceil(total / pageSize);
 
     return (
         <Container maxW="7xl" py={6}>
@@ -110,7 +145,7 @@ export default function SearchPage() {
                             borderRadius="full"
                             size="sm"
                             px={6}
-                            onClick={() => setIsSmartMode(false)}
+                            onClick={() => { setIsSmartMode(false); setRecipes([]); setTotal(0); }}
                         >
                             Classic Search
                         </Button>
@@ -120,7 +155,7 @@ export default function SearchPage() {
                             borderRadius="full"
                             size="sm"
                             px={6}
-                            onClick={() => setIsSmartMode(true)}
+                            onClick={() => { setIsSmartMode(true); setRecipes([]); setTotal(0); }}
                         >
                             ✨ Smart AI Search
                         </Button>
@@ -139,9 +174,9 @@ export default function SearchPage() {
                         <Textarea
                             value={smartQuery}
                             onChange={(e) => setSmartQuery(e.target.value)}
-                            placeholder="Describe what you want: e.g. 'Spicy dosa without rice under 300 calories'..."
+                            placeholder="Ask me anything! e.g. 'I want a high protein breakfast with eggs'..."
                             size="lg"
-                            minH="120px"
+                            minH="100px"
                             bg={inputBg}
                             fontSize="lg"
                             borderRadius="xl"
@@ -154,51 +189,41 @@ export default function SearchPage() {
                             w="full"
                             onClick={handleSmartSearch}
                             isLoading={loading}
-                            loadingText="Asking AI..."
+                            loadingText="Thinking..."
                             rightIcon={<span>✨</span>}
                         >
-                            Find Recipes
+                            Ask AI
                         </Button>
 
-                        {inferredFilters && (
+                        {aiAnswer && (
                             <Box
                                 w="full"
-                                p={4}
+                                p={6}
                                 bg={useColorModeValue('purple.50', 'whiteAlpha.100')}
-                                borderRadius="lg"
-                                border="1px dashed"
+                                borderRadius="xl"
+                                border="1px solid"
                                 borderColor="purple.200"
+                                boxShadow="sm"
                             >
-                                <Text fontSize="xs" fontWeight="bold" textTransform="uppercase" color="purple.500" mb={2}>
-                                    AI Understood:
-                                </Text>
-                                <HStack flexWrap="wrap" spacing={2}>
-                                    {inferredFilters.q && (
-                                        <Badge colorScheme="blue" borderRadius="full" px={3} py={1}>
-                                            Search: "{inferredFilters.q}"
-                                        </Badge>
-                                    )}
-                                    {inferredFilters.include_ingredients?.map(ing => (
-                                        <Badge key={`inc-${ing}`} colorScheme="green" borderRadius="full" px={3} py={1}>
-                                            + {ing}
-                                        </Badge>
-                                    ))}
-                                    {inferredFilters.exclude_ingredients?.map(ing => (
-                                        <Badge key={`exc-${ing}`} colorScheme="red" borderRadius="full" px={3} py={1}>
-                                            🚫 No {ing}
-                                        </Badge>
-                                    ))}
-                                    {inferredFilters.cal_max && (
-                                        <Badge colorScheme="orange" borderRadius="full" px={3} py={1}>
-                                            &lt; {inferredFilters.cal_max} cal
-                                        </Badge>
-                                    )}
-                                    {inferredFilters.tag && (
-                                        <Badge colorScheme="purple" borderRadius="full" px={3} py={1}>
-                                            Tag: {inferredFilters.tag}
-                                        </Badge>
-                                    )}
+                                <HStack mb={2} color="purple.600">
+                                    <Icon viewBox="0 0 24 24" fill="currentColor" boxSize={6}>
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
+                                    </Icon>
+                                    <Text fontWeight="bold">AI Suggestion</Text>
                                 </HStack>
+                                <Box fontSize="md" lineHeight="tall">
+                                    <ReactMarkdown components={{
+                                        h1: ({ node, ...props }) => <Heading as="h3" size="md" my={2} {...props} />,
+                                        h2: ({ node, ...props }) => <Heading as="h4" size="sm" my={2} {...props} />,
+                                        p: ({ node, ...props }) => <Text mb={2} {...props} />,
+                                        ul: ({ node, ...props }) => <Box as="ul" ml={4} mb={2} {...props} />,
+                                        ol: ({ node, ...props }) => <Box as="ol" ml={4} mb={2} {...props} />,
+                                        li: ({ node, ...props }) => <Box as="li" mb={1} {...props} />,
+                                        strong: ({ node, ...props }) => <Text as="span" fontWeight="bold" {...props} />,
+                                    }}>
+                                        {aiAnswer}
+                                    </ReactMarkdown>
+                                </Box>
                             </Box>
                         )}
                     </VStack>
@@ -224,15 +249,32 @@ export default function SearchPage() {
                 </Center>
             ) : (
                 <>
-                    <HStack justify="space-between" mb={4}>
+                    <HStack justify="space-between" mb={4} flexWrap="wrap" gap={2}>
                         <Text fontSize="sm" color="gray.500">
-                            Found {total.toLocaleString()} recipes
+                            Found {total > 0 ? total.toLocaleString() : 0} recipes
                         </Text>
-                        {total > 20 && (
-                            <Text fontSize="sm" color="gray.500">
-                                Page {page} of {totalPages}
-                            </Text>
-                        )}
+
+                        <HStack>
+                            <Text fontSize="sm" color="gray.500">Items per page:</Text>
+                            <select
+                                value={pageSize}
+                                onChange={handlePageSizeChange}
+                                style={{
+                                    padding: '4px',
+                                    borderRadius: '4px',
+                                    border: '1px solid #CBD5E0'
+                                }}
+                            >
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                            {total > pageSize && (
+                                <Text fontSize="sm" color="gray.500" ml={4}>
+                                    Page {page} of {totalPages}
+                                </Text>
+                            )}
+                        </HStack>
                     </HStack>
 
                     <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={5}>
@@ -248,13 +290,19 @@ export default function SearchPage() {
                                 size="sm"
                                 variant="outline"
                                 isDisabled={page <= 1}
-                                onClick={() => doSearch(searchParams, page - 1)}
+                                onClick={() => handlePageChange(page - 1)}
                             >
                                 ← Previous
                             </Button>
 
                             {[...Array(Math.min(5, totalPages))].map((_, i) => {
-                                const pageNum = Math.max(1, Math.min(page - 2, totalPages - 4)) + i;
+                                // Logic to show window around current page
+                                let startPage = Math.max(1, page - 2);
+                                if (startPage + 4 > totalPages) {
+                                    startPage = Math.max(1, totalPages - 4);
+                                }
+                                const pageNum = startPage + i;
+
                                 if (pageNum > totalPages) return null;
                                 return (
                                     <Button
@@ -262,7 +310,7 @@ export default function SearchPage() {
                                         size="sm"
                                         variant={pageNum === page ? 'solid' : 'outline'}
                                         colorScheme={pageNum === page ? (isSmartMode ? 'purple' : 'saffron') : 'gray'}
-                                        onClick={() => doSearch(searchParams, pageNum)}
+                                        onClick={() => handlePageChange(pageNum)}
                                     >
                                         {pageNum}
                                     </Button>
@@ -273,7 +321,7 @@ export default function SearchPage() {
                                 size="sm"
                                 variant="outline"
                                 isDisabled={page >= totalPages}
-                                onClick={() => doSearch(searchParams, page + 1)}
+                                onClick={() => handlePageChange(page + 1)}
                             >
                                 Next →
                             </Button>

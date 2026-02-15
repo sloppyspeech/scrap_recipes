@@ -11,8 +11,8 @@ const api = axios.create({
 export const searchRecipes = (params) =>
     api.get('/recipes/search', { params }).then((r) => r.data);
 
-export const searchRecipesNatural = (query) =>
-    api.post('/recipes/search/natural', { query }).then((r) => r.data);
+export const searchRecipesNatural = (query, params = {}) =>
+    api.post('/recipes/search/natural', { query, ...params }).then((r) => r.data);
 
 export const getRecipe = (id) =>
     api.get(`/recipes/${id}`).then((r) => r.data);
@@ -33,6 +33,16 @@ export const getModels = () =>
 
 export const setModel = (model) =>
     api.post('/admin/model', { model }).then((r) => r.data);
+
+
+export const setEmbeddingModel = (model) =>
+    api.post('/admin/embedding-model', { model }).then((r) => r.data);
+
+export const refreshEmbeddings = () =>
+    api.post('/admin/refresh-embeddings').then((r) => r.data);
+
+export const getRefreshStatus = () =>
+    api.get('/admin/refresh-status').then((r) => r.data);
 
 export const getSettings = () =>
     api.get('/admin/settings').then((r) => r.data);

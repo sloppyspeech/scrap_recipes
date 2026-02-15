@@ -30,13 +30,19 @@ function NavBar() {
         <HStack spacing={6}>
           <Heading
             as={RouterLink}
-            to="/"
+            to="/?reset=true"
             size="md"
             fontFamily="heading"
             bgGradient="linear(to-r, saffron.400, spice.400)"
             bgClip="text"
             _hover={{ transform: 'scale(1.05)' }}
             transition="transform 0.2s"
+            onClick={() => {
+              if (window.location.search.includes('reset=true')) {
+                // Force reload if already on reset page to ensure state clears
+                window.location.href = '/?reset=true';
+              }
+            }}
           >
             🍛 RecipeLens
           </Heading>
