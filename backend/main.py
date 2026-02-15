@@ -113,9 +113,33 @@ async def api_search_natural(req: NaturalSearchRequest):
     2. Generate a natural language answer using LLM with retrieved recipes as context.
     """
     # 1. Retrieval
-    # Fetch more results to allow for pagination (e.g. up to 200)
-    limit = 200  
-    all_recipe_ids = await rag_system.search(req.query, top_k=limit)
+    # Hybrid Approach: Vector Search + Keyword Search
+    
+    # A. Vector Search (Semantic) - Top 50 as requested
+    limit_vector = 50
+    vector_ids = await rag_system.search(req.query, top_k=limit_vector)
+    
+    # B. Keyword Search (Exact/Partial Match)
+    from backend.database import search_recipes
+    # Fetch a larger pool of keyword matches to ensure we cover "Pulao" cases
+    keyword_result = await search_recipes(q=req.query, page_size=200) 
+    keyword_recipes = keyword_result.get("recipes", [])
+    keyword_ids = [r['id'] for r in keyword_recipes]
+    
+    # C. Merge (Keyword prioritized, then append unique Vector)
+    # Use a dict to preserve order and uniqueness (Simulating an Ordered Set)
+    merged_map = {}
+    
+    # Add keyword results FIRST (Classic Search Priority)
+    for rid in keyword_ids:
+        merged_map[rid] = True
+        
+    # Add vector results if not present (AI Discovery)
+    for rid in vector_ids:
+        if rid not in merged_map:
+            merged_map[rid] = True
+            
+    all_recipe_ids = list(merged_map.keys())
     
     # Calculate pagination slices
     total_found = len(all_recipe_ids)
@@ -127,10 +151,20 @@ async def api_search_natural(req: NaturalSearchRequest):
     
     # Fetch full details for the PAGE results
     paged_recipes = []
+    # Optimization: if we already have recipe details from keyword search, use them?
+    # But vector results didn't fetch details yet. 
+    # To keep it simple and consistent: fetch by ID. 
+    # (Optional optimization: use keyword_recipes lookup if available)
+    
+    keyword_lookup = {r['id']: r for r in keyword_recipes}
+    
     for r_id in paged_recipe_ids:
-        r = await get_recipe_by_id(r_id)
-        if r:
-            paged_recipes.append(r)
+        if r_id in keyword_lookup:
+            paged_recipes.append(keyword_lookup[r_id])
+        else:
+            r = await get_recipe_by_id(r_id)
+            if r:
+                paged_recipes.append(r)
             
     if not all_recipe_ids:
         return {
@@ -140,37 +174,52 @@ async def api_search_natural(req: NaturalSearchRequest):
 
     # 2. Generation (Answer)
     # Use top 5 results for context regardless of pagination
+    # Note: These top 5 come from the MERGED list.
     context_ids = all_recipe_ids[:5]
     context_recipes = []
+    
+    # We need full details (especially ingredients) for the context.
+    # paged_recipes might contain some, but not necessarily the top 5 if page > 1.
+    # Also, keyword search results (if used) might NOT have ingredients populate if search_recipes doesn't return them.
+    # search_recipes returns: id, name, url, makes, calories, time. NO INGREDIENTS.
+    
+    # So we must insure we have full details.
+    
     for r_id in context_ids:
-        # Avoid fetching if already fetched for page (optimization)
-        found = False
+        # Check if we already have it in paged_recipes (optimization)
+        found_r = None
         for r in paged_recipes:
-            if r['id'] == r_id:
-                context_recipes.append(r)
-                found = True
-                break
-        if not found:
-            r = await get_recipe_by_id(r_id)
-            if r:
-                context_recipes.append(r)
+             if r['id'] == r_id:
+                 found_r = r
+                 break
+        
+        # Even if found, does it have ingredients?
+        if found_r and 'ingredients' in found_r:
+            context_recipes.append(found_r)
+        else:
+            # Need to fetch full
+            full_r = await get_recipe_by_id(r_id)
+            if full_r:
+                context_recipes.append(full_r)
 
     # Construct context from top recipes
     context_parts = []
     for r in context_recipes:
         # Format ingredients list
-        ings = ", ".join([f"{i['quantity']} {i['name']}" for i in r['ingredients'][:8]])
-        if len(r['ingredients']) > 8:
+        # Check safety again just in case
+        ing_list = r.get('ingredients', [])
+        ings = ", ".join([f"{i.get('quantity', '')} {i['name']}".strip() for i in ing_list[:8]])
+        if len(ing_list) > 8:
             ings += "..."
             
         context_parts.append(
             f"Recipe: {r['name']}\n"
             f"Description: A {r.get('makes', '')} dish. "
-            f"Time: {r['times'].get('total_time', 'N/A')}. "
+            f"Time: {r.get('times', {}).get('total_time', 'N/A')}. "
             f"Calories: {r.get('calories', 'N/A')}. "
             f"Ingredients: {ings}"
         )
-
+    
     context_str = "\n\n".join(context_parts)
 
     # Use the active model to generate answer

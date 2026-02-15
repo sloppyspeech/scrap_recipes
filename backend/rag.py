@@ -158,6 +158,8 @@ class RAGSystem:
     async def search(self, query: str, top_k: int = 100) -> List[int]:
         """Search for recipes semantically similar to query. Returns list of recipe IDs."""
         try:
+            query = query.strip()
+            
             # 1. Embed query
             query_embedding = await get_embedding(query)
             if not query_embedding:
@@ -169,7 +171,7 @@ class RAGSystem:
                 self.collection.query,
                 query_embeddings=[query_embedding],
                 n_results=top_k,
-                include=["distances"] 
+                include=["distances", "metadatas"] 
             )
             
             # results is dict: {'ids': [['id1', ...]], 'distances': [[0.1, ...]], ...}
@@ -178,17 +180,39 @@ class RAGSystem:
                 
             found_ids = results['ids'][0]
             distances = results['distances'][0]
+            metadatas = results['metadatas'][0]
             
-            final_ids = []
+            scored_results = []
             
-            for r_id, dist in zip(found_ids, distances):
-                # Cosine Distance = 1 - Similarity
-                # We want Similarity > 0.45
-                # So 1 - Distance > 0.45  =>  Distance < 0.55
-                if dist < 0.55:
-                    final_ids.append(int(r_id))
+            query_lower = query.lower()
             
-            return final_ids
+            for r_id, dist, meta in zip(found_ids, distances, metadatas):
+                # Apply Keyword Boosting
+                # If the query (or parts of it) appears in the title, boost the score (reduce distance)
+                # This helps "Pulao" find "Vegetable Pulao" even if vector similarity is weak.
+                
+                final_dist = dist
+                name_lower = meta.get('name', '').lower()
+                
+                # Check for full query in name
+                if query_lower in name_lower:
+                    final_dist -= 0.20  # Significant boost
+                else:
+                    # Check for partial word matches (e.g. "Chicken" in "Chicken Curry")
+                    query_words = query_lower.split()
+                    matches = sum(1 for w in query_words if len(w) > 3 and w in name_lower)
+                    if matches > 0:
+                        final_dist -= (0.05 * matches)
+
+                # Relaxed threshold from 0.55 to 0.60 to happen after boosting
+                # If boosted, a 0.7 distance might become 0.5 and pass.
+                if final_dist < 0.60:
+                    scored_results.append((final_dist, int(r_id)))
+            
+            # Sort by new distance
+            scored_results.sort(key=lambda x: x[0])
+            
+            return [x[1] for x in scored_results]
             
         except Exception as e:
             print(f"RAG Search failed: {e}")

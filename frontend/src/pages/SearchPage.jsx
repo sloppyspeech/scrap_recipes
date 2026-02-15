@@ -25,7 +25,6 @@ export default function SearchPage() {
     const [loading, setLoading] = useState(false);
     const [searchParams, setSearchParams] = useState({});
 
-    const [aiAnswer, setAiAnswer] = useState('');
     const [isSmartMode, setIsSmartMode] = useState(false);
     const [smartQuery, setSmartQuery] = useState('');
 
@@ -49,7 +48,6 @@ export default function SearchPage() {
                 const result = await searchRecipesNatural(smartQuery, { page: pageNum, page_size: pSize });
                 setRecipes(result.results.recipes);
                 setTotal(result.results.total);
-                setAiAnswer(result.answer);
             } else {
                 const result = await searchRecipes({ ...params, page: pageNum, page_size: pSize });
                 setRecipes(result.recipes);
@@ -69,7 +67,6 @@ export default function SearchPage() {
         if (params.get('reset') === 'true') {
             setIsSmartMode(false);
             setSmartQuery('');
-            setAiAnswer('');
             setRecipes([]);
             setTotal(0);
             setPage(1);
@@ -197,37 +194,7 @@ export default function SearchPage() {
                             Ask AI
                         </Button>
 
-                        {aiAnswer && (
-                            <Box
-                                w="full"
-                                p={6}
-                                bg={useColorModeValue('purple.50', 'whiteAlpha.100')}
-                                borderRadius="xl"
-                                border="1px solid"
-                                borderColor="purple.200"
-                                boxShadow="sm"
-                            >
-                                <HStack mb={2} color="purple.600">
-                                    <Icon viewBox="0 0 24 24" fill="currentColor" boxSize={6}>
-                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z" />
-                                    </Icon>
-                                    <Text fontWeight="bold">AI Suggestion</Text>
-                                </HStack>
-                                <Box fontSize="md" lineHeight="tall">
-                                    <ReactMarkdown components={{
-                                        h1: ({ node, ...props }) => <Heading as="h3" size="md" my={2} {...props} />,
-                                        h2: ({ node, ...props }) => <Heading as="h4" size="sm" my={2} {...props} />,
-                                        p: ({ node, ...props }) => <Text mb={2} {...props} />,
-                                        ul: ({ node, ...props }) => <Box as="ul" ml={4} mb={2} {...props} />,
-                                        ol: ({ node, ...props }) => <Box as="ol" ml={4} mb={2} {...props} />,
-                                        li: ({ node, ...props }) => <Box as="li" mb={1} {...props} />,
-                                        strong: ({ node, ...props }) => <Text as="span" fontWeight="bold" {...props} />,
-                                    }}>
-                                        {aiAnswer}
-                                    </ReactMarkdown>
-                                </Box>
-                            </Box>
-                        )}
+
                     </VStack>
                 </MotionBox>
             ) : (
