@@ -1,0 +1,4880 @@
+Total Rows: 71219
+Unique Ingredients: 4824
+
+--- Top 50 Most Common ---
+salt (to taste): 4779
+oil: 2329
+chopped coriander (dhania): 1856
+chilli powder: 1545
+chopped onion: 1520
+chopped green chillies: 1428
+turmeric powder (haldi): 1366
+sugar: 1337
+lemon juice: 1220
+cumin seeds (jeera): 1053
+chopped garlic (lehsun): 981
+milk: 879
+asafoetida (hing): 857
+chopped tomato: 817
+plain flour (maida): 725
+butter: 681
+ghee: 662
+whole wheat flour (gehun ka atta): 597
+salt: 589
+curd (dahi): 575
+grated processed cheese: 526
+olive oil: 518
+mustard seeds ( rai / sarson): 516
+oil (for deep-frying): 507
+curry leaves (kadi patta): 447
+chopped ginger (adrak): 442
+garam masala: 435
+besan (bengal gram flour): 432
+cornflour: 414
+dry red chilli flakes (paprika): 399
+fresh cream: 397
+powdered sugar: 392
+tomato ketchup: 386
+salt (and to taste): 361
+clove (laung / lavang): 354
+sliced onions: 352
+cardamom (elaichi) powder: 326
+whole wheat flour (gehun ka atta) (for rolling): 315
+oil (for cooking): 313
+chopped capsicum: 309
+ginger-green chilli paste: 305
+grated coconut: 304
+cumin seeds (jeera) powder: 304
+green chilli paste: 300
+cinnamon (dalchini): 289
+grated carrot: 284
+garlic (lehsun) paste: 281
+coriander-cumin seeds (dhania-jeera) powder: 272
+soy sauce: 269
+sesame seeds (til): 267
+
+--- All Ingredients (Name: Count) ---
+salt (to taste): 4779
+oil: 2329
+chopped coriander (dhania): 1856
+chilli powder: 1545
+chopped onion: 1520
+chopped green chillies: 1428
+turmeric powder (haldi): 1366
+sugar: 1337
+lemon juice: 1220
+cumin seeds (jeera): 1053
+chopped garlic (lehsun): 981
+milk: 879
+asafoetida (hing): 857
+chopped tomato: 817
+plain flour (maida): 725
+butter: 681
+ghee: 662
+whole wheat flour (gehun ka atta): 597
+salt: 589
+curd (dahi): 575
+grated processed cheese: 526
+olive oil: 518
+mustard seeds ( rai / sarson): 516
+oil (for deep-frying): 507
+curry leaves (kadi patta): 447
+chopped ginger (adrak): 442
+garam masala: 435
+besan (bengal gram flour): 432
+cornflour: 414
+dry red chilli flakes (paprika): 399
+fresh cream: 397
+powdered sugar: 392
+tomato ketchup: 386
+salt (and to taste): 361
+clove (laung / lavang): 354
+sliced onions: 352
+cardamom (elaichi) powder: 326
+whole wheat flour (gehun ka atta) (for rolling): 315
+oil (for cooking): 313
+chopped capsicum: 309
+ginger-green chilli paste: 305
+grated coconut: 304
+cumin seeds (jeera) powder: 304
+green chilli paste: 300
+cinnamon (dalchini): 289
+grated carrot: 284
+garlic (lehsun) paste: 281
+coriander-cumin seeds (dhania-jeera) powder: 272
+soy sauce: 269
+sesame seeds (til): 267
+chaat masala: 262
+whole dry kashmiri red chilli (broken into pieces): 257
+urad dal (split black lentils): 243
+baking soda: 242
+dried oregano: 233
+coriander (dhania) powder: 218
+chopped spring onion greens: 215
+green chutney: 213
+chopped spinach (palak): 213
+chopped mint leaves (phudina): 211
+boiled and mashed potatoes: 211
+vanilla essence: 210
+ginger-garlic (adrak-lehsun) paste: 201
+bay leaf (tejpatta): 201
+water: 198
+freshly ground black pepper (kalimirch): 194
+oil (for greasing and cooking): 193
+cardamom (elaichi): 192
+honey: 185
+dried mango powder (amchur): 176
+freshly ground black pepper (kalimirch) (to taste): 175
+chopped carrot: 173
+baking powder: 171
+saffron (kesar) strands: 166
+vinegar: 166
+rice flour (chawal ka atta): 162
+boiled green peas: 162
+dried mixed herbs: 162
+oil (for greasing): 161
+ginger (adrak) paste: 161
+semolina (rava / sooji): 157
+coriander (dhania) seeds: 154
+paneer (cottage cheese) cubes: 152
+black peppercorns (kalimirch): 152
+black salt (sanchal): 150
+chana dal (split bengal gram): 150
+garlic (lehsun) cloves: 149
+boiled sweet corn kernels (makai ke dane): 147
+dried fenugreek leaves  (kasuri methi): 147
+salt (and): 145
+shredded cabbage: 142
+nan: 139
+ice-cubes: 138
+carom seeds (ajwain): 135
+chopped spring onions whites: 134
+red chilli sauce: 134
+low fat curds (dahi): 133
+quick cooking oats: 133
+green peas: 132
+melted butter: 131
+grated paneer (cottage cheese): 129
+grated ginger (adrak): 128
+chopped walnuts (akhrot): 126
+fruit salt: 120
+bean sprouts: 119
+soft butter: 118
+sliced capsicum: 116
+chopped parsley: 116
+fennel seeds (saunf): 112
+cinnamon (dalchini) powder: 111
+fenugreek (methi) seeds: 109
+chopped cabbage: 109
+bread (slices): 109
+jowar (white millet) flour: 108
+chopped celery (ajmoda): 105
+crumbled paneer (cottage cheese): 105
+almond (badam) slivers: 104
+ginger (adrak): 101
+coconut milk (nariyal ka doodh): 98
+coconut oil: 97
+capsicum cubes: 96
+condensed milk: 96
+whisked curds (dahi): 95
+plain flour (maida) (for rolling): 95
+mayonnaise: 94
+cocoa powder: 94
+yellow moong dal (split yellow gram): 94
+green chutney (.): 92
+chopped spring onions: 92
+tomato pulp: 89
+chopped fenugreek leaves (methi) (leaves): 89
+poppy seeds (khus-khus): 88
+grated mozzarella cheese: 87
+coconut chutney: 86
+sambhar: 86
+tamarind (imli) pulp: 86
+sea salt (khada namak): 84
+green chilli: 84
+whole dry kashmiri red chilli: 82
+chopped french beans: 81
+schezwan sauce: 81
+nigella seeds (kalonji): 80
+beaten whipped cream: 80
+grated jaggery (gur): 80
+mustard (rai / sarson) powder: 80
+ghee (for cooking): 79
+nutmeg (jaiphal) powder: 79
+toovar (arhar) dal: 78
+chopped basil: 76
+cashew nuts (kaju): 75
+blanched broccoli florets: 75
+rice (chawal): 74
+bajra (black millet) flour: 73
+mint leaves (pudina): 73
+chopped jaggery (gur): 73
+tomato cubes: 71
+ragi (nachni  red millet) flour: 70
+sliced mushrooms (khumbh): 70
+slit green chilli: 69
+brown sugar: 69
+chopped dill leaves: 69
+cauliflower florets: 68
+raisins (kismis): 68
+chopped fenugreek leaves (methi): 67
+coriander (dhania): 67
+vanilla ice cream: 67
+chopped dark chocolate: 66
+tomato: 66
+vanilla extract: 65
+chopped cucumber: 65
+tomato puree: 65
+egg: 64
+low fat milk (99.7% fat-free): 64
+castor sugar: 63
+boiled kabuli chana (white chick peas): 63
+grated garlic (lehsun): 63
+pineapple cubes: 63
+kashmiri red chilli powder: 62
+pistachio slivers: 62
+chopped apple: 62
+chopped almonds (badam): 62
+mustard (rai / sarson) oil: 61
+long grain rice (basmati chawal): 60
+potato cubes: 60
+sliced tomatoes: 60
+bread crumbs: 60
+chopped potatoes: 58
+orange juice: 58
+pav bhaji masala: 57
+carrot juliennes: 56
+butter (for brushing): 56
+lemon rind: 56
+pomegranate (anar): 55
+low fat milk: 54
+orange segments: 54
+onion cubes: 54
+capsicum: 53
+cinnamon (dalchini) (stick): 52
+chopped bananas: 52
+cucumber cubes: 52
+raw peanuts: 52
+broken cashew nut (kaju): 51
+boiled potato cubes: 51
+sugar substitute: 51
+milk powder: 51
+maize flour (makai ka atta): 50
+black cardamom (badi elaichi): 50
+almond (badam): 50
+cream: 50
+tomato slices: 49
+bread crumbs (for rolling): 49
+instant dry yeast: 49
+low fat butter: 49
+green chilli (roughly chopped): 49
+green moong dal (split green gram): 49
+thick curds (dahi): 49
+chopped cashew nut (kaju): 49
+soy flour: 49
+sliced spring onions whites: 48
+masoor (split red lentil) dal: 48
+butter (for cooking): 48
+black sesame seeds (kala til): 47
+oil (for deep frying): 47
+boiled rajma (kidney beans): 47
+sweet corn kernels (makai ke dane): 46
+cheese spread: 46
+chopped pineapple: 46
+hung curds (chakka dahi): 45
+cheese slices: 45
+carrot cubes: 45
+coconut oil (or): 45
+peanut butter: 45
+sev: 44
+apple cubes: 44
+grated bottle gourd (doodhi / lauki): 44
+crushed garlic (lehsun): 43
+melted butter (for brushing): 43
+peppercorns (kalimirch): 42
+salt (to taste restricted salt for health): 42
+crushed peanuts: 42
+iceberg lettuce (torn into pieces): 41
+bread: 41
+roasted chana dal (daria): 41
+chopped pistachios: 40
+chopped coloured capsicum: 40
+chopped spring onions whites (and greens): 40
+garlic (lehsun): 40
+grated cabbage: 40
+soaked and cooked long grain rice (basmati chawal): 39
+butter (for greasing): 39
+sweet chutney: 39
+pizza sauce: 39
+shredded spinach (palak): 39
+dry yeast: 38
+broccoli floret: 38
+onion rings: 38
+white sauce: 38
+mushrooms (khumb): 38
+chopped curry leaves (kadi patta): 37
+grated dry coconut (kopra): 37
+rock salt (sendha namak) (to taste): 37
+chopped strawberries: 37
+paneer (cottage cheese): 36
+blanched and chopped tomatoes: 36
+unsweetened almond milk: 35
+blanched and chopped spinach (palak): 35
+broken wheat (dalia): 35
+roasted and crushed peanuts: 35
+chopped paneer (cottage cheese): 34
+dried ginger powder (sonth): 34
+crushed sweet corn kernels (makai ke dane): 34
+grated onions: 34
+butter (for spreading): 34
+caraway seeds (shahjeera): 33
+lemon (juice): 33
+sliced carrots: 33
+yellow moong dal (split yellow gram) (washed and drained): 33
+grated low fat paneer (cottage cheese): 33
+crushed ice: 32
+vegetable stock: 32
+burger buns: 32
+roasted sesame seeds (til): 32
+chopped dates (khajur): 32
+chopped mushrooms (khumbh): 32
+spinach (palak) puree: 32
+pandi chillies (broken into pieces): 32
+soaked and cooked rice (chawal): 32
+ghee (for greasing): 31
+chopped mixed vegetables: 31
+sliced red capsicum: 31
+lemon wedge: 31
+chocolate chips: 31
+ladi pav: 31
+chopped mint leaves (phudina) (leaves): 31
+chopped cauliflower: 31
+chopped celery (ajmoda) ((ajmoda)): 31
+sesame (til) oil: 30
+oil (for kneading): 30
+boiled noodles: 30
+mashed banana: 30
+roasted peanuts: 30
+crumbled mawa (khoya): 29
+desiccated coconut: 29
+star anise (chakri phool): 28
+roasted and crushed cumin seeds (jeera): 28
+boiled and chopped potatoes: 28
+nylon sev: 28
+sprouted moong (whole green gram): 28
+beaten rice (poha): 28
+brinjal (baingan / eggplant): 28
+chilli powder (for sprinkling): 28
+potato: 28
+chopped raisins (kismis): 28
+crushed ice (for serving): 28
+chopped mango: 27
+red pumpkin (bhopla / kaddu) cubes: 27
+khajur imli ki chutney: 27
+chaat masala (for sprinkling): 27
+thick beaten rice (jada poha): 27
+dosa batter: 27
+cooked macaroni: 27
+lettuce (leaves): 27
+chopped black olives: 27
+basil (leaves): 27
+tabasco sauce: 27
+split mustard seeds (rai na kuria): 26
+red capsicum: 26
+fried onions: 26
+boiled mixed sprouts: 26
+grated cauliflower: 26
+tamarind (imli): 26
+extra virgin olive oil: 26
+mustard (rai / sarson) paste: 26
+whole wheat bread (slices): 26
+rice (chawal) (washed and drained): 26
+chopped mixed nuts: 26
+icing sugar: 26
+green chilli (finely chopped): 26
+crumbled low fat paneer (cottage cheese): 25
+garlic chutney: 25
+jaggery (gur): 25
+maple syrup: 25
+sliced banana: 25
+pineapple juice: 25
+grated beetroot: 25
+sliced and blanched baby corn: 25
+coconut: 25
+chopped jalapenos: 25
+rice noodles: 25
+roti: 24
+mango pulp: 24
+baked beans: 24
+salt (for sprinkling): 24
+grated dark chocolate: 24
+toovar (arhar) dal (washed and drained): 24
+ghee (for deep-frying): 24
+chopped spring onions whites (and): 24
+cooked penne: 24
+cream cheese: 24
+papaya cubes: 24
+chopped spring onions ((whites and greens)): 23
+sliced black olives: 23
+flax seeds: 23
+brinjal (baingan / eggplant) cubes: 23
+chia seeds: 23
+hot dog rolls: 23
+melted butter (for greasing): 23
+green chilli (slit): 23
+grated cucumber: 23
+onion: 23
+diagonally cut and blanched baby corn: 22
+low fat paneer (cottage cheese) cubes: 22
+boiled and crushed green peas: 22
+custard powder: 22
+oil (for brushing): 22
+orange squash: 22
+soy granules: 22
+shredded red cabbage: 22
+chopped and boiled mixed vegetables: 22
+grated radish (mooli): 22
+green chilli (chopped): 21
+whole wheat bread: 21
+rajgira (amaranth) flour: 21
+sliced strawberries: 21
+cooked spaghetti: 21
+carrot: 21
+lettuce (torn into pieces): 21
+rajma (kidney beans): 21
+chopped red pumpkin (bhopla / kaddu): 21
+pear cubes: 21
+cream cracker biscuit: 21
+crushed black pepper (kalimirch): 21
+lettuce: 21
+watermelon (tarbuj) cubes: 21
+sea salt (khada namak) (to taste): 20
+cherry tomato halves: 20
+finely chopped coriander: 20
+diced mozzarella cheese: 20
+oil (for frying): 20
+black grapes: 20
+cucumber strips: 20
+diagonally cut and blanched french beans: 20
+chopped canned pineapple: 20
+curd (dahi) (whisked): 20
+tomato (ketchup): 20
+dark chocolate: 20
+shredded lettuce: 20
+pandi chillies: 19
+chopped and boiled carrots: 19
+boiled peeled and grated potatoes: 19
+soy chunks (nuggets): 19
+boiled and mashed green peas: 19
+banana: 19
+unbeaten whipped cream: 19
+brown rice: 19
+chopped lemon grass (hare chai ki patti): 19
+urad dal (split black lentil) flour: 19
+muskmelon (kharbooja) cubes: 19
+split fenugreek seeds (methi na kuria): 18
+ginger (adrak) juice: 18
+chilli paste: 18
+grated potatoes: 18
+peanut oil: 18
+walnuts (akhrot): 18
+dry red chilli flakes (paprika) (for sprinkling): 18
+chopped coriander (dhania) (for the garnish): 18
+oats flour: 18
+jowar (white millet) flour (for rolling): 18
+chopped raw mango: 18
+boiled and crushed sweet corn kernels: 18
+mango cubes: 17
+rotis: 17
+parboiled rice (ukda chawal): 17
+white pepper powder: 17
+chopped red capsicum: 17
+sunflower seeds (surajmukhi ke beej): 17
+boiled sprouted moong (whole green gram): 17
+idli batter: 17
+baby potatoes: 17
+coloured capsicum cubes: 17
+samosa patti: 17
+fennel seeds (saunf) powder: 17
+sliced cucumber: 17
+balsamic vinegar: 17
+toasted bread slice: 17
+cooked rice: 17
+chopped bottle gourd (doodhi / lauki): 17
+masoor (split red lentil) dal (washed and drained): 17
+clear vegetable stock: 17
+boiled hakka noodles: 17
+coconut water (nariyal ka pani): 17
+curry powder: 17
+rose syrup: 17
+papdi (chaat): 17
+cumin seeds (jeera) powder (for sprinkling): 17
+shredded iceberg lettuce: 16
+kabuli chana (white chick peas): 16
+chilli garlic sauce: 16
+sliced apple: 16
+soda: 16
+olive oil (for brushing): 16
+mint sprig: 16
+moong (whole green gram): 16
+soaked and cooked brown rice: 16
+coffee powder: 16
+plain flour (maida) (for dusting): 16
+sliced zucchini: 16
+lemon slices: 16
+hung low fat curds (chakka dahi): 16
+potato wafers: 16
+lemon: 16
+nacho chips: 15
+melon seeds (charmagaz): 15
+chopped yellow capsicum: 15
+cow's milk: 15
+boiled potato: 15
+capsicum strips: 15
+grated mawa (khoya): 15
+strawberry: 15
+apple cubes ((unpeeled)): 15
+basil: 15
+sliced yellow capsicum: 15
+whole grain mustard paste: 15
+cooked fusilli: 15
+chopped zucchini: 15
+meetha chutney: 15
+red capscium cubes: 15
+sweet lime (mosambi) segments: 15
+puffed rice (kurmura): 15
+arrowroot (paniphal) flour: 15
+toasted whole wheat bread slices: 15
+chole masala: 15
+sugar syrup: 15
+chillies in vinegar: 15
+rose essence: 15
+milk (for brushing): 15
+pumpkin seeds: 14
+peanut oil (for cooking): 14
+onion slice: 14
+crushed coriander (dhania) seeds: 14
+boiled cauliflower florets: 14
+rice flour (chawal ka atta) (for rolling): 14
+cooked rice (chawal): 14
+red: 14
+finely chopped onions: 14
+chopped muskmelon (kharbooja): 14
+parsley: 14
+apple: 14
+curd (dahi) (beaten): 14
+sliced baby corn: 14
+green chutney (for serving): 14
+garlic (lehsun) powder: 14
+chopped basil (leaves): 14
+thin crust pizza base: 14
+powdered flaxseeds (alsi): 14
+sugar ((optional)): 14
+lemonade: 14
+ghee (for greasing and cooking): 14
+chopped green garlic (hara lehsun): 14
+sambar: 13
+sliced spring onions: 13
+deseeded dates (khajur): 13
+frozen blueberry: 13
+chopped and boiled french beans: 13
+pomegranate seeds (anardana): 13
+hot and sweet chilli sauce: 13
+diagonally cut french beans: 13
+bottle gourd (doodhi / lauki) cubes: 13
+grated apples: 13
+greek yoghurt: 13
+chopped brinjals (baingan / eggplant): 13
+blanched spinach (palak): 13
+healthy green chutney: 13
+salt (or as advised by doctor / dietitian): 13
+ghee (for smearing): 13
+basil (torn into pieces): 13
+chopped broccoli: 13
+rolled oats: 13
+sliced coloured capsicum: 13
+nutella hazelnut chocolate spread: 13
+chocolate sauce: 13
+buckwheat (kuttu or kutti no daro): 13
+finely chopped green chillies: 13
+buttermilk: 13
+citric acid (nimbu ka phool): 13
+carrot strip: 13
+crushed papdi: 13
+red chilli garlic paste: 13
+lemongrass (hare chai ki patti): 13
+alfalfa sprouts: 12
+potato fingers: 12
+pickle: 12
+crushed green peas: 12
+fried noodles: 12
+chopped beetroot: 12
+roasted pumpkin seeds: 12
+crushed digestive biscuit: 12
+low fat milk ((99.7% fat-free)): 12
+shallots (madras onions): 12
+chopped avocado: 12
+sliced baguette: 12
+onion (chopped): 12
+whisked low fat curds: 12
+garlic bread: 12
+fresh red chilli: 12
+boiled mixed vegetables: 12
+sliced potato: 12
+dried thyme: 12
+rose water: 12
+sour curds (khatta dahi): 12
+butter (for spreading and brushing): 12
+sugar (optional): 12
+tamarind (imli) water: 12
+unsweetened cocoa powder: 12
+pistachios: 12
+cheese cubes: 12
+blanched carrot: 12
+round red chillies (boriya mirch): 12
+guava cubes: 12
+tofu (bean curd/ soya paneer) cubes: 11
+instant coffee powder: 11
+powdered almonds (badam): 11
+sour cream: 11
+ice: 11
+beetroot cubes: 11
+apple cubes ((unpeeled and deseeded)): 11
+strawberry crush: 11
+lavash: 11
+ice (cubes): 11
+coconut milk (nariyal ka doodh) ((nariyal ka doodh)): 11
+aniseed (vilayati saunf): 11
+chopped green chawli (amaranth) leaves: 11
+urad dal (split black lentils) (washed and drained): 11
+maggi noodles: 11
+maggi tastemaker: 11
+hakka noodles: 11
+muesli: 11
+rum: 11
+chana dal (split bengal gram) (washed and drained): 11
+soaked kabuli chana (white chick peas): 11
+chapatis: 11
+grated sweet corn cob: 11
+low fat paneer (cottage cheese): 11
+orange rind: 11
+basic vegetable stock: 11
+long grain rice (basmati chawal) (washed and drained): 11
+cucumber slices: 11
+soy oil: 11
+masoor (whole red lentil): 11
+sliced brinjals (baingan / eggplant): 10
+yellow capsicum: 10
+chopped ladies finger (bhindi): 10
+mushroom (khumbh) cubes: 10
+chopped black seedless dates: 10
+low fat cream: 10
+sea salt (khada namak) (for sprinkling): 10
+crumbled feta cheese: 10
+bajra (black millet) flour (for rolling): 10
+fresh tomato pulp: 10
+blanched and chopped spinach (palak) ((palak)): 10
+chopped orange: 10
+banana cubes: 10
+chironji nuts (charoli): 10
+sliced garlic (lehsun): 10
+diagonally cut carrot: 10
+zucchini cubes: 10
+tea powder (chai ki patti): 10
+cream style corn: 10
+olive oil (or): 10
+mixed sprouts: 10
+capsicum rings: 10
+powdered cashew nut (kaju): 10
+boiled chawli (cow pea / lobhia): 10
+cooked whole wheat pasta: 10
+soaked falooda seeds (subza): 10
+low fat curds (dahi) (beaten): 10
+wheat (gehun): 10
+papad: 10
+boiled and crushed rajma (kidney bean): 9
+grated raw mango: 9
+chaat masala (to taste): 9
+green chilli pickle: 9
+cinnamon (dalchini) (sticks): 9
+olive oil (for drizzling): 9
+fried masala chana dal: 9
+pomegranate (anardana) powder: 9
+food colour: 9
+dried figs (anjeer): 9
+chopped papaya: 9
+rock salt (sendha namak): 9
+grapes: 9
+chopped apple ((unpeeled)): 9
+cinnamon (dalchini) (powder): 9
+chopped peaches: 9
+olive oil (or oil): 9
+chopped baby corn: 9
+baguette: 9
+chopped capsicum ((red  yellow and green)): 9
+buckwheat (kuttu or kutti no daro) flour: 9
+sweet chilli sauce: 9
+dried oregano (for sprinkling): 9
+dried rosemary: 9
+broken wheat (dalia) (washed and drained): 9
+butter (for greasing and cooking): 9
+cooked farfalle: 9
+eggless mayonnaise: 9
+tender coconut: 9
+spinach (palak) (torn into pieces): 9
+sun-dried tomatoes: 9
+bread slices: 9
+long grain rice (basmati chawal) (soaked for 15 minutes and drained): 9
+garlic (lehsun) cloves (finely chopped): 9
+boiled kala chana (brown chick peas): 9
+tarts: 9
+celery (ajmoda): 9
+orange crush: 9
+fried cashew nut (kaju): 9
+onion paste: 9
+rose petals: 9
+chopped mixed fruits: 9
+mashed strawberries: 9
+chopped watermelon (tarbuj): 9
+nacho chips or tortilla chips: 9
+sliced green chillies: 9
+chopped coconut: 9
+sliced tendli (ivy gourd): 9
+spinach (palak) (leaves): 9
+ladies finger (bhindi): 8
+iceberg lettuce: 8
+orange marmalade: 8
+organic honey: 8
+cornflour (for rolling): 8
+crushed fennel seeds (saunf): 8
+vanilla extract (or): 8
+ginger (adrak) juliennes: 8
+dried apricots (khumani / jardalu): 8
+chopped asparagus: 8
+boiled and crushed sweet corn kernels ((makai ke dane)): 8
+avocado cubes: 8
+olive oil (for greasing): 8
+blanched baby corn: 8
+1/2 tsp garam masala: 8
+red curry paste: 8
+mawa (khoya): 8
+edible silver leaf (vark): 8
+bread crumbs (for coating): 8
+coriander (dhania) (seeds): 8
+parathas: 8
+whole bajra (black millet): 8
+cooked fettuccine: 8
+cooked long grained rice: 8
+dried basil: 8
+sliced pineapple: 8
+barley (jau): 8
+bottle gourd (doodhi / lauki): 8
+oil (or): 8
+garlic (lehsun) cloves (crushed): 8
+biryani masala: 8
+cherries: 8
+coconut (chutney): 8
+grated lemon rind: 8
+cornflour (dissolved in 1/2 cup): 8
+blanched cauliflower: 8
+paneer (cottage cheese) (cubes): 8
+blanched and diagonally cut carrot: 8
+roasted and powdered peanuts: 8
+spring onion greens: 8
+green moong dal (split green gram) (washed and drained): 8
+idlis: 8
+mozzarella cheese: 8
+chilli-garlic chutney: 8
+red colour: 8
+desiccated coconut (for rolling): 8
+cornflour (dissolved in 2 tbsp): 8
+roasted papad: 8
+sago (sabudana): 8
+boiled and peeled potato slices: 8
+jowar (white millet): 8
+kadhi: 8
+vanilla ice-cream: 8
+orange segments ((deseeded)): 8
+tutti-frutti: 8
+sanwa millet (sama): 8
+ragi (nachni  red millet) flour (for rolling): 8
+grated raw papaya: 8
+sliced paneer (cottage cheese): 8
+boiled hara chana (dried green peas): 8
+raw mango cubes: 7
+raw mango: 7
+chopped coriander (dhania) (optional): 7
+boiled and peeled baby potatoes: 7
+grated tomatoes: 7
+oil (for greasing and tempering): 7
+cornflour (dissolved in 1/4 cup): 7
+watermelon (tarbuj) balls: 7
+dates (khajur): 7
+red pumpkin (bhopla / kaddu): 7
+cherry tomatoes: 7
+chopped spinach (palak) (washed and drained): 7
+grapefruit segments: 7
+baby spinach: 7
+roasted sunflower seeds (surajmukhi ke beej): 7
+garlic (lehsun) cloves (chopped): 7
+melted butter (for greasing and brushing): 7
+dried mixed herbs (for sprinkling): 7
+grated parmesan cheese: 7
+brown bread (slices): 7
+worcestershire sauce: 7
+teekha chutney: 7
+chopped green tomatoes: 7
+saffron colour: 7
+french fries: 7
+quinoa flour: 7
+plain flour (maida) (for sprinkling): 7
+chopped and blanched broccoli: 7
+soaked and chopped sun dried tomatoes: 7
+peanut oil (for greasing and cooking): 7
+black peppercorns (kalimirch) (powder): 7
+cabbage cubes: 7
+chopped green apple: 7
+sprouted matki (moath beans): 7
+white chocolate: 7
+chopped red chilli: 7
+cardamom (elaichi) ((elaichi)): 7
+orange segments (cut into halves): 7
+wheat germ: 7
+cucumber: 7
+wheat bran: 7
+cheese slices (torn into pieces): 7
+fresh red chilli (broken into pieces): 7
+oil (for kneading and cooking): 7
+cabbage: 7
+chocolate ice cream: 7
+melted dark chocolate: 7
+orange: 7
+dark chocolate cubes: 7
+steamed rice (chawal): 7
+yellow capsicum cubes: 7
+mustard (rai/ sarson) sauce: 7
+low fat milk (99.7% fat free): 7
+whole urad (whole black lentil): 7
+malvani masala: 7
+melted butter (for cooking): 7
+chopped white chocolate: 7
+digestive biscuit: 7
+capsicum juliennes: 7
+cherry tomatoes (cut into halves): 7
+garlic (lehsun) cloves (peeled): 7
+ginger (adrak) (roughly chopped): 7
+chopped radish leaves (mooli ke patte): 7
+dill leaves (shepu / suva bhaji): 7
+mixed fruit jam: 7
+lotus seeds (makhana): 7
+lemon essence: 7
+chopped ridge gourd (turai): 7
+hoisin sauce: 6
+avocado: 6
+biryani masala powder: 6
+kitchen king masala: 6
+potato slices: 6
+diagonally cut baby corn: 6
+chopped amla (indian gooseberries): 6
+blanched and chopped pistachios: 6
+cornflour (dissolved in 1 tbsp): 6
+feta cheese cubes: 6
+saffron (kesar) strands (strands): 6
+pista barfi: 6
+yellow colour: 6
+brinjal (baingan / eggplant) slices: 6
+bhavnagri chillies: 6
+oats flour (refer handy tip): 6
+purple yam (kand): 6
+chopped low fat paneer( cottage cheese): 6
+butter ((room temperature)): 6
+rice: 6
+rajma (kidney beans) (soaked overnight): 6
+processed cheese cubes: 6
+boiled beetroot cubes: 6
+salt (and pepper to taste): 6
+freshly ground black pepper (kalimirch) (powder): 6
+onion (finely chopped): 6
+piping bag: 6
+cooked quinoa: 6
+chopped black grapes: 6
+tomato (slices): 6
+oil (for greasing and deep-frying): 6
+mozzarella cheese cube: 6
+red chilli paste: 6
+french beans: 6
+dates (khajur) (deseeded): 6
+burrata cheese: 6
+refried beans: 6
+coriander (dhania) seeds (powder): 6
+cheese slices (broken into pieces): 6
+crushed panch phoron: 6
+freshly ground black pepper (kalimirch) (powder to taste): 6
+baby corn: 6
+long grain rice (basmati chawal) (soaked for 30 minutes and drained): 6
+chopped olives: 6
+chopped spring onion whites: 6
+chopped grapes: 6
+salad oil: 6
+spinach (palak): 6
+whipped cream: 6
+knife: 6
+chopped milk chocolate: 6
+bread sticks: 6
+tea bags: 6
+coarse whole wheat flour (jada gehun ka atta): 6
+falooda seeds (sabja): 6
+honey (optional): 6
+quinoa (washed and drained): 6
+soft drink: 6
+melted butter (for greasing and cooking): 6
+green chilli sauce: 6
+mixed vegetables: 6
+cucumber (slices): 6
+fenugreek (methi) leaves: 6
+tofu: 6
+rotlis: 6
+chopped yam (suran): 6
+chopped kiwi: 6
+chopped cluster beans (gavarfali): 6
+banana leaves (kele ka patta): 6
+iceberg lettuce (torn into small pieces): 6
+blanched mushrooms (khumbh): 6
+kodri (varagu): 6
+ghee (for brushing): 6
+chopped coriander (dhania) (for garnishing): 6
+kokum: 6
+mango puree: 6
+oil (for shallow frying): 6
+strawberry puree: 6
+chinese 5 spice powder: 5
+cooked chinese rice: 5
+khakhra: 5
+sliced avocado: 5
+almond essence: 5
+green chilli (diagonally cut): 5
+potato wedges: 5
+chopped coriander (dhaania) stalks: 5
+coriander (dhania) (powder): 5
+onion (sliced): 5
+1 tsp garam masala: 5
+chopped dried figs (anjeer): 5
+apple wedge: 5
+grated apples ((unpeeled)): 5
+black olives: 5
+olives: 5
+dried rose petals: 5
+mashed avocado: 5
+chopped pear: 5
+roasted flaxseeds (alsi): 5
+sliced olives: 5
+garlic (lehsun) cloves ((lehsun)): 5
+nutmeg (jaiphal): 5
+whole bajra (black millet) (soaked for 8 hours and drained): 5
+boiled safed vatana (dried white peas): 5
+chopped and boiled mixed vegetables (( french beans  carrot and green peas)): 5
+honey (for drizzling): 5
+crushed mixed nut chikki: 5
+barley (jau) (washed and drained): 5
+sliced radish (mooli): 5
+mustard (rai / sarson) powder (readily available in the market): 5
+chopped coriander (dhania) (for garnish): 5
+boiled peeled and chopped beetroot: 5
+roasted and chopped salted peanuts: 5
+blanched cauliflower (florets): 5
+pesto sauce: 5
+paratha: 5
+coconut oil (for cooking): 5
+black salt (sanchal) (optional): 5
+chopped tender coconut meat: 5
+boondi: 5
+white butter: 5
+schezuan sauce: 5
+parboiled carrot cubes: 5
+maize kernels (dry corn kernels): 5
+rum ((optional)): 5
+brown bread: 5
+chopped and roasted almonds (badam): 5
+garlic (lehsun) (finely chopped): 5
+cashew nut (kaju) halves: 5
+thick white sauce: 5
+chopped cauliflower greens: 5
+black peppercorns (kalimirch) (to taste): 5
+chawli (cow pea  lobhia): 5
+olive oil (for greasing and cooking): 5
+peri peri masala: 5
+coloured capsicum strips: 5
+pesto: 5
+corn flakes: 5
+finely chopped garlic: 5
+chopped and boiled mixed vegetables ((french beans  carrots and green peas)): 5
+low fat curds: 5
+low calorie mayonnaise: 5
+cauliflower: 5
+sliced almonds (badam): 5
+crushed marie biscuit: 5
+eggless chocolate sponge cake: 5
+chocolate: 5
+chola dal (split cow peas): 5
+kabuli chana (white chick peas) (soaked overnight and drained): 5
+butter (for topping): 5
+rice semolina (idli rawa): 5
+maize flour (makai ka atta) (for rolling): 5
+baked sev: 5
+spring onions: 5
+sambar powder: 5
+feta cheese: 5
+red wine: 5
+wonton wrapper: 5
+curds (dahi): 5
+steamed rice: 5
+mace (javantri): 5
+salt (as advised by doctor / dietitian): 5
+turntable: 5
+egg white: 5
+chocolate truffle: 5
+curd (dahi) ((dahi)): 5
+mango juice: 5
+tulsi leaves (indian basil): 5
+strawberry (pressed lightly and cut into halves vertically): 5
+mushrooms (khumb) (cut into quarters): 5
+sprouted vaal (field beans/ butter beans): 5
+dry coconut (kopra): 5
+finely chopped tomatoes: 5
+ghee (or): 5
+boiled: 5
+mint chutney: 5
+pita bread: 5
+kit kat chocolate fingers: 5
+vermicelli (semiya): 5
+ragi (nachni / red millet): 5
+boiled sprouted matki (moath beans): 5
+parboiled sprouted moong (whole green gram): 5
+garlic (lehsun) cloves (roughly chopped): 5
+crushed oreo biscuit: 5
+powdered oats: 5
+tandoori masala: 5
+boiled and mashed sweet potato (shakarkand): 5
+cooked kodri (varagu): 4
+1/4 tsp garam masala: 4
+sweet potato (shakarkand): 4
+roasted almonds (badam): 4
+black salt (sanchal) (for sprinkling): 4
+boiled baby potato halves: 4
+taco shells: 4
+crushed papad: 4
+sweet and sour sauce: 4
+plain flour (maida) (dissolved in 3/4 cup): 4
+tomato chutney: 4
+parboiled hakka noodles: 4
+french beans (cut into thin strips): 4
+jain tomato ketchup: 4
+boiled masoor (whole red lentil): 4
+sandesh: 4
+chopped chickoo: 4
+skimmed milk powder: 4
+garden cress seeds: 4
+low fat butter (for brushing): 4
+green apple cubes: 4
+steel cut oats: 4
+sliced spring onion greens: 4
+lemon (wedges): 4
+blanched almonds (badam): 4
+kewra essence: 4
+grated red pumpkin (bhopla/ kaddu): 4
+salt (to taste use less salt for blood pressure control.): 4
+butter (for greasing and brushing): 4
+chopped chives: 4
+chopped thyme: 4
+par-boiled potatoes: 4
+salt (and for sprinkling): 4
+surti papadi (fresh vaal): 4
+grated mozzarella cheese (or): 4
+soaked chana dal (split bengal gram): 4
+chopped apricots (kummani / jardalu): 4
+digestive biscuit (crushed): 4
+cashew nuts (kaju) (broken into pieces): 4
+olive oil (for kneading): 4
+grated parmesan cheese (or): 4
+sliced jalapenos: 4
+tortillas: 4
+extra virgin olive oil (or): 4
+thin pizza base: 4
+oil (for brushing and cooking): 4
+oreo biscuit: 4
+marie biscuit: 4
+chocolate biscuit: 4
+coconut oil (or any other refined): 4
+boiled black beans: 4
+iceberg lettuce (leaves): 4
+chopped black raisins: 4
+black raspberry: 4
+blueberry: 4
+bread (torn into pieces): 4
+bread (slices  lightly buttered): 4
+blanched baby corn (cut diagonally): 4
+canned peaches: 4
+red cabbage: 4
+broccoli floret (blanched): 4
+vegetarian seasoning cube: 4
+butter (softened): 4
+sweet corn cob: 4
+plain flour (maida) (for rolling and dusting): 4
+gems: 4
+crepes: 4
+cardamom (elaichi) (powder): 4
+almond (badam) (slivers): 4
+chopped  spring onions whites and greens: 4
+black dates (kala khajur): 4
+boiled mixed sprouts ((moong  matki  chana etc.)): 4
+black salt (sanchal) (to taste): 4
+boiled rajma (kidney beans) (lightly mashed): 4
+white wine: 4
+herb bread: 4
+sandwich masala: 4
+mini pizza base: 4
+sliced capsicum ((red  yellow and green)): 4
+oil (for shallow-frying): 4
+green moong dal (split green gram) (with skin): 4
+sliced ginger (adrak): 4
+schezuan peppers (triphal): 4
+chopped spring onion greens (for the garnish): 4
+drinking chocolate: 4
+black raisins: 4
+mixed fruits: 4
+puri (chaat): 4
+coloured vermicelli: 4
+eggless chocolate sponge cake ((7?)): 4
+corn chips: 4
+sweet lime (mosambi): 4
+kiwi slices: 4
+coconut meat (nariyal ki malai): 4
+coconut cream: 4
+boiled flat noodles: 4
+tofu (bean curd/ soya paneer) cubes (or): 4
+boiled sweet corn kernels (makai ke dane) (lightly crushed): 4
+sliced dry coconut (kopra): 4
+tomato pulp (refer handy tip): 4
+chopped celery (ajmoda) (stalks): 4
+chopped lettuce: 4
+low fat butter (for greasing): 4
+malgapodi: 4
+custard apple (sitaphal) pulp: 4
+masala peanuts: 4
+soaked safed vatana (dried white peas): 4
+urad dal (split black lentils) (soaked for 2 hours and drained): 4
+rice (chawal) (soaked for 15 minutes and drained): 4
+goda masala: 4
+sliced dates (khajur): 4
+vaal dal (split field beans/ split butter beans): 4
+crumbled fresh yeast: 4
+cashew barfi: 4
+naan: 4
+agar-agar: 4
+canned pineapple syrup: 4
+soaked falooda sev: 4
+peanut curd chutney: 4
+chilkewali urad dal (spit black gram with skin): 4
+surti papdi seeds (fresh vaal seeds): 4
+sliced mixed fruits: 4
+sliced peaches: 4
+crushed corn flakes: 4
+fresh oregano: 4
+guava juice: 4
+khichdi: 4
+fresh green garlic (hara lehsun): 4
+raita: 4
+green chilli (slit lengthwise): 4
+baby potatoes (peeled): 4
+ponk / ponkh (hurda): 4
+baby spinach (torn into pieces): 4
+rocket leaves (arugula) (torn into pieces): 4
+blanched asparagus: 4
+salt (to taste  optional): 4
+grated orange rind: 4
+vegetable crudités: 4
+green garlic chutney: 4
+freshly ground black pepper (kalimirch) (for sprinkling): 4
+butter naan: 4
+boiled peeled and mashed raw banana: 4
+roasted chana: 4
+kale (leaves  torn into pieces): 4
+unsalted butter: 4
+crushed kit kat chocolate fingers: 4
+semi dried kokum: 4
+sesame seeds (til) (for rolling): 4
+coriander (dhania) stalks: 4
+onion (cut into 25 mm (1) cubes): 4
+capsicum (cut into 25 mm (1) cubes): 4
+charcoal: 4
+spring onions (for garnish): 4
+crushed mangodi: 4
+clove (laung / lavang) (of): 4
+gulkand: 4
+whole wheat vermicelli (semiya): 4
+yellow moong dal (split yellow gram) (soaked for 1 hour and drained): 4
+broccoli floret (parboiled): 4
+chopped radish (mooli): 4
+radish (mooli): 4
+blanched and sliced mushrooms (khumbh): 4
+powdered pistachios: 4
+capsicum cubes ((red  yellow and green)): 4
+baby corn cubes: 4
+peach cubes: 4
+diagonally cut zucchini: 4
+chopped apple (unpeeled): 4
+red capsicum strips: 4
+coconut milk powder: 4
+crumbled tofu (bean curd/ soya paneer): 4
+grated zucchini ((unpeeled)): 4
+fenugreek seeds (methi) powder: 3
+peeled and sliced almonds (badam): 3
+mango: 3
+sliced ladies finger (bhindi): 3
+coconut oil (or oil): 3
+sugarcane juice: 3
+brandy: 3
+powdered walnuts (akhrot): 3
+masoor (whole red lentil) (washed and drained): 3
+onion garlic masala powder: 3
+biscuit crumbs: 3
+coconut oil (for greasing): 3
+oil (to grease): 3
+white stock: 3
+pak choi: 3
+cooked whole wheat noodles: 3
+boiled sweet potato (shakarkand) cubes: 3
+plain flour (maida) (for coating): 3
+chilli garlic chutney: 3
+sweet chutney (khajur imli ki chutney): 3
+chopped iceberg lettuce: 3
+grated processed cheese (for sprinkling): 3
+long grain rice (basmati chawal) (soaked and drained): 3
+chaat masala (to sprinkle): 3
+panch phoron: 3
+carrot (cut into thin strips): 3
+amla (indian gooseberries): 3
+cashew nut (kaju) paste: 3
+slaked lime: 3
+saffron (kesar) strands (dissolved in 2 tsp of): 3
+apple cider vinegar: 3
+coconut stew: 3
+cinnamon (dalchini) powder (to taste): 3
+jelly cubes: 3
+vanilla cream: 3
+apple juice: 3
+milk (99.7% fat-free): 3
+boiled and peeled colocasia (arbi) roundels: 3
+baguette (slices): 3
+baby corn (cut diagonally): 3
+sliced beetroot: 3
+ghee (for deep frying): 3
+wasabi sauce: 3
+sliced mozzarella cheese: 3
+tahini paste: 3
+whole wheat flour (gehun ka atta) (for dusting): 3
+onion (roughly chopped): 3
+almond (badam) flakes: 3
+badam barfi: 3
+fenugreek (methi) leaves (chopped): 3
+dried ginger (adrak) (powder): 3
+sweet boondi: 3
+rabdi: 3
+crushed quick cooking rolled oats: 3
+peanut oil (for greasing): 3
+bread (slice): 3
+dry garlic chutney: 3
+soaked soy granules: 3
+chopped figs (anjeer): 3
+chopped: 3
+crumbled eggless vanilla sponge cake: 3
+chopped raw peanuts: 3
+homemade peanut butter: 3
+banana (slices): 3
+grated milk chocolate: 3
+butter (or): 3
+chopped spring onions ((with the greens)): 3
+sliced red chillies: 3
+boiled rangoon na vaal (broad field beans): 3
+boiled peeled and grated beetroot: 3
+beetroot: 3
+brown rice (soaked for 30 minutes and drained): 3
+thick puffed rice (kurmura): 3
+roasted and crushed bikaneri papad: 3
+bhaji: 3
+fried green chilli: 3
+low fat milk (99.9% fat-free): 3
+powdered peanuts: 3
+ginger (adrak) (chopped): 3
+salted peanuts: 3
+toovar (arhar) dal (soaked for 30 minutes and drained): 3
+cumin seeds (jeera) (powder): 3
+chopped black jamun: 3
+plain flour (maida) (for dusting and rolling): 3
+pinenuts (chilgoza): 3
+bread (slices  torn into pieces): 3
+slit green chilli (chopped): 3
+crushed walnuts (akhrot): 3
+fresh garlic chutney: 3
+chinese white sauce: 3
+chopped celery (ajmoda) (optional): 3
+zucchini (slices  blanched): 3
+boiled rice noodles: 3
+soaked and cooked toovar (arhar) dal: 3
+crushed nacho chips or tortilla chips: 3
+flour tortillas: 3
+tomato salsa: 3
+cabbage (leaves): 3
+fried bread croutons: 3
+sugar ((approx.)): 3
+chopped candied peel: 3
+kala chana (brown chick peas): 3
+curry leaves (kadi patta) (roughly chopped): 3
+unsweetened protein powder: 3
+black grapes (cut into halves): 3
+chopped long beans (chawli bhaji): 3
+brun bread (pieces): 3
+chopped dry kashmiri red chillies: 3
+melba toast: 3
+chopped and boiled mixed vegetables ((french beans  carrot and green peas)): 3
+raspberry jam: 3
+chopped baby fenugreek leaves (methi): 3
+french beans (cut diagonally): 3
+turmeric powder (haldi) ((haldi)): 3
+tomato (chopped): 3
+green moong dal (split green gram) (soaked for 2 hours and drained): 3
+sliced and blanched carrots: 3
+finely chopped spring onions whites and greens: 3
+chilli oil: 3
+soaked and cooked rice (chawal) (refer handy tip): 3
+agar-agar ((china grass)): 3
+marshmallow: 3
+crumbled chocolate sponge cake: 3
+powdered sugar (for sprinkling): 3
+chocolate vermicelli: 3
+red garlic chutney: 3
+samosas: 3
+sliced apple ((unpeeled)): 3
+khus syrup: 3
+kewra water: 3
+blanched and sliced almonds: 3
+spring onions (chopped): 3
+chopped coriander (dhania) (garnish): 3
+chopped colocasia leaves (arbi ke patte): 3
+oil (mixed with 1 tablespoon): 3
+coriander green garlic chutney: 3
+garlic (lehsun) (chopped): 3
+par boiled and grated potatoes: 3
+oil (for grilling): 3
+chopped zucchini ((unpeeled)): 3
+salsa: 3
+cream (cracker biscuits): 3
+chopped green chillies ((optional)): 3
+monaco biscuit: 3
+macaroni: 3
+arborio rice: 3
+canned pineapple cubes: 3
+salt (and freshly ground): 3
+low fat milk (99.7 % fat-free): 3
+thick beaten rice (jada poha) (washed and drained): 3
+sliced spring onions ((whites and greens)): 3
+cucumber cubes ((unpeeled)): 3
+whole wheat flour (gehun ka atta) (sieved): 3
+nutritious green chutney: 3
+curd (dahi) (preferably made with cow?s): 3
+dabeli masala: 3
+lehsun ki chutney: 3
+teekha pudina chutney: 3
+yellow moong dal (split yellow gram) (soaked for 2 hours and drained): 3
+rajma (kidney beans) (soaked overnight and drained): 3
+green paste: 3
+chopped dried cranberries: 3
+butter paper: 3
+chopped agar-agar: 3
+masala milk powder: 3
+low-fat cream cheese: 3
+garlic-ginger-green chilli paste: 3
+milagai podi: 3
+cake board: 3
+soaked and cooked chana dal (split bengal gram): 3
+grated low fat mawa (khoya): 3
+muskmelon (kharbooja): 3
+boiled eggs: 3
+agar-agar ((china grass)  blended into a smooth powder): 3
+cloves (laung / lavang) powder: 3
+white cumin seeds (jeera): 3
+veg gelatin powder: 3
+melted butter (or): 3
+brinjal (baingan / eggplant) (slices): 3
+onion (peeled): 3
+peach: 3
+hung curds (chakka dahi) (refer handy tip): 3
+raw peanuts (roasted and powdered): 3
+grated yam: 3
+coriander (dhania) (leaves): 3
+boiled and peeled baby potatoes (cut into halves): 3
+crushed flaxseeds (alsi): 3
+salt (and freshly ground to taste): 3
+basil (leaves  torn into pieces): 3
+red wine vinegar: 3
+chopped guava: 3
+jelly crystals: 3
+powdered sugar ((optional)): 3
+lettuce (torn): 3
+pear: 3
+sliced mangoes: 3
+tang: 3
+kala chana: 3
+malgapodi powder: 3
+chopped and blanched french beans: 3
+glace cherry: 3
+ginger (adrak) roundels: 3
+edible gum (gond): 3
+galangal (thai ginger): 3
+green chutney (to serve): 3
+cumin seeds (jeera) (crushed): 3
+mint and coriander chutney: 3
+quick cooking oats (for coating): 3
+whole wheat burger buns: 3
+sliced red pumpkin (bhopla / kaddu): 3
+zucchini slices: 3
+puran poli: 3
+chunda: 3
+cornflour (for coating): 3
+oil (for rolling): 3
+long grain rice (basmati chawal) (soaked for 10 minutes and drained): 3
+spinach (palak) puree (refer handy tip): 3
+chopped dill leaves ((shepu / suva bhaji)): 3
+brown rice flour (for rolling): 3
+cornflour (dissolved in 2 tbsp cold): 3
+beaten rice (poha) (washed and drained): 3
+pineapple: 3
+garlic (lehsun) (grated): 3
+fresh toovar: 3
+multigrain bread: 3
+sukhi lehsun ki chutney: 3
+whole wheat chapatis: 3
+dry dates (kharek): 3
+garlic (lehsun) (crushed): 3
+chopped spring onions (with the greens): 3
+pasta: 3
+amaranth (rajgira) seeds: 3
+moong (whole green gram) (washed and drained): 3
+pine nuts (chilgoza): 3
+sliced coconut: 3
+grated zucchini: 3
+whole wheat flour (gehun ka atta) (for rolling and sprinkling): 3
+strawberry jam: 3
+peanut oil (or): 3
+jowar puff (dhani): 3
+oil (for topping): 3
+milk ((99.7% fat-free)): 3
+gluten: 3
+chopped red chawli leaves (laal math): 3
+parboiled potato cubes: 3
+colocasia leaves  (arbi ke patte): 3
+quinoa: 3
+chopped bean sprouts: 3
+tofu (bean curd/ soya paneer): 3
+lemon juice ((optional)): 3
+paneer (cottage cheese) (cut into 25 mm (1) cubes): 3
+self rising flour: 3
+chai ka masala: 3
+sliced bitter gourd (karela): 3
+butter (for brushing and greasing): 3
+garlic (lehsun) cloves (grated): 3
+baby corn (sliced): 3
+rajma (kidney beans) (soaked for 8 hours and drained): 3
+broken vermicelli (sevaiyan): 3
+cashew nut (kaju) slivers: 3
+tomato ketchup (for serving): 3
+soy oil (for kneading): 3
+chopped raw banana: 3
+yellow moong dal (split yellow gram) (soaked for 30 minutes and drained): 3
+pecan: 3
+coconut flakes: 3
+multigrain bread (slices): 3
+olive oil (or any other): 3
+mashed paneer (cottage cheese): 3
+crushed ice (to serve): 3
+chutney: 3
+crumbled paneer (cottage cheese) (/): 3
+capsicum (slices): 3
+spinach rotis: 3
+parmesan cheese: 3
+sliced pear: 3
+pear pulp: 3
+alum (phitkari): 3
+pineapple essence: 3
+pineapple puree: 3
+yam (suran) cubes: 3
+rajgira (amaranth) flour (for rolling): 3
+radish juliennes: 3
+margarine (or): 3
+crumbled ricotta cheese: 3
+paneer (cottage cheese) strips: 3
+soybeans: 3
+soaked dry kashmiri red chilli: 3
+soaked and chopped soy chunks: 3
+onion (rings): 3
+baby corn roundels: 3
+wonton wrappers: 3
+chopped rocket leaves (arugula) (leaves): 3
+grated sweet potato  (shakarkand): 3
+carom seeds (ajwain) (optional): 3
+sesame seeds chutney: 2
+firm tofu (bean curd/ soya paneer): 2
+baby corn (cut into 2 vertically): 2
+fennel seeds (saunf) (coarsely ground): 2
+carom seeds (ajwain) (leaves): 2
+fried almonds (badam): 2
+olive oil (for spreading): 2
+almond butter: 2
+organic coconut oil: 2
+potato (peeled and cubed): 2
+dried mango powder (amchur) ((amchur)): 2
+citric acid (nimbu ka phool) (crystals): 2
+pomegranate (anar) (seeds): 2
+chopped mixed nuts ((pistachios  cashewnuts and almonds)): 2
+rice (chawal) (soaked for 4 to 5 hours and drained): 2
+kadala curry: 2
+soaked and cooked steel cut oats: 2
+grated mozzarella cheese (for the topping): 2
+muskmelon (kharbooja) puree: 2
+soy milk: 2
+apple cubes (unpeeled): 2
+green tea bags: 2
+cake crumbs: 2
+banana (chopped): 2
+asparagus spears: 2
+crushed mixed nuts: 2
+round brinjal cubes: 2
+rice vinegar: 2
+white chocolate curls: 2
+chopped shallots: 2
+chopped kale: 2
+shell pasta: 2
+thin pizza base ((200 mm. (8?)): 2
+baby corn (cut into halves vertically): 2
+baby corn (cut into 4 lengthwise and blanched): 2
+paneer (cottage cheese) (cut into 25 mm. strips): 2
+peeled almonds (badam): 2
+roasted and chopped nuts: 2
+chopped coriander (dhania) (washed and drained): 2
+gulab jamun: 2
+butter (for spreading  brushing and greasing): 2
+salt (and freshly ground black pepper to taste): 2
+kale (torn into pieces): 2
+churma: 2
+almond milk: 2
+chopped parsley (/): 2
+par-boiled potatoes ((unpeeled)): 2
+chopped and boiled mixed vegetables ((french beans  carrots  cauliflower and green peas)): 2
+chopped sweet lime (mosambi): 2
+strawberry wafer rolls: 2
+butterscotch essence: 2
+salad cream: 2
+salt (and freshly to taste): 2
+raw banana: 2
+butter (to cook): 2
+brandy (or): 2
+cooked barley: 2
+cream cheese (readily available): 2
+onion ((unpeeled)): 2
+cornflour (dissolved in 1/4 cup of water): 2
+bean sprouts (washed and drained): 2
+pandi chillies (broken into peices): 2
+tomato segments: 2
+panch phoron (seeds): 2
+whole dry kashmiri red chilli (broken into small pieces): 2
+ghee (for kneading): 2
+1 tbsp green paste: 2
+sweet and sour dip: 2
+drumsticks (saijan ki phalli / saragavo) (cut into 50 mm. pieces): 2
+chole: 2
+water chestnut (singoda) flour: 2
+sliced bhavnagri chillies: 2
+ladies finger (bhindi) (cut into long strips): 2
+indian pickle masala: 2
+matki (moath beans) flour: 2
+drumstick pieces: 2
+rice (chawal) (soaked for 30 minutes and drained): 2
+ghee (for serving): 2
+cooked broken wheat (dalia): 2
+black beans (soaked overnight and drained): 2
+green chilli (broken into pieces): 2
+black grapes (pressed lightly and cut into halves vertically): 2
+whole wheat bread (slices  lightly buttered): 2
+chopped gooseberries: 2
+frozen blueberries: 2
+raspberry: 2
+sukha lehsun ka chutney: 2
+bread (pieces): 2
+green chutney for chaat: 2
+chopped broccoli stalks: 2
+broccoli stalks: 2
+salt (and powder to taste): 2
+blanched water chestnut: 2
+broccoli: 2
+grated processed cheese (or): 2
+curry leaves (kadi patta) paste: 2
+coloured capsicum: 2
+unpolished brown rice: 2
+roasted almonds (badam) (halves): 2
+buckwheat (kuttu or kutti no daro) groats: 2
+buckwheat (kuttu or kutti no daro) (washed and drained): 2
+sour low fat curds (khatta dahi): 2
+mint and onion chutney: 2
+buckwheat (kuttu or kutti no daro) flour (refer handy tip): 2
+brown bread buns: 2
+green cucumber: 2
+chopped spring onions (whites and greens): 2
+olive oil (for brushing and drizzling): 2
+nutri tortillas: 2
+mexican fried rice: 2
+whole wheat mexican tortillas: 2
+yellow gel food colour: 2
+chilli powder (to taste): 2
+lemon juice (to taste): 2
+yellow moong dal (split yellow gram) (soaked and parboiled): 2
+milk (for binding the dough): 2
+powdered sugar (optional): 2
+soaked and parboiled chana dal (split bengal gram): 2
+red cabbage cubes: 2
+orange peel: 2
+grated mozzarella cheese (for baking): 2
+dosas: 2
+caramel sauce: 2
+eggless vanilla sponge cake: 2
+carrot (roughly chopped): 2
+whole wheat bread (slices  toasted): 2
+apple (grated): 2
+carrot cubes (peeled): 2
+whole dry kashmiri red chilli (broken): 2
+eggless sponge cake: 2
+chopped almonds (badam) (and): 2
+oil (for tempering): 2
+chopped celery (ajmoda) ((without leaves)): 2
+grapes (halved): 2
+brown rice ((chawal)): 2
+saffron (kesar) strands (optional): 2
+chana dal (split bengal gram) (soaked for 4 to 5 hours and drained): 2
+roasted and powdered chana dal (daria): 2
+sliced raw banana: 2
+tomato strips: 2
+milk (refer handy tip): 2
+red chilli thecha: 2
+soaked chawli (cow pea / lobhia): 2
+soaked urad dal (spit black gram): 2
+chopped and boiled mixed vegetables ((french beans): 2
+indori potatoes: 2
+peri peri sauce: 2
+chopped leek: 2
+cheeslings: 2
+grated broccoli: 2
+toasted triangles: 2
+soft butter (for spreading): 2
+maggi noodles (broken into pieces): 2
+dried parsley: 2
+grated processed cheese (for the topping): 2
+khari biscuit: 2
+blanched zucchini (cubes): 2
+chickoo cubes: 2
+mushrooms (khumb) (halves): 2
+capsicum (strips): 2
+fresh red chilli (or): 2
+parboiled potato fingers: 2
+chilli garlic paste: 2
+capsicum wedges: 2
+butter (frozen and cut into small pieces): 2
+nice biscuit (or any sweet biscuits): 2
+cranberries: 2
+chopped dried fruits: 2
+hazelnut: 2
+green colour: 2
+dried cranberries: 2
+chocolate vermicelli (for coating): 2
+nice biscuit: 2
+banana leaves (kele ka patta) (cut into 150 mm ? 150 mm. square): 2
+grated nutmeg (jaiphal): 2
+bread (slice  torn into pieces): 2
+chopped canned peach: 2
+whole wheat pasta: 2
+spinach (palak) (torn into small pieces): 2
+wheat (gehun) (flour): 2
+basil (torn in pieces): 2
+almond (badam) flakes (for sprinkling): 2
+coconut flour: 2
+capsicum cubes ((red and yellow)): 2
+celery (ajmoda) (cut into 25 mm. (1) pieces): 2
+chopped and boiled mixed vegetables ((french beans  carrots and cauliflower)): 2
+appam: 2
+grated coconut ((nariyal)): 2
+canned green asparagus spears: 2
+red wine ((optional)): 2
+ghee (for topping): 2
+paneer (cottage cheese) (cubed): 2
+orange segments ((optional)): 2
+cornflour (dissolved in 1 cup of): 2
+long grain rice (basmati chawal) (cleaned and washed): 2
+phulkas: 2
+peanut oil (or for greasing and cooking): 2
+stuffed olives (cut into roundels): 2
+couscous: 2
+potato (wafers): 2
+white wine ((optional)): 2
+thin pizza base (200 mm. (8)): 2
+butter (or for greasing): 2
+blanched baby corn (pieces): 2
+blanched asparagus (pieces): 2
+powdered sugar (to taste): 2
+low fat cream cheese: 2
+soaked and chopped sun dried tomatoes (refer handy tip): 2
+sliced lotus stem: 2
+vrat green chutney: 2
+butternut squash: 2
+crushed corn flakes (for coating): 2
+muskmelon (kharbooja) cubes ((deseeded)): 2
+salt (or as advised by the doctor / dietitian): 2
+leftover rice: 2
+hot dog rolls (cut into two horizontally): 2
+idli cubes: 2
+khajur ki chutney: 2
+soy oil (or): 2
+boiled yellow moong dal (split yellow gram): 2
+yellow moong dal (split yellow gram) (washed  soaked for 2 hours and drained): 2
+masoor (split red lentil) dal (washed  soaked for 2 hours and drained): 2
+nigella seeds (kalonji) (optional): 2
+green chilli (cut lengthwise): 2
+chana dal (split bengal gram) (soaked for 4 hours and drained): 2
+bikaneri bhujia: 2
+chana dal (split bengal gram) (soaked for 2 hours and drained): 2
+masoor (split red lentil) dal (soaked for 2 hours and drained): 2
+capsicum cubes ((red and green)): 2
+zucchini cubes ((unpeeled)): 2
+sprouted vaal (field beans/ butter beans) ((field beans/ butter beans)): 2
+baking soda ((optional)): 2
+masoor (split red lentil) dal (soaked for 15 minutes and drained): 2
+cornflour (dissolved in): 2
+roasted walnuts (akhrot): 2
+chopped spring onions ((including greens)): 2
+red paste: 2
+yellow capsicum strips: 2
+jowar (white millet) flour (for dusting): 2
+whole wheat pizza base: 2
+poppy seeds (khus-khus) (for coating): 2
+round nozzle: 2
+drumsticks (saijan ki phalli / saragavo) (cut into 75 mm. pieces): 2
+drumsticks (saijan ki phalli / saragavo) (cut into 2? pieces): 2
+kala khatta syrup ((readily available in the market)): 2
+white onions: 2
+cinnamon (dalchini) (powder for sprinkling): 2
+chopped apple (peeled): 2
+blueberry crush: 2
+chocolate chips (for the topping): 2
+chocolate chips (for topping): 2
+edible coloured stars: 2
+edible silver balls: 2
+canned pineapple: 2
+lemon jelly: 2
+cocoa powder (for dusting): 2
+strawberry (slices): 2
+powdered sugar (for dusting): 2
+jaggery powder (gur powder): 2
+cheese cubes (strips): 2
+baby onions: 2
+rice (chawal) (soaked for 1 hour and drained): 2
+crushed cardamom (elaichi): 2
+papad khar: 2
+hummus: 2
+parboiled and grated purple yam (kand): 2
+arrowroot (paniphal) flour (for rolling): 2
+french beans (blanched): 2
+potato (peeled and cut into fingers): 2
+figs (anjeer): 2
+fig (anjeer) cubes: 2
+cornflour (dissolved in 1 tbsp cold): 2
+muskmelon (kharbooja) balls: 2
+strawberry (cut into quarters): 2
+low fat milk ((99.9% fat-free  readily available in the market)): 2
+tamarind (imli) (paste): 2
+salt (to taste (optional)): 2
+mint leaves (pudina) ((phudina)): 2
+cornflour (dissolved in 2 tsp): 2
+apple cubes (with the skin): 2
+corn flakes (or): 2
+curd (dahi) (chilled): 2
+vanilla essence ((optional)): 2
+cinnamon (dalchini) (sticks  50 mm. each): 2
+nutmeg (jaiphal) powder (optional): 2
+masoor (whole red lentil) (soaked for 3 hours and drained): 2
+pandi chillies (soaked): 2
+whole dry kashmiri red chilli (broken into peices): 2
+cluster beans (gavarfali) (cut into 25 mm. pieces): 2
+toasted bread croutons: 2
+geela lehsun chutney: 2
+green peas (coarsely crushed): 2
+soaked sago (sabudana): 2
+ginger ale squash: 2
+lemongrass stalk: 2
+ginger (adrak) juice (refer handy tip): 2
+ginger (adrak) (finely chopped): 2
+ginger ale: 2
+mushrooms (khumb) (sliced): 2
+green chilli (roughly chopped.): 2
+dagad phool (black stone flower): 2
+roasted poppy seeds (khus-khus): 2
+ice-cubes (to serve): 2
+salt (rim): 2
+grapes (cut into halves): 2
+green apple: 2
+chopped spring onions (with greens): 2
+grapes (pressed lightly and cut into halves vertically): 2
+chopped onion ((optional)): 2
+bread toast: 2
+plain flour (maida) (dissolved in 1 1/2 cups of): 2
+mushrooms (khumb) (quarters): 2
+sliced cauliflower: 2
+pita bread (or): 2
+celery (ajmoda) (finely chopped): 2
+baked beans ((canned)): 2
+guava: 2
+rotli: 2
+oil (for deep- frying): 2
+rotla: 2
+motichoor ladoo: 2
+gulab jamuns: 2
+gulab jamun mawa (hariyali khoya): 2
+boiled and mashed red pumpkin (bhopla/ kaddu): 2
+hara chana (green chick peas) (soaked and boiled): 2
+meethi chutney: 2
+potato salli: 2
+shredded spinach (palak) (leaves): 2
+kiwi cubes: 2
+cacao nibs: 2
+fresh yeast: 2
+purple yam (kand) (peeled and cut into cubes): 2
+drumsticks (saijan ki phalli / saragavo): 2
+sanwa millet (sama) (washed and drained): 2
+chilli-garlic paste: 2
+bread loaf cubes: 2
+olive oil (for greasing and brushing): 2
+low calorie green chutney: 2
+chopped raw mango (peeled): 2
+samosa patti (cut into thin strips): 2
+chilled almond milk: 2
+kulith (horse gram): 2
+soft butter (for brushing): 2
+drinking chocolate (or): 2
+papaya: 2
+vaal (field beans/ butter beans): 2
+semolina (rava / sooji) (for rolling): 2
+tomato gravy: 2
+spring onion greens (chopped): 2
+oil (mixed with 1 tablespoon of): 2
+castor sugar (for coating): 2
+carrot cubes ((unpeeled)): 2
+oil (or for frying): 2
+flavoured curds (dahi): 2
+jal jeera powder: 2
+chopped pear ((unpeeled)): 2
+saffron (kesar) strands (dissolved in 2 tsp): 2
+chopped onion (optional): 2
+chopped jaggery (gur) (optional): 2
+koro sambhar (for topping): 2
+finely chopped fenugreek leaves: 2
+minty green chutney: 2
+grated processed cheese ((optional)): 2
+onion puree: 2
+kala chana (brown chick peas) (soaked overnight and drained): 2
+chopped kaffir lime leaves: 2
+soaked kala chana (brown chick peas): 2
+crumbled gulab jamun mawa (hariyali khoya): 2
+soaked kala vatana (dried black peas): 2
+lotus stem (kamal kakdi / bhein): 2
+boiled and mashed purple yam (kand): 2
+purple yam (kand) sliced: 2
+beaten rice (poha) (flakes): 2
+yellow moong dal (split yellow gram) (soaked for 1 1/2 hours and drained): 2
+chopped bitter gourd (karela): 2
+grated bitter gourd (karela) (unpeeled): 2
+whole dry kashmiri red chilli (soaked and finely chopped): 2
+chopped mixed fruits ((pineapple oranges pears apples guavas etc.)): 2
+chopped mixed nuts ((walnuts cashewnuts almonds raisins etc.)): 2
+almond (badam) (halves): 2
+jackfruit (kathal / phanas) cubes: 2
+surti raw banana: 2
+ice-cubes (for serving): 2
+nutmeg (jaiphal) (powder): 2
+crushed whole wheat khakhra: 2
+grated coconut (optional): 2
+lily puff margarine: 2
+khichiya papad: 2
+sesame lavash: 2
+masoor (split red lentil) dal (soaked for 30 minutes and drained): 2
+butter (for spreading and greasing): 2
+cooked lasagne sheets: 2
+low fat curds (dahi) (whisked): 2
+finely chopped ginger: 2
+chopped mixed nuts ((almonds  pistachios and cashewnuts)): 2
+crushed coconut biscuit: 2
+blanched and chopped tomatoes (refer handy tip): 2
+capsicum rings (cut into halves): 2
+tahini dip: 2
+yellow colour ((optional)): 2
+1/2 cup low fat curds  (dahi): 2
+mint leaves (pudina) (finely chopped): 2
+egg yolk: 2
+lettuce (leaves torn into pieces): 2
+chopped tomato (chopped): 2
+iceberg lettuce (leaves  torn into small pieces): 2
+celery (ajmoda) (chopped): 2
+muskmelon (kharbooja) (chopped): 2
+chopped and boiled mixed vegetables ((carrot  green peas and french beans)): 2
+chopped and boiled cauliflower: 2
+garlic (lehsun) (chutney): 2
+fennel seeds (saunf) (crushed): 2
+whole wheat flour (gehun ka atta) (for sprinkling): 2
+milk (99.7% fat free): 2
+shredded spinach (palak) (washed and drained): 2
+lychee: 2
+chopped lychee: 2
+jeera rice: 2
+grated cheddar cheese: 2
+cooked brown rice: 2
+garlic-tomato chutney: 2
+white corn kernels (safed makai ke dane): 2
+whole wheat bread (slice): 2
+paneer (cottage cheese) (cut into 50 mm. cubes): 2
+alum (phitkari) (powder): 2
+ginger (adrak) (paste): 2
+cornflour (slurry): 2
+gelatine: 2
+flavoured soy milk: 2
+tequila: 2
+bitter gourd (karela): 2
+chopped green radish pods (mogri): 2
+2 tsp red chilli paste: 2
+roasted peanut halves: 2
+ghee (for brushing and cooking): 2
+garlic green chutney: 2
+chana dal (split bengal gram) (soaked for 1/2 hour and drained): 2
+urad dal (split black lentils) (soaked for 1/2 hour and drained): 2
+slit green chilli (finely chopped): 2
+sliced ridge gourd (turai): 2
+brown rice (soaked for 15 minutes and drained): 2
+rice (chawal) (soaked and drained): 2
+saffron (kesar) strands (dissolved in 1 tbsp): 2
+carrot (cut into long strips): 2
+cucumber (sliced): 2
+betel leaves (paan): 2
+paan (betel leaves) masala: 2
+sprouted fenugreek (methi) seeds: 2
+corn tortillas: 2
+green tomatoes: 2
+pesto       see below: 2
+taco seasoning mix: 2
+baby corn (cut into 25 mm (1) cubes and blanched): 2
+soaked rajma (kidney beans): 2
+milk (or): 2
+chopped and boiled mixed vegetables ((french beans carrots and green peas)): 2
+whole wheat chapati: 2
+low fat paneer (cottage cheese) ((cottage cheese)): 2
+sesame seeds (til) (roasted): 2
+cumin seeds (jeera) (roasted): 2
+mixed farsan (mixed farsan): 2
+soy oil (for cooking): 2
+chopped mixed nuts ((cashewnuts  almonds and pistachios)): 2
+whole wheat hot dog rolls: 2
+salted biscuit: 2
+black bean sauce: 2
+dark chocolate curls: 2
+momos chutney: 2
+yellow moong dal (split yellow gram) (soaked for 3 hours and drained): 2
+shredded radish leaves (mooli ke patte): 2
+yellow moong dal (split yellow gram) (soaked and drained): 2
+yellow moong dal (split yellow gram) (soaked for 3 hours): 2
+grated jaggery (gur) (optional): 2
+moong (whole green gram) (soaked for 8 hours and drained): 2
+capsicum (deseeded): 2
+chopped spring onion greens (and): 2
+honey (or): 2
+parboiled mixed sprouts: 2
+boondi (soaked for 10 minutes and drained): 2
+thin pizza base ((7?) each): 2
+whole dry kashmiri red chilli (soaked): 2
+chopped spring onions ((including the greens)): 2
+black olives (deseeded and chopped): 2
+tomato sauce: 2
+mysore chutney: 2
+ginger (adrak) (piece): 2
+rice (chawal) (soaked for 4 hours and drained): 2
+olive oil (for cooking): 2
+mixed sprouts (moong   matki   chana etc.): 2
+ferrero rocher: 2
+chocolate syrup: 2
+chopped spring onions ((with greens)): 2
+chopped raisins (kismis) (optional): 2
+raisins (kismis) (optional): 2
+roasted and powdered oats: 2
+ghee (or for cooking): 2
+chopped raw papaya: 2
+garlic mayonnaise: 2
+greek yoghurt (or): 2
+orange essence: 2
+mixed fruits (peeled): 2
+banana (peeled and thinly sliced): 2
+butter ((at room temperature)): 2
+spring onions (finely chopped): 2
+curd (dahi) (/): 2
+jal jeera powder (optional): 2
+ginger (adrak) juliennes (for the garnish): 2
+chopped palm jaggery: 2
+ridge gourd (turai) cubes: 2
+palak methi na muthia: 2
+tomato (deseeded and sliced): 2
+capsicum (cut into thin strips): 2
+mint leaves chutney: 2
+paneer (cottage cheese) (slices): 2
+corn flakes (for rolling): 2
+mint leaves (pudina) (chopped): 2
+tomato (roughly chopped): 2
+whole wheat bread (crumbs for rolling): 2
+papad (broken into small pieces): 2
+green chilli (lengthwise): 2
+paneer (cottage cheese) (cut into strips): 2
+capsicum (sliced): 2
+rice (chawal) (or): 2
+pomogranate juice: 2
+chopped dill leaves (leaves): 2
+blanched snow peas: 2
+onion powder: 2
+chopped pinenuts (chilgoza): 2
+raspberry syrup: 2
+chopped tulsi leaves (indian basil): 2
+blanched pistachios: 2
+plum cubes: 2
+vegetarian oyster sauce: 2
+peeled and grated raw potato: 2
+chopped tomato (deseeded): 2
+pear cubes ((unpeeled and deseeded)): 2
+brinjal (baingan / eggplant) (small black variety): 2
+dill seeds (suva dana): 2
+fresh cream ((optional)): 2
+chopped purple radish pods (mogri): 2
+kerala papadum: 2
+pomegranate seeds (anardana) (roasted and ground): 2
+onion (grated): 2
+chopped coriander (dhania) (leaves): 2
+puris: 2
+sliced bottle gourd (doodhi / lauki): 2
+safed vatana (dried white peas): 2
+hari chutney: 2
+oil (for tempering  greasing and cooking): 2
+sweet lime (mosambi) segments ((deseeded)): 2
+brown rice flour: 2
+puffed amaranth (rajgira) seeds: 2
+spring onions (with greens  finely chopped): 2
+dried fenugreek leaves  (kasuri methi) (crushed): 2
+rasam powder: 2
+sliced raw mango: 2
+drumsticks (saijan ki phalli / saragavo) (cut into 3? pieces): 2
+cumin seeds (jeera) (roughly ground): 2
+cooked long grain rice (basmati chawal): 2
+rice wrappers: 2
+chopped cauliflower (or): 2
+zucchini strips: 2
+soaked sago (sabudana) (refer handy tip): 2
+tendli (ivy gourd): 2
+blanched: 2
+herbed pita strips: 2
+rice vermicelli (seviyan): 2
+cluster beans (gavarfali): 2
+custard apple (sitaphal) (deseeded): 2
+boiled soba noodles (buckwheat noodles): 2
+sesame seeds (til) (for garnish): 2
+brown onion paste: 2
+spaghetti: 2
+sweet pickle: 2
+deep-fried onions: 2
+thin pizza base ((7? each)): 2
+orange cubes: 2
+black grape halves: 2
+low fat butter (for cooking): 2
+boiled mixed sprouts ((moong  chana  matki etc.)): 2
+blanched zucchini: 2
+thick pizza base: 2
+chopped garlic (lehsun) ((lehsun)): 2
+kokum (soaked for 15 minutes and drained): 2
+boiled soybeans: 2
+chopped spring onion greens (for garnish): 2
+sweet lime (mosambi) wedges: 2
+white peppercorn: 2
+onion (peeled and halved): 2
+lemon leaf (chopped): 2
+thandai syrup: 2
+sliced round gourd (tinda): 2
+water (for boiling): 2
+khajur imli chutney: 2
+ladi pav ((small squares of white bread)): 2
+stir-fried rice: 2
+chopped mixed vegetables ((french beans  carrots and green peas)): 2
+capsicum (cut into strips): 2
+curd (dahi) (preferably made with): 2
+salt (for frosting): 2
+tomato juice (chilled): 2
+coconut essence: 2
+chinese steamed rice: 1
+chopped and boiled french beans (and): 1
+asparagus (cut into 1 sticks): 1
+corn cob: 1
+snow peas (cut into 2 vertically): 1
+shitake mushrooms (soaked): 1
+mushrooms (khumb) (chopped): 1
+asparagus (cut into 50 mm. (2 ) pieces): 1
+raw mango (cut into pieces): 1
+sambhaar: 1
+oil (for cooking rolls): 1
+aam ka achaar: 1
+dried apricot purée   refer handy tip: 1
+oil (or a pinch of): 1
+whole wheat footlong bread: 1
+garden cress seeds (powder  refer handy tip): 1
+almond (badam) (soaked for 1 hour in hot and drained): 1
+almond bread slices: 1
+apple (cider): 1
+cardamom (elaichi) powder ((optional)): 1
+nutmeg (jaiphal) (powder (optional)): 1
+powdered almonds (badam) (or): 1
+saffron (kesar) strands (dissolved in 1 tsp warm): 1
+steamed purple yam (kand) cubes: 1
+papdi (chaat) (masala for sprinkling): 1
+baby potatoes (halves): 1
+roasted salted peanuts: 1
+fried masala chana dal (for sprinkling): 1
+roasted peanuts (for sprinkling): 1
+oil (for cooking and greasing): 1
+green chilli (in  refer handy tip): 1
+purple yam (kand) (peeled and cubed): 1
+nacho chips or tortilla chips (for coating): 1
+sukhi lehsun chutney: 1
+potato (boiled  peeled and cubed): 1
+chopped fenugreek leaves (methi) (washed and drained): 1
+grated tofu (bean curd/ soya paneer): 1
+baby potatoes ((unpeeled) boiled and cut into halves): 1
+ghee (for cooking and greasing): 1
+ladi pav (set): 1
+aloo tikkis: 1
+nayalki bhaji (malabar spinach): 1
+cabbage (cut into thin strips): 1
+grated coconut ((optional)): 1
+nylon khaman dhokla: 1
+spinach (palak) (roughly chopped): 1
+cucumber (cut into slices): 1
+amla (indian gooseberries) (deseeded and chopped roughly): 1
+powdered star anise (chakri phool): 1
+amla (indian gooseberries) wedges: 1
+ghee (to grease the modak moulds): 1
+chaat masala for sprinkling: 1
+paneer (cottage cheese) (cut in to 50 mm long cubes): 1
+black grapes (or): 1
+mint leaves (pudina) (for the garnish): 1
+ash gourd ((ash gourd)): 1
+almond (badam) (blanched and peeled): 1
+almond (badam) slivers ((badam) for the garnish): 1
+dried figs (anjeer) (soak 4 hours): 1
+orange (segments): 1
+alfalfa sprouts (placed in cold for 5 minutes and drained): 1
+coconut milk (nariyal ka doodh) (for serving): 1
+rice (chawal) (preferably unpolished): 1
+oil ((for cooking)): 1
+grated carrot (for the topping): 1
+apple (sliced): 1
+carrot (peeled and cut into thick strips): 1
+apple (slices): 1
+sliced apple ((peeled)): 1
+sliced cucumber ((peeled)): 1
+mixed fruits (cubes (apple  pear  chickoo  pomegranate and banana)): 1
+white dragon fruit cubes: 1
+cinnamon (dalchini) powder ((optional)): 1
+apple wedge (unpeeled): 1
+apple cubes ((peeled)): 1
+grated apples ((with skin)): 1
+apple sticks: 1
+flavoured custard powder: 1
+apricots  soaked: 1
+soya milk: 1
+kesar shrikhand: 1
+english cucumber cubes: 1
+lebanese 7 spice powder: 1
+boiled colocasia (arbi): 1
+tomato (blanched and pur?ed): 1
+soaked and cooked toovar (arhar) dal (whisked): 1
+blanched asparagus (spears  cut into 1/2 long pieces): 1
+asparagus (cut 50 mm (2?) long  blanched): 1
+cream cracker biscuits: 1
+freshly ground black pepper (kalimirch) (to tast): 1
+boiled and crushed mixed sprouts: 1
+malaga podi powder: 1
+brinjal (baingan / eggplant) (each cut into thin slices): 1
+low calorie white sauce: 1
+drumsticks (saijan ki phalli / saragavo) (cut into 25 mm. pieces): 1
+french beans (cut into 25 mm. pieces): 1
+carrot (cut into 25 mm pieces): 1
+yam (suran) (cut into 25 mm pieces): 1
+red pumpkin (bhopla / kaddu) cubes (cubes): 1
+raw banana (peeled and cut into 25 mm pieces): 1
+drumsticks (saijan ki phalli / saragavo) (cut into 1 pieces): 1
+french beans (cut into 1 pieces): 1
+red pumpkin (bhopla/ kaddu) strips: 1
+chopped bananas (frozen): 1
+coconut oil (for brushing): 1
+sushi rice: 1
+seaweed sushi (nori) sheets: 1
+bamboo mat: 1
+toga rashi powder (for sprinkling): 1
+avocado strips: 1
+pickled sushi ginger: 1
+tomato strips (deseeded): 1
+chopped garlic (lehsun) (optional): 1
+breadsticks: 1
+sesame (til) paste: 1
+soaked and cooked long grain rice (basmati chawal) (or leftover): 1
+blanched sweet corn kernels (makai ke dane): 1
+baby corn (cut into 4 lengthwise): 1
+slit green chilli (roughly chopped): 1
+blanched baby corn (cut into 25 mm. pieces): 1
+dried fenugreek leaves  (kasuri methi) (roasted): 1
+blanched baby corn (halves): 1
+blanched baby corn (cut into 1? pieces): 1
+boiled and peeled baby potatoes ((unpeeled)): 1
+roasted pecan: 1
+cider vinegar (apple vinegar): 1
+grained rice: 1
+banana leaves (kele ka patta) (approx. 2? x 2?): 1
+boiled and chopped colocasia (arbi): 1
+roasted chana dal (daria) (powder): 1
+peeled almonds (badam) (broken into pieces): 1
+charcoal (for smoking): 1
+bread (sides removed and crumbled): 1
+onion rings (and): 1
+almond (badam) paste (refer handy tip): 1
+vermicelli (semiya) (broken into pieces): 1
+almond (badam) (soaked): 1
+brinjal (baingan / eggplant) (washed and cleaned): 1
+boiled mixed vegetables ((carrot  cauliflower  potatoes  onions etc.)): 1
+purple yam (kand) (boiled  peeled and grated): 1
+whole bajra (black millet) (soaked or 8 hours and drained): 1
+whole bajra (black millet) (flour): 1
+bajra (black millet) flour (for dusting): 1
+salt (to taste restrict or skip for blood pressure control): 1
+whole bajra (black millet) (soaked for 5 hours and drained): 1
+poppy seeds (khus-khus) (for sprinkling): 1
+shredded lettuce (leaves): 1
+chopped spring onions whites (with the): 1
+whole wheat noodles (roughly chopped): 1
+buckwheat (kuttu or kutti no daro) flour (for rolling): 1
+t: 1
+asafoetida (hing) (optional): 1
+mustard (rai / sarson) powder (mixed with 2 tsp water): 1
+zucchini (slices (unpeeled)): 1
+olive oil (for dipping): 1
+whole dry kashmiri red chilli (blanched and broken into pieces): 1
+feta cheese (block): 1
+chopped fresh rosemary: 1
+panchmel dal: 1
+oil (for kneading and greasing): 1
+instant mushroom soup powder: 1
+sliced black olives (to serve): 1
+parmesan cheese (for garnish): 1
+pudina chutney: 1
+brown rice (or): 1
+crumbled low fat paneer (cottage cheese) ()): 1
+hot dog rolls (/ cut into two horizontally): 1
+sun-dried tomatoes (soaked in warm for 30 minutes and finely chopped): 1
+sweet potato fingers: 1
+chopped and boiled mixed vegetables ((french beans  carrot  green peas and sweet corn kernels)): 1
+green peas (and cauliflower)): 1
+chopped and boiled mixed vegetables (( french beans  carrots and green peas)): 1
+strawberry ice cream: 1
+low fat milk (99.7% fat-free or): 1
+butterscotch sauce: 1
+olive oil (or for greasing and cooking): 1
+cornflour (mixed with 2 tbsp): 1
+chopped red capsicum (and): 1
+sliced green cucumber: 1
+chopped spring onions (and): 1
+fresh cream (mixed with 1 tbsp. of): 1
+chopped cabbage (or): 1
+chopped spinach (palak) (blanched and pur?ed): 1
+tomato pulp (refer to handy tip): 1
+cherries (halves): 1
+potato (cut into strips): 1
+gujarati dal: 1
+dry garlic (lehsun) chutney: 1
+bread buns: 1
+extra virgin olive oil (or olive oil): 1
+leftover roti ((approx. 150 mm. (6”) in diameter)): 1
+wheat (gehun) (chapatis): 1
+mayonnaise (recipe below): 1
+white pepper powder (powder to taste): 1
+cucumber (sliced lengthwise into halves  deseeded and cut into thin strips): 1
+brown rice (refer handy tip): 1
+boiled potato ((unpeeled)): 1
+bread (slices  toasted and lightly buttered): 1
+salt (salt to taste use less salt for blood pressure control.): 1
+beetroot (strips): 1
+rocket leaves (arugula) (leaves): 1
+sea salt (khada namak) (and to taste): 1
+soaked and cooked long grain rice (basmati chawal) (or leftover rice): 1
+wood apple (bael fruit): 1
+brinjal (baingan / eggplant) (cut into 12 mm. cubes): 1
+ambemohar rice: 1
+baked papadis: 1
+chopped mango candy: 1
+mulberry puree: 1
+rice (chawal) (mashed): 1
+7 1/2 tsp khajur imli ki chutney: 1
+garlic (lehsun) cloves (finely): 1
+trevti dal: 1
+brinjal (baingan / eggplant) (black variety): 1
+chopped mixed nuts ((almonds  cashews and pistachios)): 1
+bhavnagri chillies (slit vertically and deseeded.): 1
+ladies finger (bhindi) (cut into 50 mm. pieces): 1
+kokum (soaked for 10 minutes and drained): 1
+bhavnagri chillies (cut into roundels): 1
+ladies finger (bhindi) (cut into 25 mm. pieces): 1
+ladies finger (bhindi) (vertically cut into halves): 1
+ladies finger (bhindi) (cut into 1 long pieces): 1
+ladies finger (bhindi) (cut into 1 inch pieces): 1
+aloo bhujiya: 1
+mace (javantri) (broken into pieces): 1
+boiled mixed vegetable cubes: 1
+oreo biscuit (for topping): 1
+chopped mixed nuts ((almonds  pistachio and walnuts)): 1
+cinnamon (dalchini) ((optional)): 1
+toovar (arhar) dal (soaked for an hour and drained.): 1
+drumsticks (saijan ki phalli / saragavo) (cut into small pieces): 1
+coleslaw: 1
+black beans: 1
+black beans (soaked for 5 hours and drained): 1
+rich chocolate sponge cake: 1
+chopped cherries: 1
+black grapes ((deseeded)): 1
+black jamun pulp: 1
+sugar (optional skip for better health): 1
+blackberry: 1
+curacao (syrup): 1
+egg white (optional): 1
+coconut oil (for greasing and cooking): 1
+low fat milk (- 99.9% fat-free): 1
+potato (boiled and peeled): 1
+baharat powder: 1
+sugar (for sprinkling): 1
+chocolate butter icing: 1
+bourbon biscuits: 1
+capsicum cubes ((): 1
+madras curry powder: 1
+golden syrup: 1
+bread (slices  cut diagonally): 1
+whole wheat bread (cut into cubes): 1
+chopped mixed nuts (( walnuts  almonds and cashews)): 1
+chilli garlic sauce (readily available in the market): 1
+coloured aniseed sweets: 1
+bread sticks (readily available): 1
+water (as required): 1
+chopped celery (ajmoda) (stems (ajmoda)): 1
+blanched asparagus (cut into 25 mm. (1) pieces): 1
+blanched baby corn (cut into 25 mm. (1) pieces): 1
+red capsicum (and): 1
+carrot cubes (boiled): 1
+fried cashew nut (kaju) (lightly fried): 1
+garlic toast: 1
+blanched capsicum ((red  yellow and green) cubes): 1
+salt (to taste less sat with those with blood pressure): 1
+dill potatoes and carrots: 1
+chopped blanched and pureed broccoli: 1
+blanched asparagus (cut into 1 pieces): 1
+boiled baby corn: 1
+cornflour (dissolved in 3/4 cup): 1
+carrot cubes (blanched): 1
+long beans (chawli bhaji): 1
+whole wheat tortillas: 1
+carrot (peeled and cut into thin strips): 1
+milk (or low fat milk): 1
+cornflour (dissolved in 1 cup milk): 1
+kabuli chana (white chick peas) (soaked and boiled): 1
+brown rice (soaked for 2 hours and drained): 1
+soaked brown rice: 1
+brownie: 1
+eggless chocolate brownie: 1
+crushed cream wafer biscuit ((chocolate flavoured)): 1
+cream wafer biscuit: 1
+dark chocolate (chopped): 1
+walnuts (akhrot) (chopped): 1
+white chocolate (chopped): 1
+brussels sprouts (cut into halves): 1
+brussels sprouts halves: 1
+cream cheese    recipe given below: 1
+fruit salt ((optional)): 1
+coriander (dhania) (optional): 1
+peanut kadhi: 1
+bitter gourd (karela) (kadhi /): 1
+cooked buckwheat (kuttu / kutti no daro): 1
+bottle gourd (doodhi / lauki) (cut into fingers): 1
+paneer (cottage cheese) cubes (preferably made with cow's): 1
+chopped and boiled mixed vegetables ((french beans carrots  green peas and cauliflower)): 1
+garlic roundels: 1
+vaal dal (split field beans/ split butter beans) (soaked for 3 hours and drained): 1
+cooked basmati rice: 1
+chopped and parboiled mixed vegetables: 1
+fried garlic (lehsun): 1
+shredded basil: 1
+boiled mixed vegetables ((sweet corn french beans carrots)): 1
+avocado pulp: 1
+crushed corn chips: 1
+low fat buttermilk: 1
+maple syrup (or): 1
+chopped mixed nuts ((cashews  almonds  walnuts)): 1
+pickled jalapeno: 1
+grapes (halves): 1
+boiled mixed sprouts ((kala chana  chawli  moong  rajma etc.)): 1
+tomatoes gravy: 1
+chopped coriander (dhania) ((dhania) for garnish): 1
+low fat white sauce: 1
+low-calorie white sauce: 1
+fresh pasta dough: 1
+baby corn (diagonally cut): 1
+homemade caramel sauce: 1
+caramel popcorn: 1
+red capsicum strips (cut into short thin strips): 1
+yellow capsicum strips (cut into short thin strips): 1
+capsicum strips (cut into short thin strips): 1
+whole wheat bread (cut into 8 pieces): 1
+stuffed olives: 1
+thin pizza base ((10)): 1
+sugar (for caramelizing): 1
+chocolate curls: 1
+brandy (/): 1
+high fibre chutney: 1
+cashewnuts (kaju): 1
+honey dressing: 1
+freshly ground black pepper (kalimirch) (optional): 1
+carrot (cut into cubes): 1
+orange (separated into segments): 1
+tomato cubes (see handy tip): 1
+brown bread (slices  lightly buttered): 1
+thousand island dressing: 1
+carrot (cut into thin slices): 1
+paneer (cottage cheese) (cut into 12 mm. ( 1/2) pieces): 1
+boiled eggs (cut into half): 1
+coffee: 1
+coffee ice-cream: 1
+boiled and mashed mixed sprouts: 1
+jowar bhakri: 1
+roasted onion (finely chopped): 1
+1 cup fresh low fat curds  (dahi)    whisked: 1
+carrot garlic chutney: 1
+green chilli (slit each into 2): 1
+cornflour (dissolved with 1/2 cup of): 1
+fenugreek (methi) seeds (soaked for 10 minutes and drained): 1
+rice flour (chawal ka atta) (sieved): 1
+boiled and peeled potato cubes: 1
+bhaturas: 1
+chana chor garam (pieces): 1
+kabuli chana (white chick peas) (soaked for 8 hours): 1
+orange segments (peeled  deseeded and cut into halves): 1
+brinjal (baingan / eggplant) (cut into thick slices): 1
+olive oil (for roasting): 1
+feta cheese (or  cut into 25 mm. cubes): 1
+olives (sliced): 1
+sun-dried tomatoes (sliced): 1
+brinjal (baingan / eggplant) (cut into quarters): 1
+red capscium cubes (deseeded and cut into 25 mm. (1?) pieces): 1
+blanched mushrooms (khumbh) (halved): 1
+yellow capsicum (cubes  deseeded and cut into 25 mm. (1?) pieces): 1
+cauliflower florets (blanched): 1
+capsicum cubes (deseeded and cut into 25 mm. (1?) pieces): 1
+onion cubes (cut into 25 mm. (1?) pieces): 1
+carrot (roundels  cut into 6 mm. ( 1/4?) thickness and blanched): 1
+leftover whole wheat rotis: 1
+fried coconut chutney: 1
+bread (slices  cut into cubes): 1
+green chawli (amaranth) leaves: 1
+kachumber: 1
+boiled chawli (cow pea / lobhia) (lightly mashed): 1
+boiled mixed pulses ((rajma  chawli and chick peas)): 1
+salt (to taste and freshly ground black pepper): 1
+bathua (cheel bhaji): 1
+boiled moong (whole green gram): 1
+sliced apple (peeled): 1
+potato fingers ((unpeeled)): 1
+french fries ((with the skin)): 1
+grated garlic (lehsun) (optional): 1
+shaped khari biscuits: 1
+crushed cream cracker biscuit: 1
+brown stock: 1
+yellow cucumber cube (slices): 1
+boiled noodles (roughly chopped): 1
+mozzarella cheese strips: 1
+cheddar cheese powder (readily available in the market): 1
+schezwan sauce (to serve): 1
+bread crumbs (for sprinkling): 1
+sukha lehsun ki chutney: 1
+ladi pav (sets): 1
+boiled mixed vegetables ((french beans  carrot  cauliflower and green peas)): 1
+parmesan cheese powder: 1
+zucchini fingers ((unpeeled)): 1
+chipotle sauce: 1
+strawberry fans: 1
+mustard (rai / sarson) powder (optional): 1
+potato (boiled with skin): 1
+cherry tomatoes (cut into two halves (optional)): 1
+crushed fried papad: 1
+maggi noodles ((70 gms. each)): 1
+boiled noodles     cut into 1 pieces: 1
+cornflour (dissolved in 1/2 cup of): 1
+sweet corn kernels (makai ke dane) (boiled and coarsely crushed): 1
+processed cheese: 1
+cooked penne (refer handy tip): 1
+sliced capsicum ((green  red and yellow)): 1
+ladi pav (vertically): 1
+baby potatoes (blanched  halved and scooped): 1
+footlong bread ((12 each) each): 1
+red chilli sauce (for spreading): 1
+vanilla ice cream (to serve): 1
+dried oregano (to sprinkle): 1
+coriander (dhania) ((dhania) seeds): 1
+cumin seeds (jeera) ((jeera)): 1
+fennel seeds (saunf) ((saunf)): 1
+clove (laung / lavang) ((laung / lavang)): 1
+cinnamon (dalchini) ((dalchini)): 1
+poppy seeds (khus-khus) ((khus-khus)): 1
+broken cashew nut (kaju) ((kaju)): 1
+garlic (lehsun) (clove): 1
+tomato (blanched and grated): 1
+curry leaves (kadi patta) ((kadi_spell! patta)): 1
+boiled mixed vegetables ((cauliflower  peas  french beans)): 1
+potato (boiled and mashed): 1
+pear (deseeded and cut into cubes): 1
+honey ((optional)): 1
+chopped spring onion greens (and whites): 1
+blanched carrot (diagonally cut): 1
+boiled potato (cut into pieces): 1
+cooked spaghetti (or boiled): 1
+curd (dahi) ((dahii)): 1
+spring onion greens (and whites): 1
+tomato ketchup (for serving.): 1
+butter (for the): 1
+cooked chinese rice (chawal): 1
+nacho chips or tortilla chips (of your choice): 1
+chopped capsicum (( red  green  yellow )): 1
+garlic (lehsun) cloves (small): 1
+baby corn (boiled and cut into 25 mm. (1) pieces): 1
+green chilli (cut into strips lengthwise): 1
+paneer (cottage cheese) (pieces  cut into 38 mm. (1 1/2?) x 12 mm. ( 1/2?) strips): 1
+green chilli (cut into 25 mm. (1?) pieces): 1
+cornflour (dissolved in 3 tbsp): 1
+sliced spring onions (for the garnish): 1
+bhavnagri chillies (deseeded): 1
+cinnamon (dalchini) (1 each): 1
+boiled potato (peeled and cut into fingers): 1
+capsicum (rings): 1
+khimchi: 1
+maggi noodles ((70 gm. each)): 1
+oil (for coating): 1
+baby corn (sliced diagonally and parboiled): 1
+sliced carrots (parboiled): 1
+chinese rice: 1
+lemon (juice or): 1
+crispy rice (chawal): 1
+diagonally cut and blanched french beans (cut diagonally): 1
+2 cups cooked rice: 1
+rice (chawal) (short grained): 1
+grated coconut ((fresh)): 1
+2 scoops vanilla ice-cream: 1
+malgapodi powder (readily available in the market): 1
+chopped chickoo (chilled  peeled  deseeded and roughly chopped): 1
+chickoo wedge: 1
+eggless chocolate sponge cake ((150 mm. (6?) x 100 mm. (4?)): 1
+cream biscuit: 1
+disposable piping bag: 1
+margarine: 1
+chocolate butter cream: 1
+canned cherries: 1
+crushed chocolate chip cookies: 1
+coconut butter: 1
+coffee powder (dissolved in 1 tbsp water): 1
+digestive biscuit (or): 1
+cornflour (dissolvedin 1 tbsp): 1
+deseeded dates (khajur) (roughly chopped): 1
+choux pastry: 1
+nutella hazelnut chocolate spread (readily available): 1
+chocolate bytes: 1
+sour curds (khatta dahi) ((dahi)): 1
+lemon (slices): 1
+peppermint essence: 1
+quick cooking oats (or regular oats): 1
+chocolate chips (for garnish  optional): 1
+chopped marshmallow: 1
+dark chocolate (grated): 1
+white chocolate (grated): 1
+coffee powder (mixed in 1 tablespoon warm): 1
+dark: 1
+edible garnishes (for decoration): 1
+sugar syrup (for soaking): 1
+coated strawberries: 1
+jam: 1
+chola dal (split cow peas) (soaked overnight and drained): 1
+chola dal (split cow peas) (soaked for 3 hours and drained): 1
+cinnamon (dalchini) (approximately 3?): 1
+bay leaf (tejpatta) (depending upon the size): 1
+mace (javantri) powder: 1
+tea bags (or tsp of tea powder tied in muslin cloth): 1
+crunchy cumin seed cracker: 1
+milk (optional): 1
+poppy seeds (khus-khus) (for rolling): 1
+cinnamon (dalchini) powder (for sprinkling): 1
+lemonade () or 4 cups lemon drink): 1
+chopped capsicum ((red yellow and green)): 1
+chopped carrots: 1
+onion (quatered): 1
+celery (ajmoda) (roughly chopped): 1
+coriander (dhania) (stems): 1
+whole wheat bread (toasted): 1
+left over chapattis          approx. 175 mm. (7) in diameter: 1
+2 tbsp mint and onion chutney: 1
+mixed nuts ((almonds  cahewnuts and pistachio nuts)): 1
+chopped pistachios (for sprinkling): 1
+dried rose petals (for sprinkling): 1
+barley (jau) (refer handy tip): 1
+lemon (grass (hare chai ki patti) stalk): 1
+chopped spring onions (( whites and greens)): 1
+sweet lime (mosambi) (slices): 1
+peanut butter (refer handy tip): 1
+whole dry kashmiri red chilli (soaked for 15 minutes and drained): 1
+tender coconut (torn into pieces): 1
+dessert apples (peeled and grated): 1
+papaya (pieces): 1
+banana (roughly chopped): 1
+carrot roundels: 1
+tomato (cut into wedges): 1
+1 cup coconut cream: 1
+soaked and cooked rice (chawal) (soaked and drained): 1
+rose (petals): 1
+chopped tender coconut meat ((nariyal ki malai)): 1
+coffee powder (mixed with 1/4 cup): 1
+milk chocolate: 1
+coffee powder (dissolved in 1 tbsp warm): 1
+coffee powder (dissolved in 1 1/2 tbsp warm): 1
+castor sugar (and for dusting): 1
+agar-agar (cut into small pieces): 1
+chocolate sauce (for decoration): 1
+spice powder: 1
+misri ((khadi sakhar)): 1
+melted butter (for spreading): 1
+methi crispies: 1
+1/2 recipe guacamole: 1
+sweet corn kernels (makai ke dane) (boiled and crushed): 1
+plain flour (maida) (to coat the cheese corn balls): 1
+bread crumbs (to coat the cheese corn balls): 1
+leftover rice (or steamed rice): 1
+soaked and cooked rice (chawal) (for rolling): 1
+chopped green garlic (hara lehsun) (including the greens): 1
+fresh green garlic (hara lehsun) ((including the greens)): 1
+urad dal (split black lentils) (soaked for 15 minutes and drained): 1
+toasted whole wheat bread slices (cut into halves): 1
+bread (slice  crumbled): 1
+spicy potato wedges: 1
+fusilli: 1
+4  whole-wheat chapatis: 1
+boiled and crushed sweet corn kernels (coarsely crushed): 1
+chopped and boiled mixed vegetables ((french beans cauliflower and green peas)): 1
+rice (chawal) (slightly mashed): 1
+2 tbsp  tomato puree: 1
+chopped capsicum ((): 1
+finely chopped spring onions whites: 1
+apple cubes ((with the skin)): 1
+coloured capsicum cubes ((red  yellow and green)): 1
+bread (slices  a day old): 1
+salsa dip: 1
+carom seeds (ajwain) ((optional)): 1
+cornflour (dissolved in 2 cups of): 1
+raw corn flakes: 1
+sweet corn kernels (makai ke dane) (cobs): 1
+rotis/parthas: 1
+banana leaves (kele ka patta) (for cooking): 1
+slit green chilli (paste): 1
+6 corn tortillas: 1
+canned corn kernels (makai ke dane): 1
+sweet corn kernels (makai ke dane) (crushed): 1
+cooked penne (finely chopped): 1
+bread sticks (cut into pieces): 1
+schezwan sauce (/): 1
+vegetable idlis for babies and toddlers: 1
+melted butter (mixed with 2 tsp for brushing): 1
+cornflour (dissolved with 2 tbsp cold): 1
+black olives (cut into thin slices): 1
+brown bread (lightly browned): 1
+black olives (for garnish): 1
+cherry tomatoes (or): 1
+shredded spinach (palak) (washed and drained (refer handy tip)): 1
+chopped coloured capsicum ((red  green and yellow)): 1
+carrot cubes (unpeeled): 1
+chilli powder (optional): 1
+deep-fried bread croutons: 1
+bottle gourd (doodhi / lauki) (cut into small pieces): 1
+chilli sauce: 1
+italian tomato ketchup: 1
+thin pizza base (200 mm (8) diameter): 1
+thin crust pizza base   175 mm.(7): 1
+garlic (lehsun) paste (optional): 1
+mint (phudina) paste: 1
+slice cake: 1
+orange crush (for drizzling): 1
+black grapes (cut into halves vertically): 1
+romaine lettuce (torn into small pieces): 1
+chopped salted peanuts: 1
+tabasco sauce ((optional)): 1
+parsley (for garnish): 1
+chopped parsley ((optional)): 1
+boiled baby potatoes: 1
+ladies finger (bhindi) (cut into four lengthwise): 1
+ladies finger (bhindi) (into four lengthwise): 1
+cornflour (dissolved in 1/2 cup cold): 1
+pineapple jam: 1
+green chilli (diagonally chopped): 1
+bitter gourd (karela) slices: 1
+ladies finger (bhindi) (cut into 12 mm. ( 1/2) pieces): 1
+fusilli (or pasta): 1
+whole wheat vermicelli (semiya) (for rolling): 1
+crispy jeera puri: 1
+koro sambhar (for sprinkling): 1
+6  chapatis   recipe below: 1
+brown bread (slices  toasted): 1
+pieces tofu (bean curd/ soya paneer) or paneer (cottage cheese)   of 1 1/2” x  1/2” each: 1
+sliced mixed vegetables: 1
+ice (cold): 1
+clear vegetables stock: 1
+wine: 1
+chopped and boiled mixed vegetables ((carrots  french beans and baby corn)): 1
+yellow moong dal (split yellow gram) (soaked for 1/2 hour and coarsely ground): 1
+grated potatoes ((raw)): 1
+hung curds (chakka dahi) (made from low fat (99.7% fat-free )): 1
+chopped mixed vegetables ((carrots  cauliflower  tendli etc.)): 1
+rice (chawal) (cooled and mashed slightly): 1
+cucumber (cut into strips): 1
+cucumber (peeled and cubed): 1
+mint syrup: 1
+rice (chawal) (cooled): 1
+dill leaves (shepu / suva bhaji) ((optional)): 1
+sliced carrots (for dipping): 1
+whisked low fat curds (made from 99.7% fat-free): 1
+castor sugar (or): 1
+grated cucumber (peeled and squeezed): 1
+whole wheat flour (gehun ka atta) (for rolling  sieved): 1
+crumbled goat cheese: 1
+white wine vinegar: 1
+custard apple (sitaphal) (refer handy tip): 1
+chopped mixed fruits ((apple  grapes and orange)): 1
+pandi chillies (broken into small pieces): 1
+dabeli masala (readily available): 1
+masala peanuts (readily available): 1
+homemade dabeli masala powder: 1
+ladi pav (slit): 1
+boiled kabuli chana (white chick peas) (or): 1
+coriander (dhania) (for garnish): 1
+nylon sev (for garnish): 1
+ladies finger (bhindi) (cut into halves): 1
+curd (dahi) (mixed with 1/2 cup water): 1
+coloured capsicum cubes ((red and yellow)): 1
+baby potatoes (boiled and peeled): 1
+chopped brinjals (baingan / eggplant) (cut into 25 mm. pieces): 1
+pandi chillies (broken into chillies): 1
+khajur imli ni chutney: 1
+spicy onion chutney: 1
+yellow moong dal (split yellow gram) (paste  refer handy tip): 1
+crushed garlic (lehsun) (optional): 1
+chilkewali urad dal (spit black gram with skin) (washed and drained): 1
+urad dal (split black lentils) (washed and soaked for 1 hour): 1
+fresh cream (for the garnish): 1
+chopped bottle gourd (doodhi / lauki) (cut into big pieces): 1
+green moong dal (split green gram) (soaked for 60 minutes and drained): 1
+chopped ginger (adrak) (or): 1
+yellow moong dal (split yellow gram) (soaked for 5 to 6 hours and ground into a paste): 1
+dried fenugreek leaves  (kasuri methi) (lightly roasted and crushed): 1
+salad: 1
+toovar (arhar) dal (soaked for 15 minutes and drained): 1
+coriander (dhania) (seed powder): 1
+bottle gourd (doodhi / lauki) (cut into big pieces): 1
+red pumpkin (bhopla / kaddu) (cut into big pieces): 1
+baby corn (cut into big pieces): 1
+low fat milk ((99.7% fat free)): 1
+sugar substitute ((1 gm each)): 1
+dates (khajur) (deseeded and chopped): 1
+black dates (kala khajur) (kneaded): 1
+roasted and powdered sesame seeds (til): 1
+dates (khajur) (finely chopped): 1
+dates (khajur) (soaked and pureed): 1
+banana (/ 1/4 cup): 1
+fruit salt ((optional )): 1
+low fat butter (for greasing and cooking): 1
+dark chocolate (slab): 1
+grater: 1
+toothpick: 1
+cookie cutter: 1
+leaves (for decoration): 1
+basic pizza dough: 1
+tomato (sliced): 1
+mozzarella cheese (sliced): 1
+chopped tulsi leaves (indian basil) (leaves): 1
+urad dal (split black lentils) (with skin): 1
+green chilli (into 2): 1
+tamarind (imli) (soaked in 1/4 cup of): 1
+spring onions (with greens): 1
+garlic (lehsun) cloves (crushed (optional)): 1
+thecha: 1
+koro sambhar: 1
+kodri (varagu) (washed): 1
+green moong dal (split green gram) (washed): 1
+almond (badam) (roughly chopped): 1
+cashew nuts (kaju) (roughly chopped): 1
+sugar (for caramelising): 1
+sliced zucchini ((optional)): 1
+chopped cauliflower (or doodhi (bottle gourd)): 1
+garlic mayonnaise (readily available in the market): 1
+anjeer barfi: 1
+pointed gourd (parwal) (peeled and cut into halves): 1
+maize flour (makai ka atta) (for dusting and rolling): 1
+cornflour (mixed in 1/4 cup): 1
+grated bottle gourd (doodhi / lauki) (squeezed): 1
+chocolate (spread): 1
+leftover dosas: 1
+potato bhaji: 1
+coconut sauce: 1
+rangoon na vaal (broad field beans) (with skin  soaked overnight): 1
+dark chocolate truffle: 1
+milk chocolate truffle: 1
+star nozzle: 1
+chocolate sponge cake: 1
+drumsticks (saijan ki phalli / saragavo) (cut into 1? pieces): 1
+toovar (arhar) dal (soaked for 15 minutes  washed and drained): 1
+drumsticks (saijan ki phalli / saragavo) (cut into 50 mm long pieces): 1
+drumsticks (saijan ki phalli / saragavo) (cut into 2 1/2 pieces): 1
+tomato (quatered thin): 1
+dried figs (anjeer) (soaked for 45 minutes and chopped): 1
+cashew nuts (kaju) (cut into halves): 1
+canned pineapple syrup ((readily available in the market)): 1
+rose syrup ((readily available in the market)): 1
+mixed fruit syrup ((readily available in the market)): 1
+kacchi kairi syrup ((readily available in the market)): 1
+chopped dried fruits ((almonds cashewnuts and pistachios)): 1
+bitter gourd (karela) halves: 1
+gluten free pasta ((readily available)): 1
+chana dal (split bengal gram) (soaked for 1 hour and drained): 1
+cashew nuts (kaju) (broken): 1
+fenugreek (methi) seeds (roasted): 1
+baby potatoes (boiled  peeled and deep-fried): 1
+garam masala (optional): 1
+boiled eggs (peeled): 1
+bajra rotis: 1
+ghee (for spreading): 1
+butter cubes: 1
+rolling board: 1
+rolling pin: 1
+knife (or metal dough cutter): 1
+eggless vanilla sponge cake ([175 mm (7?)]): 1
+plain butter cream icing: 1
+crushed praline: 1
+pastry comb: 1
+butter cream icing: 1
+praline triangles: 1
+piping bag (fitted with a no 5): 1
+unsweetened almond milk (plus 2 tablespoons): 1
+castor sugar (for sprinkling): 1
+apple cubes (refer handy tip): 1
+chopped mixed nuts ((walnuts  almonds)): 1
+blueberry crush (readily available): 1
+chocolate chips (for rolling): 1
+vanilla essence (or): 1
+orange squash (for sprinkling): 1
+palette knife: 1
+dough cutter: 1
+piping bag (fitted with a big): 1
+icing sugar (for rolling): 1
+butter (to grease the ring mould): 1
+walnuts (akhrot) (for decoration): 1
+agar-agar (chopped): 1
+agar-agar (torn into pieces): 1
+crushed corn flakes (for rolling): 1
+almonds (badam): 1
+kalhua liqueur ((optional)): 1
+beaten whipped cream (or cool whip): 1
+chocolate (sauce): 1
+blueberries: 1
+chopped banana: 1
+cumin seeds (jeera) (for sprinkling): 1
+agar-agar (powder): 1
+butter (cube): 1
+mixed nut chikki: 1
+canned pineapple (cut into 6 pieces): 1
+1 tsp red velvet emulsion: 1
+almond (badam) slivers (for garnish): 1
+tiramisu biscuits: 1
+mascarpone cheese: 1
+edible garnishes (for topping): 1
+blue colour: 1
+pink colour: 1
+plum compote: 1
+dry yeast (or): 1
+chopped dates (khajur) (for topping): 1
+walnuts (akhrot) (for topping): 1
+whole wheat pita bread: 1
+vegetable crudites: 1
+potato (peeled): 1
+toovar (arhar) dal (soaked for 1 hour and drained): 1
+banana leaves (kele ka patta) (cut into 75 mm ? 75 mm. square): 1
+cardamom (elaichi) (lightly crushed): 1
+low fat cream ((malai) for the garnish): 1
+eggless chocolate sponge cake ([75 mm (7?)]): 1
+melted chocolate: 1
+scooper: 1
+almond (badam) (slivered): 1
+fafda: 1
+jalebi: 1
+fafda chutney: 1
+tabbouleh: 1
+arrowroot (paniphal) flour (for coating): 1
+sanwa millet (sama) flour: 1
+roasted and powdered peanuts (optional): 1
+paneer (cottage cheese) (cut into 25 mm cubes): 1
+sweet potato (shakarkand) (peeled  cut into 25 mm slices and parboiled): 1
+purple yam (kand) (peeled and cut into 25 mm cubes and parboiled): 1
+arrowroot (paniphal) flour (flour): 1
+sweetened curd (dahi): 1
+faral chutney: 1
+farfalle: 1
+chopped coriander (dhania) (seeds): 1
+pita bread (round or oval): 1
+whole wheat hot dog rolls (cut into halves horizontally): 1
+sliced feta cheese: 1
+sliced celery (ajomda): 1
+dry red chilli flakes (paprika) (for garnish): 1
+fettuccine: 1
+dry red chilli flakes (paprika) (for the garnish): 1
+dried figs (anjeer) (soaked and pureed): 1
+dried apricots (khumani / jardalu) (soaked and pureed): 1
+dried apricots (khumani / jardalu) (deseeded and chopped): 1
+low fat milk (99.7% fat-free milk): 1
+egg (whites): 1
+yellow capsicum (chopped): 1
+cheddar cheese: 1
+foxtail millet (kangni): 1
+cumin seeds (jeera) (powdered): 1
+coriander (dhania) seeds (dry roasted and powdered): 1
+melted butter (and cooking): 1
+sliced mixed fruits ((apple pear and kiwi)): 1
+white sponge (50 mm.(6) diameter): 1
+rasgullas: 1
+tender ginger (adrak) (peeled and cut into strips): 1
+chopped mixed nuts ((almonds  cashews and pistachios) for rolling): 1
+milk (chilled): 1
+sliced tender ginger (adrak): 1
+sliced fresh turmeric (amba halad): 1
+soaked dried apricots (kummani / jardalu): 1
+water ((approx.)): 1
+bread crumbs (to coat): 1
+red wine (sauce): 1
+fried cashew nut (kaju) (broken vertically): 1
+chopped mixed nuts ((cashewnuts  almonds and walnuts)): 1
+beetroot (chopped or sliced): 1
+lettuce (leaves  torn into small pieces): 1
+mixed fruits (scoops): 1
+muskmelon (kharbooja) (scoops): 1
+amla (indian gooseberries) (cubes  optional): 1
+black grapes (cut into halves horizontally): 1
+boiled potato (peeled and cut into cubes): 1
+orange segments (peeled): 1
+strawberry pulp (mixed in 1? teaspoons): 1
+cranberries (juice): 1
+cucumber cubes (optional): 1
+chopped mixed fruits ((apples and pears)): 1
+1/4 cup fresh low fat curds  (dahi): 1
+strawberry (roughly chopped): 1
+strawberry (mashed): 1
+grapes (cut in halves): 1
+boiled mixed pulses: 1
+iceberg lettuce (washed and torn into pieces): 1
+strawberry puree (or): 1
+lettuce (torn into big pieces): 1
+chopped mixed fruits ((pears and apples)): 1
+sliced fruits: 1
+beaten rice (poha) ((beaten rice flakes)): 1
+sliced mixed fruits ((banana apples etc.)): 1
+sliced mixed fruits ((apples  etc.)): 1
+cornflour (mixed with 2 tsp): 1
+orange segments (for the topping): 1
+sliced banana (for the topping): 1
+mint sprig (for garnish): 1
+chopped mixed fruits ((watermelon grapes papaya oranges apples banana etc)): 1
+red capsicum (cubes): 1
+crushed potato wafers: 1
+cauliflower (cut into small florets): 1
+carrot (cut into small cubes): 1
+raw mango (cut into small pieces): 1
+ginger (adrak) (peeled and cut into small pieces): 1
+chopped fresh turmeric (amba halad) ((optional)): 1
+roti (.): 1
+ganthia (refer handy tip): 1
+tendli (ivy gourd) rings: 1
+hot dog rolls (cut horizontally): 1
+tamarind (imli) pulp (mixed with 2 cups of): 1
+tomato concasse: 1
+roasted dry kashmiri red chilli: 1
+mustard (rai / sarson) powder (to taste): 1
+boiled baby potatoes ((with the skin)  cut into halves): 1
+chunky salsa    recipe above: 1
+blanched spinach (palak) (leaves): 1
+white pepper powder (optional): 1
+ganthia: 1
+garlic (lehsun) ((optional)): 1
+teekha phudina chutney: 1
+dry masala powder: 1
+chopped poi saag: 1
+raw banana (cubes): 1
+chana dal (split bengal gram) (washed and soaked for 1 hour and drained): 1
+lemongrass juice: 1
+lemonade ((7 up  sprite or lemonade)): 1
+soft drink ((lemon flavoured)): 1
+sweet lime slices: 1
+cooked kodri (varagu) (refer handy tip): 1
+tofu (bean curd/ soya paneer) cubes ((bean curd/ soya paneer) cubes or): 1
+celery (ajmoda) (thinly sliced): 1
+sweet dip: 1
+powdered sugar (refer handy tip): 1
+cooked gluten free pasta ((readily available)): 1
+potato (cut into big cubes): 1
+cauliflower florets (washed): 1
+cauliflower florets (cut into halves vertically): 1
+cinnamon (dalchini) (sticks  25 mm. each): 1
+orange segments (to serve): 1
+butter (as required): 1
+grated processed cheese (as required): 1
+almond (badam) slivers (for the garnish): 1
+grated potatoes ((90% cooked)): 1
+dry red chilli flakes (paprika) (to taste): 1
+olive oil (any for cooking): 1
+dry dates (kharek) (deseeded): 1
+chopped gongura leaves (ambada): 1
+gongura leaves (ambada): 1
+chopped mixed nuts ((almonds  walnuts and cashewnuts)): 1
+sliced indian jujube (ber / bor): 1
+brandy ((optional)): 1
+steamed and grated purple yam (kand): 1
+romaine lettuce (torn into pieces): 1
+chopped feta cheese: 1
+green cucumber cubes: 1
+potato wedges ((unpeeled)): 1
+lemongrass (hare chai ki patti) (stalks  each cut into 3?): 1
+coriander (dhania) (with the leaves): 1
+coriander (dhania) (seeds  ground): 1
+cumin seeds (jeera) (ground): 1
+chopped lemon grass (hare chai ki patti) (stalks): 1
+chopped green garlic (hara lehsun) (or 1 tbsp finely finely): 1
+sage (and): 1
+moong (whole green gram) (soaked overnight and drained): 1
+green moong dal (split green gram) (soaked for 3 hours and drained): 1
+green moong dal (split green gram) (soaked overnight and drained): 1
+green moong dal (split green gram) (soaked in for 2 hours and drained): 1
+green moong dal (split green gram) (soaked and cooked): 1
+green moong dal (split green gram) (with skin  soaked for 3 hours): 1
+green moong dal (split green gram) (soaked for 3 hours  boiled and drained): 1
+crushed green chillies: 1
+beaten rice (poha) (soaked): 1
+sev (and 2 tbsp): 1
+baked papdi: 1
+green peas (coarsely ground): 1
+dried apricots (khumani / jardalu) (soaked in for 1 hour  drained and chopped): 1
+curd (dahi) (mixed with 1/2 cup): 1
+1 tsp tamarind water: 1
+cornflour (dissolved in 1 tbsp of): 1
+sliced onions (optional): 1
+green peas puree (refer handy tip): 1
+yellow moong dal (split yellow gram) (soaked for 30 minutes and drain): 1
+banana leaves (kele ka patta) (125 mm. diameter): 1
+boiled and mashed green peas (mashed): 1
+green pea pods: 1
+boiled green peas (lightly mashed): 1
+peanut oil (for deep-frying): 1
+urad dal (split black lentils) (flour): 1
+soaked long grain rice (basmati chawal) (for 30 minutes and drained): 1
+1 tbsp fresh low fat curds  (dahi): 1
+quick cooking oats (flour  refer handy tip): 1
+sliced capsicum ((red  green and yellow)): 1
+brussels sprouts: 1
+chopped mixed nuts (( almonds and walnuts)): 1
+bread slices (slices): 1
+recipe green chutney: 1
+pita bread (breads): 1
+mushrooms (khumb) (stalks  finely chopped): 1
+mushrooms (khumb) (destemmed): 1
+sea salt: 1
+sliced baguette ((approx. 3/4 thick)): 1
+chopped red capsicum (or): 1
+sliced sweet potato (shakarkand) ((unpeeled)): 1
+parboiled long sweet potato (shakarkand) slices: 1
+chopped and blanched french beans (cut into 2” inch): 1
+white corn kernels (safed makai ke dane) ((optional)): 1
+tabasco sauce (to serve): 1
+zucchini: 1
+chopped guava ((peru)): 1
+guava (cut it into halves): 1
+chopped pink guava: 1
+kokum (soaked): 1
+chunda (or sweet pickle): 1
+samosa: 1
+plain flour (maida) (dissolved in 1 tbsp): 1
+komal: 1
+whole dry kashmiri red chilli (broken into pieces.): 1
+3/4 cup readymade custard mixture (150g): 1
+pistachios (slivers): 1
+crumbled gulab jamun mawa: 1
+gulkand (refer handy tip): 1
+gunda: 1
+sea salt (khada namak) (roasted and powdered): 1
+white butter (safed makhan): 1
+masala chai: 1
+cornflour (dissolved with 1 tbsp cold water): 1
+carrot (juliennes): 1
+boiled soybeans (sauce): 1
+capsicum (cut into long thin strips): 1
+boiled noodles (refer handy tip): 1
+vinegar ((optional)): 1
+blanched carrot strips: 1
+paneer (cottage cheese) (cut into 50 mm. (2) x 25 mm. (1) and 1 cm. thick): 1
+chilli garlic fries: 1
+fresh hara chana (green chick peas): 1
+powdered walnuts (akhrot) (and drained): 1
+3/4 cup low fat curds  (dahi): 1
+brown rice (soaked and drained): 1
+low fat paneer (cottage cheese) (cut into 25 mm. x 25 mm. pieces): 1
+green colour ((optional)): 1
+hara chana (green chick peas): 1
+green chilli (cut into 1? pieces): 1
+soaked and boiled haricot beans: 1
+pandi chillies (deseeded and broken into pieces): 1
+ragi (nachni / red millet) (or flour): 1
+chopped radish (mooli) (leaves): 1
+phulkas or parathas: 1
+matki (moath beans) (soaked overnight and drained): 1
+brown rice flour ((chawal ka atta)): 1
+pointed gourd (parwal): 1
+1 1/2 cups cooked rice: 1
+plain flour (maida) (dissolved with 2 tbsp): 1
+tender coconut meat cubes: 1
+agar-agar ((unflavoured china grass)): 1
+muskmelon (kharbooja) (cubes): 1
+(150 mm. (6) diameter) chocolate sponge cake: 1
+chilli powder (or): 1
+oil (or coconut oil for a healthier diet): 1
+brazilian nuts: 1
+low fat paneer: 1
+puffed cereals: 1
+turmeric powder (haldi) ((optional)): 1
+whole wheat chapatis    semi-cooked (150 mm. (6”) diameter each): 1
+blanched baby corn (cut into roundels): 1
+brown rice (to serve): 1
+bhakris: 1
+sweet potato (shakarkand) cubes: 1
+banana (mashed): 1
+baked methi muthias: 1
+banana (cut into slices): 1
+cinnamon (dalchini) powder (to sprinkle): 1
+chopped strawberries (or strawberry wedges): 1
+chopped and parboiled red pumpkin (bhopla / kaddu): 1
+whole wheat ladi pav: 1
+zucchini cubes (unpeeled): 1
+brown rice ((chawal)  soaked for 2 hours and drained): 1
+chopped mixed vegetables ((carrots  french beans  cabbage and green peas)): 1
+dry yeast (or 2 tsp fresh yeast crumbled): 1
+3 tbsp sambhar masala: 1
+carrot (and): 1
+chopped coloured capsicum ((red  yellow and green)): 1
+paneer (cottage cheese) (cut into cut into 10 mm. (1 cm) x 10 mm. (1 cm.) cubes): 1
+cucumber ((approx. 20 slices)): 1
+cooked chick peas: 1
+thyme: 1
+zucchini (diagonally cut): 1
+lotus seeds (makhana) ((makhanas)): 1
+cheesy bread strips: 1
+whole dry kashmiri red chilli (soaked in warm for 10 minutes and drained): 1
+rice flour (chawal ka atta) ((chawal ka atta)): 1
+chopped carrot (unpeeled): 1
+crushed marie biscuit (refer handy tip): 1
+desiccated coconut (for coating): 1
+electric beater: 1
+banana (sliced): 1
+organic honey (to taste): 1
+footlong bread ((12 each)): 1
+tofu (bean curd/ soya paneer) (cut into 25 mm. (1?) cubes): 1
+red capsicum (cut into quarters and deseeded): 1
+capsicum (cut into quarters and deseeded): 1
+sliced and blanched baby corn (cut into halves lengthwise and blanched): 1
+low-fat sour cream: 1
+soya rotis: 1
+mushrooms (khumb) (blanched and sliced): 1
+bournvita: 1
+carom seeds (ajwain) (or 1/2 teaspoon): 1
+mixed sprouts ((moong  chana  matki etc.)): 1
+frozen green peas: 1
+olive oil (optional): 1
+colocasia (arbi) roundels: 1
+water (for cooking or sprinkling): 1
+fresh low fat curd (dahi): 1
+chopped mixed vegetables ((carrot  french beans and cauliflower)): 1
+chopped mixed nuts ((almonds and cashewnuts)): 1
+whole dry kashmiri red chilli (broken to pieces): 1
+rice (chawal) (soaked): 1
+urad dal (split black lentils) (soaked): 1
+ginger-green chilli paste ((optional)): 1
+whole dry kashmiri red chilli (with the stems removed): 1
+chopped mushrooms (khumbh) (optional): 1
+cornflour (dissolved in 2 tablespoons of): 1
+dahiwali pudina chutney: 1
+chopped parsley (stems with leaves): 1
+chopped celery (ajmoda) (sticks): 1
+chopped and boiled mixed vegetables ((french beans  carrot and cauliflower)): 1
+tomato cubes (deseeded): 1
+unsweetened protein powder ((optional)): 1
+capsicum (finely sliced): 1
+roasted peanuts (peeled): 1
+grated parmesan: 1
+fresh rosemary (stalks): 1
+grated bottle gourd (doodhi / lauki) (squeeze the excess water): 1
+mushrooms (khumb) (halved): 1
+chopped and boiled carrots (and): 1
+sago wafers (fried): 1
+chopped mixed fruits ((apple  greenapple  pineapple)): 1
+chopped mixed nuts ((almonds and walnuts)): 1
+cinnamon (dalchini) powder (for coating): 1
+celery (ajmoda) (sticks  roughly chopped): 1
+crushed pistachios (for sprinkling): 1
+oil (for greasing and smearing): 1
+raw mango (cut into strips): 1
+dried rose petals (optional): 1
+broken wheat (dalia) (washed): 1
+chopped mixed vegetables ((carrot  french beans and green peas)): 1
+mini toasted bread croutons: 1
+carom seeds (ajwain) (for sprinkling): 1
+french beans (cut into strips): 1
+butter (for cooking the pancakes): 1
+oil (mixed with 1 tablespoon water): 1
+pine nuts: 1
+boiled pasta: 1
+tomato (deseeded and cubed): 1
+capsicum (cubed): 1
+spring onions ((with the greens)  chopped): 1
+stuffed olives (cut into halves): 1
+chopped jackfruit (kathal / phanas): 1
+dry coconut (kopra) (slices): 1
+chilli oil (refer handy tip): 1
+green moong dal (split green gram) ((split green gram)  washed and drained): 1
+pav bhaji masala (refer handy tip): 1
+hara vatana (dried green peas) (soaked  boiled and mashed): 1
+pappadam: 1
+ghee (for the dough): 1
+oil (or ghee for deep frying): 1
+salted boondi: 1
+strawberry jam (for spreading): 1
+chopped chives ((optional)): 1
+lettuce (broken into small pieces): 1
+cherries ((optional)): 1
+turmeric powder (haldi) (optional): 1
+navratna chivda: 1
+fried peanuts: 1
+jhal muri masala: 1
+ginger-garlic (adrak-lehsun) paste (optional): 1
+bread (slice  dipped in and squeezed): 1
+semi-cooked rotis: 1
+oil (or for cooking): 1
+peanut oil (or for cooking): 1
+soaked and cooked whole jowar (white millet): 1
+grated radish (mooli) (squeezed): 1
+chopped radish leaves (mooli ke patte) (washed and drained): 1
+grated pear: 1
+salt (or as recommended by doctor / dietitian): 1
+jowar (white millet) (washed and drained): 1
+ragi (nachni / red millet) (washed and drained): 1
+isabgol: 1
+ghee (optional): 1
+powdered jowar (white millet): 1
+3 tbsp sambhaar    refer handy tip: 1
+200 mm. (8) wholemeal pizza bases: 1
+red chilli sauce ((optional)): 1
+kabuli chana (white chick peas) (soaked and drained): 1
+chole masala (powder  readily available in the market): 1
+paneer (cottage cheese) (cut into 37 mm. cubes): 1
+1 tsp  garam masala: 1
+fresh tomato pur?e: 1
+cashew nuts (kaju) (coarsely powdered): 1
+saffron (kesar) strands (dissolved in 1 tbsp of): 1
+saffron (kesar) strands (or): 1
+ghee (warm): 1
+ghee (hot): 1
+sprouted kala chana (brown chick peas) (refer handy tip): 1
+onion (pureed): 1
+tomato (pureed): 1
+kala khatta syrup: 1
+chopped onions: 1
+chopped drumstick (saijan ki phalli / saragavo): 1
+avocado oil: 1
+chana dal (split bengal gram) (soaked for 3 hours and drained): 1
+kolumbu: 1
+grated purple yam (kand): 1
+purple yam (kand) cubes: 1
+purple yam (kand) (peeled and thinly sliced): 1
+roasted chana dal (daria) (coarsely crushed): 1
+steamed purple yam (kand) cubes (cut into 50 mm. x 50 mm. (2? x 2?) pieces): 1
+salt ((sendha namak) and to taste): 1
+purple yam (kand) strips: 1
+potato ((80% cooked)  peeled and cut into thick strips): 1
+milk (for sealing): 1
+bitter gourd (karela) juliennes (cut approx. 2): 1
+bitter gourd (karela) (peeled and cut into long strips): 1
+sliced bitter gourd (karela) (unpeeled): 1
+bitter gourd (karela) peels: 1
+chopped bitter gourd (karela) peels: 1
+kashmiri green tea leaves: 1
+cardamom (elaichi) (slightly crushed): 1
+finely chopped almonds: 1
+banana (peeled and roughly chopped): 1
+lemon sweets: 1
+banana (roundels): 1
+ker (soaked for 8 hours and drained): 1
+ker (soaked overnight and drained): 1
+ker: 1
+sangri (sanger): 1
+sandalwood (chandan): 1
+chopped mixed nuts ((almond  cashewnuts and pistachios)): 1
+low fat milk ((99.7% fat-free)  boiled and cooled slightly): 1
+saffron (kesar) strands (dissolved in a little): 1
+tamarind (imli) (deseeded): 1
+khakhra ((7? each) broken into big pieces): 1
+roasted peanuts (deskinned): 1
+whole wheat khakhra ((approx. 8  diameter)): 1
+whole wheat khakhras: 1
+chilkewali urad dal (spit black gram with skin) (soaked for 1 hour and drained): 1
+khaman dhokla: 1
+green chilli ((bhavanagari chillies)): 1
+crushed coriander (dhania) seeds (optional): 1
+yellow moong dal (split yellow gram) (soaked for 2 to 3 hours and drained): 1
+cumin seeds (jeera) (slightly crushed): 1
+water (or as required): 1
+white dhokla flour: 1
+crushed black pepper (kalimirch) (for sprinkling): 1
+dhokla pieces: 1
+sour curds (khatta dahi) (whisked): 1
+soaked and cooked rice (chawal) (/): 1
+urad dal (split black lentils) ((split black lentils)): 1
+sour curds (khatta dahi) ((khatta dahi)  whisked with 1 cup of): 1
+garlic (lehsun) ((lehsun) paste): 1
+chopped coriander (dhania) ((dhania)): 1
+salt (to taste restricted salt to health): 1
+radish (mooli) (cubes): 1
+valor papdi (stringed and broken into 2 pieces): 1
+curd (dahi) (preferably made from cow's): 1
+cabbage (cut into 25 mm. (1?) cubes): 1
+cabbage (cut into 25 mm. (1) dices): 1
+ghee (for smearing and serving): 1
+chopped mixed nuts (( almonds pistachios and cashews)): 1
+blanched mushrooms (khumbh) (cut into quarters): 1
+low fat milk ((99.7% fat-free  readily available in the market)): 1
+hung curds (chakka dahi) (whisked): 1
+cabbage cubes ((cut into 1)): 1
+eggless chocolate sponge cake (( 7?)): 1
+kit kat chocolate: 1
+chocolate walnut brownie: 1
+cream wafer biscuit ((pickwick)): 1
+kiwi crush: 1
+lemon (halve): 1
+salt (as required): 1
+kiwi: 1
+kiwi (slices): 1
+sprouted moong (whole green gram) (coarsely crushed): 1
+dried fenugreek leaves  (kasuri methi) ()): 1
+cardamom (elaichi) (seeds): 1
+saffron (kesar) strands (soaked in 1 tbsp of warm): 1
+sweet buns: 1
+rice (chawal) (washed  soaked for 15 minutes and drained): 1
+boiled mixed vegetables ((carrot  french beans  green peas  potatoes etc.)): 1
+moong (whole green gram) (sprouts): 1
+soaked and cooked hara vatana (dried green peas): 1
+kulfi: 1
+jalebis (broken into pieces): 1
+cream (cubes): 1
+chopped mixed nuts ((almonds and pistachios)): 1
+boiled sprouted kulith (horse gram) (sprouts  refer handy tip): 1
+diagonally cut capsicum ((red  green and yellow)): 1
+water (+ 1 1/2 tablespoons): 1
+sliced mixed vegetables ((carrots baby corn zucchini small brinjals yellow squash)): 1
+vinegar (or): 1
+ladi pav (cut into thick slices): 1
+crushed fenugreek (methi) seeds: 1
+split coriander seeds (dhana na kuria): 1
+ginger (adrak) juliennes (optional): 1
+chapati dough: 1
+chopped and parboiled mixed vegetables ((carrot  french beans  cauliflower  green peas)): 1
+salt (restriction for blood pressure control): 1
+water (chilled): 1
+mixed fruit cubes ((strawberry  black grapes  papaya and apple)): 1
+chopped jelly: 1
+soaked kashmiri rajma (kidney beans): 1
+all spice powder: 1
+tomato slices (cut into halves): 1
+tortilla wraps: 1
+pickled jalapeno (rings): 1
+tahini sauce: 1
+water (for 1 hour and drained): 1
+mustard seeds ( rai / sarson) ((rai / sarson)): 1
+curry leaves (kadi patta) (cut into half): 1
+soft drink ((lemon flavour)): 1
+crushed ice (for serving  optional): 1
+basic cheese cake: 1
+low fat butter (melted): 1
+vanilla ice cream (softened): 1
+mint leaves (pudina) (to garnish): 1
+lemon slices (to serve): 1
+vegetarian seasoning cube (lightly crushed): 1
+lemongrass (hare chai ki patti) (finely chopped): 1
+jaggery (gur) (to taste): 1
+milk ((room temperature)): 1
+lemon (rind): 1
+lemon (colour): 1
+cornflour (dissolved in 2 tbsp water): 1
+chopped lettuce ((preferably iceberg)): 1
+apple ((unpeeled)): 1
+whole wheat bread (sticks): 1
+lemon (zest): 1
+chopped lettuce (leaves): 1
+toasted: 1
+chopped mixed fruits (( apples pears bananas and stone cherries)): 1
+roasted peanuts (broken into pieces (optional)): 1
+tomato (cut into cubes): 1
+cucumber (cut into cubes): 1
+chopped basil (for serving): 1
+plum sauce: 1
+red garlic sauce: 1
+fresh green garlic (hara lehsun) (optional): 1
+lemon squash: 1
+soda (chilled): 1
+1 tsp stuffed red chilly pickle masala: 1
+lemon (juice (optional)): 1
+water (.): 1
+coriander (dhania) seeds (crushed): 1
+raw peanuts ((optional)): 1
+salt (and taste): 1
+essence: 1
+chopped mixed vegetables (boiled): 1
+strawberry (crushed): 1
+oil (for deep-frying and rolling): 1
+lychee pulp: 1
+salt (to taste  optional restricted salt for health): 1
+whole urad (whole black lentil) (soaked overnight and drained): 1
+carrot (cut diagonally): 1
+grated processed cheese (for topping): 1
+dried oregano (or): 1
+maggi noodles ((70 gms) each): 1
+maggi noodles (coarsely crushed): 1
+lahsun ki chutney (for serving): 1
+roasted and powdered dry coconut: 1
+roasted sesame seeds (til) (powder): 1
+black sesame seeds (kala til) (for sprinkling): 1
+plain flour (maida) (dissolved in 1/2 cup of water): 1
+chopped mixed nuts ((cashewnuts and pistachios)): 1
+low fat paneer (cottage cheese) (cut into 12 mm. ( 1/2) cubes): 1
+3/4 cup milk combined with 1 tsp plain flour (maida): 1
+mustard seeds ( rai / sarson) ((rai/sarson)): 1
+finely chopped cucumber: 1
+finely chopped coloured capsicum: 1
+low fat paneer (cottage cheese) cubes (cut into 37 mm. (1 1/2?) cubes): 1
+paneer (cottage cheese) (cut into 25mm (1)cubes): 1
+pahadi marinade: 1
+butter (for smearing): 1
+french bean cubes: 1
+whole dry kashmiri red chilli (with the stem removed): 1
+curd (dahi) (combined with 1/2 cup): 1
+boiled green peas (refer handy tip): 1
+soya chaap: 1
+paneer (cottage cheese) cubes (or): 1
+chopped mixed fruits ((pineapple  peaches  strawberries etc.)): 1
+mixed fruits ((pear  apples  oranges  bananas)  cut into cubes): 1
+basic malvani gravy: 1
+chopped cauliflower ((optional)): 1
+fried noodles (refer handy tip): 1
+veg manchurian balls: 1
+mayonnaise (for garnish): 1
+misri (or sugar): 1
+mango cubes (threaded on 2 skewers): 1
+ice cream sticks (cut into 3? pieces): 1
+crystallized ginger: 1
+mango (slices): 1
+toasted bread slice (lightly buttered): 1
+mango (cubes): 1
+raw mango (cut into big pieces with the seed): 1
+cream (chilled): 1
+mango (chopped into pieces): 1
+peeled riped mango: 1
+chopped mango ((totapuri)): 1
+water (to make a dough): 1
+mango cake: 1
+thick curds (dahi) (preferably made with): 1
+sliced strawberries (or): 1
+cornmeal (for dusting): 1
+mozzarella cheese slices: 1
+parsley (sprigs): 1
+black olives (drained): 1
+olive oil (as required): 1
+dal baati churma: 1
+brown rice ((chawal)  soaked for 30 minutes and drained): 1
+tendli (ivy gourd) (sliced horizontally): 1
+cashew nuts (kaju) (fried): 1
+lemongrass (hare chai ki patti) (stalks  each cut into 50 mm. pieces): 1
+crushed ginger (adrak): 1
+chilli powder ((optional)): 1
+soaked chana dal (split bengal gram) (overnight and): 1
+chawli (cow pea  lobhia) (soaked overnight and drained): 1
+chopped mint leaves (phudina) (washed and drained): 1
+chopped mixed vegetables ((cabbage  cauliflower  carrot and french beans)): 1
+soaked masoor dal (split red lentil): 1
+white onions (peeled): 1
+nutmeg (jaiphal) powder ((optional)): 1
+rasgullas      cut into halves: 1
+roasted onion (roughly chopped): 1
+tendli (ivy gourd) ((optional)): 1
+soy oil (or oil): 1
+soy oil (or oil for kneading): 1
+soy oil (or oil for cooking): 1
+soaked and cooked toovar (arhar): 1
+soaked chana dal (split bengal gram) (refer handy tip): 1
+coconut (chutney or green chutney): 1
+boiled mixed sprouts ((moong  matki  chana etc)): 1
+milk (for making dough): 1
+masoor (whole red lentil) (soaked for 2 hours and drained): 1
+dried apricots (khumani / jardalu) (soaked and finely chopped): 1
+masoor (whole red lentil) (soaked and drained): 1
+masoor (whole red lentil) (soaked for 1-2 hours): 1
+bean sprouts ((readily available in the market)): 1
+brown rice (washed and drained): 1
+whole wheat bread (slices  crumbled): 1
+chopped and boiled mixed vegetables ((carrot and french beans)): 1
+masoor (whole red lentil) (soaked): 1
+shallots (madras onions) (chopped): 1
+carrot (parboiled): 1
+cornflour (dissolved with 2 tbsp): 1
+peanut oil (or oil for cooking): 1
+boiled matki (moth beans): 1
+boiled and crushed matki (moath beans): 1
+medu vadas: 1
+capsicum (sliced lengthwise): 1
+garlic bread (leaves): 1
+paan katha: 1
+dhana dal: 1
+deseeded and chopped dried dates (kharek): 1
+oranges: 1
+dried mango: 1
+pineapple crush: 1
+papaya balls ((prefrebly the red variety)): 1
+honeydew melon: 1
+papaya balls ((preferably the red variety)): 1
+muskmelon (kharbooja) balls (scoops): 1
+low fat milk ((99.7% fat-free )): 1
+sliced muskmelon (kharbooja): 1
+raw mango (peeled and cubed): 1
+fenugreek (methi) leaves (leaves with the stalks): 1
+chopped fenugreek leaves (methi) (with the stalks): 1
+ginger-green chilli paste (optional): 1
+fenugreek (methi) seeds (soaked for 2 hours and drained): 1
+chopped bottle gourd (doodhi / lauki) ((doodhi)): 1
+drumsticks (saijan ki phalli / saragavo) (cut into 2 pieces): 1
+butter (to serve): 1
+yellow moong dal (split yellow gram) (soaked in hot for 5 minutes): 1
+1 1/2 tsp green chilli paste: 1
+papad (broken into big pieces): 1
+papad (torn into pieces): 1
+green tomatoes (cut into big pieces): 1
+grated cheese cubes: 1
+guacamole: 1
+green salsa: 1
+soaked and chopped dry kashmiri red chillies: 1
+grated monterey jack cheese: 1
+sharp cheddar cheese: 1
+chunky salsa: 1
+jalapeno paste: 1
+uncooked salsa: 1
+blanched mushrooms (khumbh) (blanched): 1
+chopped garlic (lehsun) (peeled and roughly chopped): 1
+chopped tomato (finely chopped): 1
+shredded lettuce (shredded): 1
+hot sauce: 1
+garlic (lehsun) paste ((lehsun)): 1
+thin pizza base ((7) each): 1
+avocado (cubes): 1
+chopped and boiled mixed vegetables ((french beans and carrots)): 1
+leftover chapatis: 1
+zucchini (sliced): 1
+carrot (sliced): 1
+dry red chilli flakes (paprika) (or): 1
+boiled baby potatoes (halves): 1
+नमक: 1
+4 1/2 cups clear vegetable stock    refer handy tip: 1
+8 flour tortillas: 1
+cooked tomato salsa: 1
+almond (badam) (cut into big cubes): 1
+chocolate (chopped): 1
+milk (cooking): 1
+curd (dahi) (mixed with 3/4 cup water): 1
+curds: 1
+penne: 1
+4 cups basic vegetable stock: 1
+kodri (varagu) (washed and drained): 1
+baking soda ((soda bi-carb)): 1
+chopped masala cashew nut: 1
+sweet corn cob (cut into 10 roundels): 1
+green moong dal (split green gram) (soaked for 1 hour and drained): 1
+grated mixed vegetables ((carrots cabbage cauliflower onions etc.)): 1
+sesame seeds (til) (for the topping): 1
+olive oil (for greasing and drizzling): 1
+lemonade ((limca)): 1
+low fat milk ((99% fat free)): 1
+guava (slices): 1
+whole wheat bread crumbs: 1
+salt (to taste iodised salt for hypothyroidism): 1
+boiled chawli (cow pea / lobhia) (refer handy tip): 1
+grapefruit: 1
+mint leaves (pudina) (torn into pieces): 1
+white jamun: 1
+lemongrass (hare chai ki patti) (stalks  cut into 50 mm. pieces): 1
+salt (and freshly ground pepper to taste): 1
+whole dry kashmiri red chilli (broken into two pieces): 1
+bhavnagri chillies (cut into thick strips): 1
+sprouted safed vatana (dried white peas): 1
+sprouted chawli (cow pea / lobhia): 1
+batata poha: 1
+wheat (gehun) (washed and drained): 1
+3 tbsp  sambhaar: 1
+sliced grape: 1
+watermelon (tarbuj) juice: 1
+kiwi slices (cut into halves): 1
+hung low fat curds (chakka dahi) (refer handy tip): 1
+matki (moath beans): 1
+hara vatana (dried green peas): 1
+besan (bengal gram flour) (dissolved in 1 tsp): 1
+chopped mixed dried berries: 1
+chopped mixed nuts (( almonds  pistachios and walnuts)): 1
+blanched baby onion: 1
+boiled and mashed mixed sprouts (((matki  moong  chana  etc)  refer handy tip): 1
+mixed sprouts ((moong  chana  matki (moath beans) etc.)): 1
+parboiled safed vatana (dried white peas): 1
+boiled mixed sprouts ((moong  chana  matki etc)): 1
+chopped mixed vegetables ((french beans  potatoes and cauliflower)): 1
+long grain rice (basmati chawal) (soaked for 1 hour): 1
+roasted masala chana: 1
+boiled mixed sprouts ((mung beans  sukha vatana  kala chana  chawli  kabuli chana  matki)): 1
+boiled and crushed mixed sprouts ((moong  matki  chana etc)): 1
+cardamom (elaichi) (broken lightly): 1
+chopped and boiled mixed vegetables ((carrots french beans green peas etc.)): 1
+resh curds: 1
+boiled mixed sprouts ((kabuli chana  moong  rajma  matki etc.)): 1
+boiled mixed sprouts ((chana and matki)): 1
+chopped mixed vegetables (( carrots  cabbage  french beans and green peas)): 1
+black sesame seeds (kala til) (for rolling): 1
+chopped coriander (dhania) (for rolling): 1
+chopped and boiled mixed vegetables ((french beans  carrots  green peas and cauliflower)): 1
+chopped and boiled mixed vegetables ((carrots  french beans green peas)): 1
+boiled mixed vegetables ((carrot): 1
+short crust pastry: 1
+chopped and boiled mixed vegetables ((cauliflower  carrot  french beans and green peas)): 1
+green peppercorns (with stalks (optional)): 1
+fresh green garlic (hara lehsun) (or): 1
+sliced mixed vegetables ((carrots french beans baby corn) parboiled): 1
+diagonally cut and boiled mixed vegetables (( french beans  carrot and green peas)): 1
+blanched baby corn (sliced diagonally): 1
+peach halves (syrup removed): 1
+ghee (for kneading and greasing): 1
+rose water (optional): 1
+pistachio slivers (for sprinkling): 1
+almond (badam) slivers (for sprinkling): 1
+bamboo shoots: 1
+capsicum cubes (( red and green)): 1
+chopped radish (mooli) (whites and greens): 1
+radish leaves (mooli ke patte) (finely chopped): 1
+chopped radish (mooli) (washed and drained): 1
+quick mango chunda: 1
+methi muthias (recipe below): 1
+chopped cauliflower greens (washed and drained): 1
+yellow moong dal (split yellow gram) (soaked for 3 to 4 hours): 1
+green moong dal (split green gram) (with skin  soaked for 2 hours and drained): 1
+yellow moong dal (split yellow gram) (soaked for 2 to 3 hours): 1
+yellow moong dal (split yellow gram) flour: 1
+soaked yellow moong dal (split yellow gram): 1
+oil (for drizzling): 1
+healthy coconut chutney: 1
+yellow moong dal (split yellow gram) (soaked for 10 minutes and drained): 1
+moong dal vadi: 1
+moong (whole green gram) (soaked and drained): 1
+soaked and cooked rice (chawal) (or leftover rice): 1
+banana leaves (kele ka patta) (cut into 150 mm. x 150 mm. pieces): 1
+ghee (for deep- frying): 1
+brinjal (baingan / eggplant) (cut into thin slices (12-15 slices)): 1
+tomato puree ((optional)): 1
+sliced mozzarella cheese ((2?? 1/2?)): 1
+chopped mixed nuts (( almonds  walnuts  cashews and pistachios)): 1
+whole dry kashmiri red chilli (broken into pieces and soaked in 1 cup hot for 1 hour and drained): 1
+cashew nuts (kaju) (soaked in 1 cup hot for 1 hour and drained): 1
+aniseeds (vilayati saunf) powder: 1
+radish (mooli) (slices): 1
+apple skins swirls: 1
+calcium propionate powder: 1
+flax seeds (powder): 1
+sunflower seeds (surajmukhi ke beej) (for sprinkling): 1
+quick cooking oats (roasted and coarsely ground): 1
+lemon (cut into halves and deseeded): 1
+puri (chaat) (readily available): 1
+mushrooms (khumb) (washed): 1
+1/2 cup  rice noodles   broken into pieces: 1
+mushrooms (khumb) (chopped into quaters): 1
+cornflour (dissolved in 1 tablespoon): 1
+chopped spring onions (for the garnish): 1
+chana dal (split bengal gram) (soaked for 2 hours): 1
+milk (99.7% fat-free  readily available in the market): 1
+2 tsp cornflour dissolved in 1 tbsp water: 1
+whole wheat bread (hot dog buns): 1
+oil (for brushing and greasing): 1
+dried fenugreek leaves  (kasuri methi) ((kasuri methi)): 1
+bread (slices  toasted): 1
+stock cubes: 1
+crust pizza base: 1
+capsicum cubes ((green  red and yellow)): 1
+blanched baby corn (cubes): 1
+chopped and blanched broccoli (stalks): 1
+thin pizza base (200 mm. (8) diameter): 1
+olive oil (or any other for greasing and drizzling): 1
+canned mushrooms (khumbh): 1
+mushrooms (khumb) (stem removed and sliced): 1
+chopped prunes: 1
+chopped wheat grass: 1
+watermelon (tarbuj) cubes ((deseeded)): 1
+wheat grass: 1
+bhavnagri chillies (cut into 12 mm. roundels and deseeded): 1
+black grape juice: 1
+fenugreek (methi) leaves (leaves leaves seeds): 1
+rice (chawal) (flakes): 1
+coconut oil (or any other for greasing and cooking): 1
+coconut (chutney for serving): 1
+potato (masala): 1
+6 tsp mysore chutney  recipe above.: 1
+ragi (nachni / red millet) (flour): 1
+ragi (nachni  red millet) flour (for dusting): 1
+low fat curds (dahi) (/): 1
+besan (bengal gram flour) (or): 1
+green chilli (cut): 1
+baked beans ((canned) (readily available in the market)): 1
+baked tortilla chips: 1
+lotus stem (kamal kakdi / bhein) (cleaned and grated): 1
+vanaspati: 1
+malagapdi powder   recipe given: 1
+salted peanuts (crushed lightly): 1
+chopped mixed vegetables ((carrots  frenchbeans and green peas)): 1
+chopped dried fruits (( almonds  pistachio and cashewnuts)): 1
+neem leaves: 1
+whole dry kashmiri red chilli (coarsely ground): 1
+oreo biscuit (halves): 1
+quick cooking oats (for rolling): 1
+chopped coriander (dhania) ((optional)): 1
+masoor (split red lentil) dal (soaked for 2 hours): 1
+sweet lime (mosambi) juice: 1
+whole wheat pasta (or): 1
+1 1/2 tbsp low fat curds  (dahi): 1
+fresh red chilli (sliced): 1
+sesame seeds (til) (toasted): 1
+chopped asparagus (parboiled): 1
+capsicum cubes ((red yellow and green)): 1
+dried oregano (or a pinch of (optional)): 1
+cheese sauce: 1
+1 tbsp red chilli paste: 1
+thin pizza base ((7?) inch each): 1
+icing sugar (for dusting): 1
+green chutney (for serving.): 1
+blanched broccoli florets ((small)): 1
+rice noodles ((dried rice vermicelli)): 1
+sliced mushrooms (khumbh) (optional): 1
+roasted peanuts (and): 1
+tomato ketchup (mixed with 1 tsp): 1
+whole whole wheat pita breads: 1
+1 tbsp of sprouted mixture: 1
+crushed mixed nuts ((almonds  pistachios)): 1
+plain flour (maida) (mixed with 1 tablespoon water): 1
+chopped mixed nuts ((cashewnuts pistachios almonds and walnuts)): 1
+maple syrup (optional): 1
+herbed hummus: 1
+quick cooking oats (roasted and coarsely powdered): 1
+low fat butter (softened): 1
+slit green chilli (slit lengthwise): 1
+whole wheat khakhra (broken into pieces): 1
+almond (badam) (blanched  peeled and sliced): 1
+low fat curds (dahi) (made from 99.7% fat-free): 1
+sprouted and boiled kala chana (brown chick peas): 1
+flax seeds (for sprinkling): 1
+chopped mixed nuts ((pistachios  almond and walnuts)): 1
+green moong dal (split green gram) (soaked and drained): 1
+olive oil (for brushing and cooking): 1
+parboiled green peas: 1
+low fat milk (for coating): 1
+toovar (arhar) dal (soaked for 1 hour): 1
+coconut flakes (for garnish): 1
+burger buns (to serve): 1
+vegetable sticks: 1
+oil (to deep-fry): 1
+freshly ground black pepper (kalimirch) (powder powder): 1
+chilli powder (non spicy): 1
+parboiled cabbage: 1
+purple yam (kand) cubes ((peeled)): 1
+yam (suran) cubes ((peeled)): 1
+potato ((peeled)): 1
+chopped celery (ajmoda) ((ajmonda)): 1
+orange jelly: 1
+orange (drink mix): 1
+orange (flavoured): 1
+malta orange slices: 1
+orange (slices  cut into halves): 1
+grated orange rind ((optional)): 1
+malta orange slices ((peeled and deseeded)): 1
+chocolate biscuit (cut into quarters): 1
+oreo biscuit ((chocolate flavoured)): 1
+crushed oreo biscuit ((chocolate flavoured)): 1
+crushed oreo biscuit (for sprinkling): 1
+samosa patti (cut into long strips): 1
+paneer (cottage cheese) cubes (cut into 12 mm. (?) cubes): 1
+boiled baby corn (and): 1
+baby corn (cut diagonally and par-boiled): 1
+spring onion whites (cut diagonally): 1
+spring onion greens (cut diagonally): 1
+baby corn (parboiled and cut into thin slices): 1
+pak choi (or): 1
+broccoli (or): 1
+chopped and boiled mixed vegetables ((carrots  french beans and green peas)): 1
+cardamom (elaichi) ((ealichi)): 1
+kokum (soaked in): 1
+red pumpkin (bhopla/ kaddu) fingers: 1
+sweet potato (shakarkand) (unpeeled): 1
+dry dates (kharek) (soaked overnight): 1
+cardamom (elaichi) (crushed): 1
+menthol: 1
+betel leaves (paan) (torn into small pieces): 1
+soaked kabuli chana (white chick peas) (see handy tip 1 below): 1
+sliced lotus stem (thinly sliced  see handy tip 2 below): 1
+spring onions ((including the greens)): 1
+green curry paste    recipe below: 1
+2 tbsp khajur imli ki chutney: 1
+paneer (cottage cheese) cubes (cut into 25 mm cubes): 1
+onion cubes (cut into 25 mm cubes): 1
+capsicum cubes (cut into 25 mm cubes): 1
+tomato cubes (cut into 25 mm cubes): 1
+roti ((8) each): 1
+chopped pak choi (torn into pieces): 1
+coconut kadhi: 1
+spinach (palak) (blanched and drained): 1
+spinach (palak) (leaves  washed and dried): 1
+chopped spinach (palak) (washed): 1
+chana dal (split bengal gram) (soaked and drained): 1
+2 cups low fat curds  (dahi)    beaten: 1
+kale (torn into pieces  washed and drained): 1
+blanched spinach (palak) (refer handy tip): 1
+sesame seeds (til) ((optional)): 1
+finely chopped spinach: 1
+besan (bengal gram flour) (sieved): 1
+chopped spinach (palak) (refer handy tip): 1
+paneer (cottage cheese) (cut into 12 mm. cubes): 1
+ginger (adrak) (grated): 1
+chopped paneer (cottage cheese) (preferably made with cow's milk): 1
+yellow moong dal (split yellow gram) (soaked for 15 minutes and drained): 1
+whole wheat (gehun): 1
+toovar (arhar) (dal): 1
+toovar (arhar) dal (soaked for 3 hours and drained): 1
+urad dal (split black lentils) (soaked for 1 hour and drained): 1
+momos: 1
+blanched carrot (cubes): 1
+masoor (whole red lentil) (soaked for 8 hours and drained): 1
+matki (moath beans) (soaked for 8 hours and drained): 1
+kabuli chana (white chick peas) (soaked for 8 hours and drained): 1
+radhuni (optional): 1
+dosa batter (readily available in the market): 1
+cabbage (cut into big pieces): 1
+potato (peeled and chopped): 1
+mango cubes (cut into 25 mm. (1) cubes): 1
+raw banana (peeled and cut into big pieces): 1
+brinjal (baingan / eggplant) (cut into big pieces): 1
+potato (peeled and cut into big pieces): 1
+carrot (peeled and cut into big pieces): 1
+red pumpkin (bhopla / kaddu) (peeled and cut into big pieces): 1
+3 leftover chapatis   torn into small pieces: 1
+paneer (cottage cheese) (cut into 50 mm. (2?) x 12 mm. ( 1/2?) strips): 1
+blanched baby corn (cut into 13 mm ( 1/2) pieces): 1
+dried fenugreek leaves  (kasuri methi) (roasted and crushed): 1
+carom seeds (ajwain) (roasted and crushed): 1
+carrot (for spreading): 1
+paneer (cottage cheese) strips (or): 1
+capsicum strips (or): 1
+slices of kulfi: 1
+chopped tomato (without the pulp): 1
+galangal (thai ginger) (or): 1
+bean sprouts (roughly chopped): 1
+raw peanuts (roasted and coarsely ground): 1
+curly red lettuce: 1
+bread (slices  with crust trimmed): 1
+paneer (cottage cheese) cubes (cut into 25 mm. (1?) cubes): 1
+tomato cubes (deseeded and cut into 2 mm. (1?) cubes): 1
+carrots: 1
+low fat paneer (cottage cheese) (cut into small cubes): 1
+banana leaves (kele ka patta) (cut into 175 mm. x 200 mm.): 1
+melted butter (for spreading and brushing): 1
+coriander (dhania) seeds (coarsely crushed): 1
+hot and sweet dip: 1
+paneer (cottage cheese) (pieces): 1
+pandi chillies (chilli): 1
+chopped spinach (palak) (leaves): 1
+paneer (cottage cheese) cubes ((1?)): 1
+chilli coriander fried rice: 1
+paneer (cottage cheese) cubes ((1?each)): 1
+1 tbsp  red chilli paste: 1
+kulcha bread: 1
+1/2 tsp peri peri masala: 1
+whole dry kashmiri red chilli (coarsely powdered): 1
+cornflour (dissolved in 1/2 cup water): 1
+roti (for serving): 1
+soaked dry kashmiri red chilli (broken into pieces): 1
+chopped coriander (dhania) (stem): 1
+paratha (for serving): 1
+blanched tomatoes (finely chopped): 1
+paneer (cottage cheese) ()  cut into 25 mm. (1?) cubes): 1
+low fat curds (dahi) ((dahi)): 1
+plain flour (maida) (mixed with ? cup water): 1
+paneer (cottage cheese) (triangles): 1
+powdered pistachios (for rolling): 1
+plain flour (maida) (dissolved in 1 cup): 1
+chopped tomato ((without the pulp)): 1
+red capsicum (cut into 50 mm. cubes): 1
+yellow capsicum (cut into 50 mm. cubes): 1
+onion (cut into 50 mm. cubes): 1
+paneer (cottage cheese) cubes (cut into 25mm. (1) cubes): 1
+capsicum cubes ((greenred and yellow)): 1
+grated jalapeno cheese (/): 1
+samosa patti (( readily available in the market )): 1
+hot and sour sauce: 1
+flour tortilla: 1
+crumbled malai paneer: 1
+tomato (cut into thin strips): 1
+coloured capsicum juliennes: 1
+paneer (cottage cheese) cubes (cut into 50 mm. (2 ) cubes): 1
+paneer (cottage cheese) cubes (cut into 50 mm. (2?) cubes): 1
+capsicum cubes (cut into 50 mm. (2?) cubes): 1
+phudina chutney: 1
+onion wedges: 1
+capsicum (pieces (2) each): 1
+1/2 tsp  garam masala: 1
+boiled sweet corn kernels (makai ke dane) ((makai ka dana)): 1
+baguette (150 mm. each): 1
+cheese slices (torn into halves): 1
+punjabi garam masala: 1
+mashed low fat paneer (cottage cheese): 1
+cooked salsa: 1
+tomato ketchup (optional use tabasco for healthier choice): 1
+low fat paneer (cottage cheese) (or): 1
+chapattis: 1
+3 cups basic vegetable stock: 1
+paneer (cottage cheese) cubes (cut into 25 mm. (1) pieces): 1
+red garlic (lehsun) chutney: 1
+dry coconut (kopra) (cut into thin pieces): 1
+oil (for dough): 1
+oil (for kneading and smoothening): 1
+papaya puree: 1
+raw papaya juliennes: 1
+raw papaya cubes: 1
+whole wheat flour rotis: 1
+parle g biscuits: 1
+bread loaf: 1
+mixed vegetable crudites: 1
+sliced pointed gourd (parwal): 1
+olive oil (for tossing): 1
+blanched tomato cubes: 1
+cooked and chopped fusilli: 1
+tomato ketchup (/): 1
+processed cheese (cube  cut into 6 pieces): 1
+farfalle ((bow-shaped pasta)): 1
+basil (or): 1
+salt (or as advised by doctor or dietitian): 1
+nacho chips or tortilla chips (for serving): 1
+ladi pav (buttered and toasted): 1
+whole dry kashmiri red chilli (deseeded): 1
+ladi pav (slit horizontally): 1
+lemonade ((7 up  lemonade or sprite)): 1
+herbed pizza strips: 1
+peach (juliennes): 1
+peach halves: 1
+parsley (leaves): 1
+tempered dark chocolate: 1
+rajgira paratha: 1
+baby corn (sliced diagonally and blanched): 1
+sliced brie cheese: 1
+grated pear ((unpeeled)): 1
+grated pear ((with skin)): 1
+sliced pear ((unpeeled)): 1
+rocket leaves (arugula) (leaves  torn into big pieces): 1
+chopped pear ((peeled)): 1
+milk (with a dash of): 1
+pear ((deseeded and peeled)  cut into half vertically): 1
+blanched mushrooms (khumbh) (and cut into quaters): 1
+boiled baby potatoes (peeled): 1
+hung low fat curds (chakka dahi) (whisked): 1
+cooked penne (cut diagonally): 1
+chopped walnuts (akhrot) (or): 1
+asparagus (cut into 1? pieces): 1
+chopped asparagus (and blanched): 1
+vegetarian seasoning cube (crumbled): 1
+sun-dried tomatoes (pesto): 1
+potato slices ((unpeeled)): 1
+guava cubes ((with seeds)): 1
+guava cubes ((deseeded)): 1
+guava (unpeeled): 1
+basil (loosely packed): 1
+sun-dried tomatoes (soaked  drained and chopped): 1
+conchiglie ((shell pasta)): 1
+walnuts (akhrot) (halved): 1
+pine nuts (chilgoza) (or): 1
+petha slices: 1
+clove (laung / lavang) (for garnishing): 1
+ash gourd cubes (cut into 50 mm. x 50 mm.): 1
+powdered sugar (for rolling): 1
+long grain rice (basmati chawal) (soaked for 1 hour and drained): 1
+milk ((full cream)): 1
+coarse besan (bengal gram flour): 1
+pearl onion: 1
+cucumber (peeled and cut into 50 mm. (2?) long pieces): 1
+fresh jalapeno roundels: 1
+cherries (on a stirrer srick): 1
+tea bags ((optional)): 1
+carrot ka achaar: 1
+bread (lightly buttered): 1
+wheat (gehun) (grass): 1
+grated pineapple: 1
+iceberg lettuce (optional  torn into pieces): 1
+pineapple cubes (cut into small pieces): 1
+cucumber cubes (cut into small pieces): 1
+cherry tomatoes (halved): 1
+roasted chana dal (daria) (corsely powdered): 1
+chopped aloe vera: 1
+baby corn (cut into 25 mm.): 1
+red capsicum (cut into cubes): 1
+soaked garden cress seeds: 1
+pineapple (halves): 1
+orange (segmented and deseeded): 1
+beetroot (roughly chopped): 1
+strawberry ((seasonal)): 1
+apple cubes ((deseeded)): 1
+lemongrass stalk (each cut into 3 ? pieces): 1
+blanched almonds (badam) (and): 1
+pistachio slivers (for garnish): 1
+mixed nuts: 1
+saffron (kesar) strands (dissolved in): 1
+samosa patti (cut into 3 x 2 1/2 pieces): 1
+plain flour (maida) (mixed with 2 tablespoon): 1
+blanched almonds (badam) (peeled and): 1
+pita: 1
+chopped fenugreek leaves (methi) (leaves (methi)): 1
+oil (for greasing  cooking and tempering): 1
+1/4 cup healthy green chutney: 1
+kesar-flavoured shrikhand: 1
+shrikhand: 1
+mozzarella cheese ((2” x 1/2”)): 1
+dried oregano (and for sprinkling): 1
+hot dog rolls (or): 1
+thin pizza base ((7”) each): 1
+orange juice (refer handy tip): 1
+sugar syrup (for brushing): 1
+chopped plum: 1
+ginger ale squash (strips): 1
+plum (cubes): 1
+sliced plum: 1
+plum jam: 1
+quick cooking oats (roasted): 1
+beaten rice (poha) (roasted): 1
+sprouted and boiled hara vatana (dried green peas) ((dried green peas)): 1
+beaten rice (poha) ((patla poha)): 1
+chopped mixed fruits ((banana and apples etc.)): 1
+dry yeast (or 2 tsp): 1
+chopped grapefruit: 1
+mimosa sugar balls: 1
+black pepper lemon sev: 1
+roasted corn seeds: 1
+carrot (cut into thin juliennes): 1
+onion (cut into thin juliennes): 1
+french beans (cut into thin juliennes): 1
+baby potatoes (with skin): 1
+lettuce (leaves  torn into pieces): 1
+grated potatoes ((old potatoes)): 1
+spring onion greens (for garnish): 1
+potato crackers: 1
+aloo bhujia: 1
+potato cubes (with skin on): 1
+bread (soaked and squeezed): 1
+bread sticks (broken into half): 1
+boiled potato (slices): 1
+french dressing: 1
+grated potatoes (refer handy tip): 1
+boiled and peeled baby potatoes (halved): 1
+brown bread (lightly buttered): 1
+peanut chutney: 1
+boiled eggs (cut into halves): 1
+surti papadi (fresh vaal) (stringed and cut vertically): 1
+baby potatoes (peeled and cut vertically): 1
+purple yam (kand) (peeled and cut into big pieces): 1
+sweet potato (shakarkand) (peeled and cut into big pieces): 1
+barley (jau) (soaked for 30 minutes and drained): 1
+curd (dahi) (made from 99.7% fat-free): 1
+spring onion and curd dip: 1
+puffed rice (kurmura) (toasted): 1
+semolina (rava / sooji) ((rava)): 1
+salt (and 1 tablespoon): 1
+blanched spinach (palak) (spinach (palak)): 1
+chopped onion (chopped): 1
+kala vatana (dried black peas): 1
+dried thyme (or): 1
+mango (cut into25 mm. (1) pieces): 1
+carrot strip (cut into thin slices): 1
+jain tomato ketchup (readily available): 1
+chopped mustard leaves (sarson ke patte): 1
+coriander-cumin seeds (dhania-jeera) powder (optional): 1
+makai ki roti: 1
+toovar (arhar) dal (wash and drained): 1
+purple radish pods (mogri) (washed and cut into 1? pieces): 1
+slit green chilli (deep-fried): 1
+bhakarwadi: 1
+oil (for greasing and brushing): 1
+chocolate (.): 1
+edible garnishes (.): 1
+edible coloured stars (.): 1
+edible silver balls (.): 1
+green peas ()): 1
+fresh cream ((malai)): 1
+butter biscuit: 1
+hot fudge sauce: 1
+potato (stew): 1
+grated raw mango ((rajapuri)): 1
+tomato salsa    recipe below: 1
+saffron (kesar) strands (dissolved in 1 tbsp water): 1
+coriander onion chutney: 1
+soaked and cooked rice (chawal) (mashed): 1
+edible coloured balls: 1
+soaked and cooked rice (chawal) ((chawal)): 1
+hide and seek biscuits: 1
+cocoa powder (for sprinkling): 1
+blanched tomatoes (refer handy tip): 1
+carrot (peeled and cubed): 1
+bottle gourd (doodhi / lauki) (slices): 1
+chopped capsicum ((red yellow green)): 1
+blanched mixed vegetables: 1
+rocket leaves (arugula): 1
+safed vatana (dried white peas) (soaked overnight): 1
+ragi (nachni / red millet) (soaked overnight and drained): 1
+almond (badam) (powder): 1
+ragi (nachni  red millet) flour (flour): 1
+crushed split mustard seeds (rai na kuria): 1
+samo khichdi: 1
+fenugreek (methi) leaves (finely chopped): 1
+farali green chutney: 1
+sprouted rajma (kidney beans): 1
+curd (dahi) (mixed with 2 tbsp): 1
+thick curds (dahi) (chilled): 1
+mozzarella sticks: 1
+rice (chawal) (or leftover rice): 1
+sliced spring onions ((white and greens)): 1
+rajma (kidney beans) (soaked): 1
+tomato ketchup (.): 1
+rajma (kidney beans) (soaked  drained and cooked): 1
+onion cubes (cut into 25 mm. pieces): 1
+tomato cubes (deseeded and cut into 25 mm. pieces): 1
+chopped brinjals (baingan / eggplant) ((baingan / eggplant)): 1
+papad (for serving): 1
+yellow moong dal (split yellow gram) (wash and drained): 1
+chana dal (split bengal gram) (wash and drained): 1
+rangoon na vaal (broad field beans): 1
+tamarind (imli) pulp (optional): 1
+cloves (laung / lavang): 1
+nylon khamman dhokla: 1
+rasgulla logs: 1
+saffron (kesar) strands (soaked in 1 tbsp): 1
+salt (to cook the): 1
+chopped capsicum (finely chopped): 1
+chopped coloured capsicum ((red yellow green)): 1
+cashew nuts (kaju) (broken into halves): 1
+salt (advised by doctor / dietitian): 1
+parboiled and diagonally cut raw banana: 1
+raw mango cubes (peeled): 1
+crushed salted peanuts: 1
+red radish ((mooli)): 1
+whole dry kashmiri red chilli (soaked in warm for 15 minutes and drained): 1
+red pumpkin (bhopla / kaddu) (peeled and cut into cubes): 1
+sambar masala: 1
+1 tbsp biryani masala: 1
+banana leaves (kele ka patta) (cut in 200 mm. x 225 mm. (8? x 9?)): 1
+oil (mixed with 2 tbsp): 1
+powdered soya chunks: 1
+cooked conchiglie ((shell pasta)): 1
+soaked and cooked rice (chawal) (mashed lightly): 1
+honey chilli sauce: 1
+boiled mixed vegetables ((carrots  french beans  green peas and potatoes)): 1
+french beans (cut into 1 inch and blanched): 1
+mixed vegetable stew: 1
+1 cup leftover cooked rice: 1
+banana leaves (kele ka patta) (cut into 150 mm. x 150 mm. square pieces): 1
+ridge gourd (turai) (peeled and chopped): 1
+fresh cream (for garnish): 1
+cooked arborio rice: 1
+red capsicum (medium): 1
+capsicum (green medium): 1
+yellow capsicum (medium): 1
+garlic (lehsun) (pod): 1
+fresh rosemary: 1
+capsicum ((red  yellow and green)  cut into triangles): 1
+cherry tomatoes ((red and yellow)): 1
+brun bread: 1
+baby corn ()  cut into 25 mm. (1) pieces): 1
+rocket leaves (arugula) (leaves  put in cold and then dried): 1
+crushed cream wafer biscuit: 1
+shredded rose petals: 1
+rose colour: 1
+almond (badam) (cut into halves): 1
+chopped and parboiled mixed vegetables ((carrot  french beans  potato and green peas)): 1
+chopped canned pineapple (optional): 1
+chopped and boiled mixed vegetables (( carrot  french beans  green peas and cauliflower florets)): 1
+nylon sago (sabudana): 1
+sago (sabudana) (washed and drained): 1
+salt (or to taste): 1
+sweet curds (dahi): 1
+garam masala ((optional)): 1
+sliced apple (unpeeled): 1
+chana dal (split bengal gram) (soaked for 15 minutes and drained): 1
+khatta bhaji (indian sorrel leaves): 1
+chopped khatta bhaji (indian sorrel leaves): 1
+sanwa millet (sama) (washed): 1
+sour curds (khatta dahi) (beaten): 1
+banana leaves (kele ka patta) (cut into 150 mm x 150 mm. square pieces): 1
+sweet potato (shakarkand) (peeled and cut into big cubes): 1
+finely chopped ginger (jains paryushan to omit): 1
+rajgira kadhi: 1
+punjabi samosas: 1
+hara vatana (dried green peas) (soaked and boiled): 1
+sukha garlic (lehsun) ka chutney: 1
+port wine: 1
+orange liquer: 1
+grapes juice: 1
+drumstick leaves (saragva bhaji): 1
+salt (to taste.): 1
+raw mango pickle: 1
+gatte ki subzi: 1
+snow peas: 1
+rice (chawal) (cleaned and washed): 1
+pak choi (torn into small pieces): 1
+blanched snow peas (cut into half horizontally): 1
+spring onion whites (quartered): 1
+baby corn (cut into wedges and blanched): 1
+snow peas (each cut into 2 and blanched): 1
+capsicum (( green  red and yellow)  cut into wedges): 1
+chopped mixed vegetables (( onion  capsicum  carrot  cabbage )): 1
+chilli oil (recipe above): 1
+whole dry kashmiri red chilli (soaked in warm for 15 minutes): 1
+grated apples (peeled): 1
+chopped mixed nuts (( almonds cashews pista)): 1
+whole wheat vermicelli (semiya) (broken into 1? pieces): 1
+1/2 cup tomato puree: 1
+cornflour (mixed with ? cup): 1
+burger buns (or): 1
+pak choi (torn into pieces): 1
+paneer (cottage cheese) cubes (cut into 2 ? 1/2 ? 1/2 pieces): 1
+papdis: 1
+sev (readily available): 1
+blanched almonds (badam) (cut into halves): 1
+potato (etc.)): 1
+milk (99.7 % fat-free): 1
+paneer (cottage cheese) (thick triangle pieces): 1
+dried apricots (kummani / jardalu): 1
+fried raisins (kismis): 1
+rose water (for brushing): 1
+rabadi: 1
+kabuli chana (white chick peas) (soaked): 1
+cardamom (elaichi) (crushed lightly): 1
+turnip cubes (peeled): 1
+cooked conchiglie (( shell pasta)): 1
+chana dal (split bengal gram) (soaked in hot for 30 minutes and drained): 1
+rice (chawal) (soaked for 4 hours  drained): 1
+grenadine syrup: 1
+lemonade (to fill): 1
+lemon essence ((optional)): 1
+carrot (slices): 1
+potato (slices (peeled)): 1
+drumsticks (saijan ki phalli / saragavo) ((saijan ki phalli/saragvo)  each cut into 4 pieces): 1
+ladies finger (bhindi) (cut into 25 mm. (1?) piece): 1
+ladies finger (bhindi) (cut into 4 long pieces): 1
+star anise (chakri phool) (broken into pieces): 1
+shredded red cabbage (optional): 1
+chopping board: 1
+shredded red cabbage ((optional)): 1
+boiled rice noodles (refer to handy tip): 1
+spring onions (whites): 1
+zucchini (blanched and): 1
+carrot (peeled  blanched and cut into thin roundels): 1
+baby corn (blanched and cut into roundels): 1
+cornflour (mixed with 1 1/2 cups): 1
+sliced lemongrass stem: 1
+rice (chawal) (soaked for 2 hours and drained): 1
+custard apple (sitaphal) pulp (deseeded): 1
+asparagus (chopped into 25 mm pieces and): 1
+baby corn (cut into 25 mm pieces and blanched): 1
+brownies: 1
+mixed fruits ((): 1
+mushrooms (khumb) (cut into quaters): 1
+whole wheat bread (triangles): 1
+pineapple cubes (cut into 50 mm. (2?) pieces): 1
+worcestershire sauce (readily available in the market): 1
+butter (for smoking): 1
+curry paste: 1
+rice noodles (broken into pieces): 1
+bird’s eye chilli: 1
+drumsticks (saijan ki phalli / saragavo) ((saijan ki phalli / saragavo) pieces): 1
+sliced yam (kand): 1
+french beans (cut into 75 mm. (3?) pieces): 1
+raw banana (cut into 75 mm. (3?) pieces): 1
+urad dal (split black lentils) (soaked and drained): 1
+fresh red chilli (broken): 1
+1/4 cup  boiled onion paste: 1
+soy chunks (nuggets) (soaked  drained and chopped): 1
+soy oil (for deep-frying): 1
+melted butter (for cooking the scones): 1
+whole dry kashmiri red chilli (dry roasted): 1
+3 tbsp red paste: 1
+ginger (adrak) (sliced): 1
+long grain rice (basmati chawal) (or): 1
+ladies finger (bhindi) (slices): 1
+cinnamon (dalchini) (sticks  25 mm. (1?) each): 1
+cardamom (elaichi) powder ((elaichi)): 1
+potato wedges (unpeeled): 1
+sweet potato fingers (unpeeled): 1
+chilkewali urad dal (spit black gram with skin) (soaked for 4 hours and drained): 1
+green moong dal (split green gram) (with skin  soaked for 4 hours and drained): 1
+leftover roti (torn into pieces): 1
+low fat buttermilk (refer handy tip): 1
+capsicum ((red  yellow and green) cubes): 1
+roasted peanuts (crushed): 1
+vegetarian seasoning cube (optional): 1
+potato (parboiled and cut into wedges (with the skin)): 1
+diagonally cut spring onions ((whites and greens)): 1
+sweet corn roundels (cut into 10 roundels): 1
+masoor (split red lentil) dal (soaked for 10 minutes and drained): 1
+rice (chawal) (soaked for 10 minutes and drained): 1
+grated jalapeno cheese: 1
+kokum (peels): 1
+mushrooms (khumb) (cleaned and finely chopped): 1
+masala french fries: 1
+samosa patti (finely chopped): 1
+fresh red chilli (sauce): 1
+grated mozzarella cheese ((optional)): 1
+soaked chana dal (split bengal gram) (for 3 hours and drained): 1
+red cabbage (sliced): 1
+mushrooms (khumb) (or finely chopped): 1
+butter (for greasing the): 1
+boiled mixed vegetables ((french beans and carrot) cubes): 1
+spinach (palak) (chopped): 1
+desiccated coconut ((optional)): 1
+spinach (palak) (pur?e): 1
+processed cheese cubes (each cut into 6 pieces): 1
+whole wheat bread (crumbs): 1
+yellow cucumber strips: 1
+pita bread (or ready made): 1
+spinach (palak) (leaves  roughly chopped): 1
+powdered flaxseeds (alsi) (or 1 tbsp): 1
+plain flour (maida) (dissolved in 3 tbsp): 1
+mexican green sauce: 1
+cream cracker biscuit (or): 1
+oil (for cooking the gnocchi): 1
+freshly ground black pepper (kalimirch) (to taste.): 1
+curd (dahi) (preferably made from cow’s milk): 1
+bean sprouts (cleaned): 1
+pretzel (or 4): 1
+garlic bread (washed and torn into pieces): 1
+salt (and to taste.): 1
+ginger (adrak) (juliennes): 1
+boiled mixed vegetables ((carrots  french bean and potatoes)): 1
+tomato cubes (cut into big pieces): 1
+dried oregano (or 1 teaspoon fresh): 1
+low fat butter (for greasing and brushing): 1
+chopped and boiled mixed vegetables ((carrots french bean green peas and cauliflower)): 1
+eggless vanilla sponge cake (7”): 1
+chopped spring onion greens (for sprinkling): 1
+shredded mixed vegetables ((french beans  cabbages and carrots)): 1
+boiled noodles (cut into 1 pieces): 1
+plain flour (maida) (mixed with 1/4 cup of): 1
+chilli garlic sauce (to serve): 1
+roll wrappers: 1
+matki (moath beans) (washed and drained): 1
+oil (deep-frying): 1
+sprouted and cooked kabuli chana (chick peas): 1
+sprouted kabuli chana (white chick peas) (boiled): 1
+poppy seeds (khus-khus) (optional): 1
+vaal (field beans/ butter beans) ((field beans)): 1
+malvani masala (or): 1
+kokum (soaked and drained): 1
+raw peanuts (boiled): 1
+red capscium cubes (and): 1
+alfalfa sprouts (placed in cold for 5 minutes): 1
+boiled mixed sprouts ((moong  chana  rajma etc.)): 1
+mixed sprouts ((moong  matki  chana  etc.)): 1
+whisked curds (dahi) (made with cow's milk or low fat milk): 1
+mixed sprouts ((moong  chana  chawli etc.)): 1
+boiled mixed sprouts ((kala chana  chawli  moong etc.)): 1
+misal masala: 1
+mixed sprouts ((moong  matki  chana  rajma etc.)): 1
+boiled mixed vegetables ((french beans carrots cauliflower potatoes sweet corn etc.)): 1
+steamed long-grained rice (basmati): 1
+iceberg lettuce (leaves  torn into pieces): 1
+bread crumbs (refer handy tip): 1
+tomato (salsa): 1
+malagapdi powder recipe below: 1
+diagonally cut french beans (and boiled): 1
+sliced baby corn (and boiled): 1
+chopped and boiled french beans ()): 1
+carrot (sticks  75 mm (3?) long): 1
+sliced green tomato: 1
+diagonally cut ladies finger: 1
+schezwan sauce (for cooking): 1
+chopped pak choi: 1
+cauliflower florets ((parboiled)): 1
+paneer (cottage cheese) (cut into cubes): 1
+sliced capsicum ((green and red)): 1
+cauliflower florets (parboiled): 1
+spinach (palak) rotis: 1
+french beans (cut into 25 mm.): 1
+pak choi (cut into pieces): 1
+asparagus (cut into 25 mm.): 1
+blanched broccoli florets (florets): 1
+knol khol: 1
+paneer (cottage cheese) (cut into thin strips): 1
+baby corn (sliced and parboiled): 1
+paneer (cottage cheese) (cut into 25 mm. (1?) cubes): 1
+capsicum ((yellow  red and green)): 1
+vanilla sponge cake: 1
+ice-cubes (for blending): 1
+marie biscuit (broken into pieces): 1
+strawberry (pur?e): 1
+cornflour (levelled): 1
+sweetened cream (or): 1
+spinach (palak) (leaves  torn into pieces): 1
+condensed milk ((full can is 400 grams)): 1
+orange rind (or 1 tsp): 1
+chopped strawberries (coarsely): 1
+tomato ketchup (for squeezing): 1
+burger buns (cut horizontally): 1
+geela lehsun ka chutney: 1
+chaat masala (powder): 1
+almond (badam) (thinly sliced): 1
+bhavnagri chillies (split lengthwise and deseeded): 1
+brinjal (baingan / eggplant) (de-stemmed): 1
+tendli (ivy gourd) (ends removed): 1
+2 tbsp red paste: 1
+melted butter (for brushing and cooking): 1
+chopped and boiled mixed vegetables ((french beans  carrot  green peas and cauliflower)): 1
+crumbled tofu (bean curd/ soya paneer) (for the garnish): 1
+milk (for kneading): 1
+chopped spring onions (greens): 1
+footlong bread: 1
+whole wheat chapattis: 1
+jalapenos: 1
+curd (dahi) (mixed with 1 1/2 cups of): 1
+butter (for serving): 1
+capsicum (chopped): 1
+sev (for rolling): 1
+1/2 tsp chaat masala: 1
+plain flour (maida) ((maida)): 1
+low fat milk ((99.7% fat-free readily available in the market)): 1
+sliced mushrooms (khumbh) ((khumbh)): 1
+grated bitter gourd (karela): 1
+mixed vegetable curry: 1
+potato (cut into halves and scooped): 1
+oil (or greasing and cooking): 1
+milk ((optional)): 1
+potato (unpeeled): 1
+capsicum ((red  yellow and green)): 1
+hung curds (chakka dahi) (beaten): 1
+dahiwali phudina chutney: 1
+fenugreek (methi) seeds (washed and drained): 1
+chopped mixed vegetables (( french beans  carrot and capsicum)): 1
+mushrooms (khumb) (cleaned and washed): 1
+chopped and boiled mixed vegetables ((cauliflower and french beans)): 1
+rotis/parathas: 1
+chopped and boiled mixed vegetables ((carrots  cauliflower and french beans)): 1
+chopped mixed vegetables ((capsicum carrots peas)): 1
+boiled soybeans (based basic dough): 1
+ginger (adrak) juice ((optional)): 1
+fresh yeast (crumbled): 1
+papdi (chaat) (broken into pieces): 1
+salt (for rubbing): 1
+ladies finger (bhindi) (cut 1/2 long pieces): 1
+crushed vermicelli (sevaiyan): 1
+orange food colour: 1
+chopped green chillies (finely chopped): 1
+yellow moong dal (split yellow gram) (soaked in hot for 2 hours and drained): 1
+baked chips: 1
+jaggery (gur) (crumbled): 1
+pak choi (cubes): 1
+brown vinegar: 1
+parboiled carrot roundels: 1
+vinaigrette dressing (or): 1
+fresh red chilli (soaked in warm for 10 minutes and drained): 1
+oil (for greasing and frying): 1
+grated sweet corn cob ((makai ke dane)): 1
+roasted desiccated coconut: 1
+saffron (kesar) strands (strands mixed): 1
+almonds: 1
+curry leaves (kadi patta) ((optional)): 1
+oil (/): 1
+potato ((shakarkand)  boiled and cubed): 1
+saffron (kesar) strands (dissolved in 2 tbsp warm milk): 1
+boiled rajma (kidney beans) (refer handy tip): 1
+herben pita strips: 1
+cornflour (mixed with 3/4 cup): 1
+boiled noodles (cut into 50 mm. (2) length): 1
+chopped mixed vegetables ((cauliflower  carrot  cabbage  spring onion whites)): 1
+hakka noodles (broken into pieces): 1
+mustard seeds ( rai / sarson) ((rai /sarson)): 1
+blanched baby corn (cut into 25 mm. (1) pieces and): 1
+par-boiled potatoes (big cubes): 1
+charcoal (piece): 1
+masala pickled onions: 1
+baby potatoes (boiled  peeled and cut into halves): 1
+chilli powder (to sprinkle): 1
+10 chapatis: 1
+dried fenugreek leaves  (kasuri methi) (roasted and powdered): 1
+butter (for greasing and glazing): 1
+paneer (cottage cheese) (cut into 50 mm.(2) x 12 mm.( 1/2) cubes): 1
+thick curds (dahi) (whisked): 1
+sliced mangoes ((totapuri)): 1
+butter (for cooking and greasing): 1
+crushed garlic (lehsun) ((optional)): 1
+thin pizza base (each): 1
+mango puree (and strained): 1
+strawberry puree (and strained): 1
+raw mango ((approx. 500 gm)): 1
+mustard seeds ( rai / sarson) (coarsely powdered): 1
+clove (laung / lavang) (roasted): 1
+coriander (dhania) (seeds  roasted): 1
+chopped spring onions whites (s and): 1
+chopped lemon grass (hare chai ki patti) (stem): 1
+chopped galangal (thai ginger) (/): 1
+chopped tofu (bean curd/ soya paneer) (/): 1
+oats flour (dissolved in 1/4 cup): 1
+lemongrass (hare chai ki patti) (tied well): 1
+thai red chillies (deseeded and cut in segments): 1
+leftover idlis       cut into cubes: 1
+lemongrass stalk (chopped): 1
+broccoli (cut into florets): 1
+baby corn (sliced diagonally): 1
+pineapple (peeled  cored): 1
+sliced onions (fried till brown): 1
+chopped mango (peeled): 1
+lemongrass stalk (washed and chopped): 1
+chopped mixed vegetables ((onions cabbage carrot capsicum and baby corn)): 1
+roasted cashew nut (kaju): 1
+capsicum (cut into square pieces): 1
+soy sauce (to taste): 1
+rumali rotis: 1
+boiled kabuli chana (white chick peas) (paste): 1
+roasted peanuts (ground to a smooth paste): 1
+lemongrass (hare chai ki patti) (paste): 1
+whole dry kashmiri red chilli (powder): 1
+cucumber (cut into thin strips): 1
+radish (mooli) (cut into thin strips): 1
+peanut sauce recipe above: 1
+red curry paste recipe below: 1
+cornflour (mixed in 1/2 cup): 1
+sliced onions (thickly): 1
+fresh red chilli (soaked in warm water for 10 minutes): 1
+capsicum (cut into 25 mm cubes): 1
+boiled rice noodles (refer handy tip): 1
+whole dry kashmiri red chilli (soaked in warm for 10 minutes): 1
+chopped galangal (thai ginger) (or): 1
+lemongrass (hare chai ki patti) (washed and roughly chopped): 1
+banana (( 25 slices)): 1
+almond (badam) (soaked  drained and peeled): 1
+peppercorns (kalimirch) ((kalimirch)): 1
+thandai syrup (readily available in the market): 1
+curd (dahi) (mixed with): 1
+methi theplas: 1
+mushrooms (khumb) (optional): 1
+mixed beans (rajma: 1
+butter (for spreading and grilling): 1
+sesame seeds (til) (refer handy tip): 1
+parboiled and peeled baby potatoes: 1
+chopped coriander (dhania) (and 1 tsp finely chopped for the garnish): 1
+sliced round gourd (tinda) (unpeeled): 1
+red capsicum (slices): 1
+ghee (for glazing): 1
+butter (for glazing): 1
+leftover whole wheat chapatis   torn into pieces: 1
+spinach (palak) (finely chopped): 1
+leftover chapatis  approx. (200 mm. (8)) in diameter: 1
+garlic (lehsun) cloves (lightly crushed): 1
+lemon (grated): 1
+tofu (bean curd/ soya paneer) (cut into 25 mm (1) cubes): 1
+sprouted moong (whole green gram) (coarsely ground): 1
+red chilli roundels: 1
+sliced tofu (bean curd/ soya paneer): 1
+chili coriander fried rice: 1
+epsom salt ((magnesium sulphate)): 1
+chopped ginger (adrak) ((adarak)): 1
+blanched tomatoes: 1
+baguette (cut into 10 thick slices): 1
+shallots (madras onions) (peeled): 1
+water (for boiling tomatoes): 1
+1/2 eggless sponge cake: 1
+cucumber (slices for garnishing): 1
+tomato (cut into quarters): 1
+sodium benzoit: 1
+soaked and cooked brown rice (refer handy tip): 1
+cumin seeds (jeera) powder (to taste): 1
+sun-dried tomatoes (soaked and drained): 1
+green chilli (sliced): 1
+whole wheat lavash: 1
+cornflour (mixed with): 1
+cornflour (mixed with 5 tbsp): 1
+jaggery (gur) (or 2 tsp): 1
+grated mozzarella cheese (for the garnish): 1
+tomato (cut into thick slices): 1
+sliced mozzarella cheese (cut into thick slices): 1
+black olive pesto: 1
+basil (leaves for garnishing): 1
+rasawala potato nu shaak: 1
+toovar (arhar) dal (soaked for 2 hours and drained): 1
+drumsticks (saijan ki phalli / saragavo) (cut into 50 mm. (2) pieces): 1
+ladies finger (bhindi) ((with edges trimmed)): 1
+browned rice (chawal): 1
+sundried tomatoes and basil pesto: 1
+chopped avocado ((optional)): 1
+bhakhri: 1
+chopped mixed fruits ((kiwi  peach  pineapple  etc)): 1
+banana (cubes): 1
+pomegranate (anar) (or use blueberry chikoo papaya musk melon or grapes.): 1
+whole dry kashmiri red chilli (or 2): 1
+yellow moong dal (split yellow gram) (washed): 1
+ridge gourd (turai) (peeled and cubed): 1
+palak methi na muthia    cut into cubes: 1
+patras   cut into cubes: 1
+fried green chillies: 1
+raw banana (cut into 25 mm. cubes): 1
+surti papadi (fresh vaal) (i  stringed and cut into halves): 1
+yam (suran) (peeled and chopped): 1
+curd (dahi) (mixed with 3 tbsp): 1
+oil (ofr deep-frying): 1
+oil (or for deep-frying): 1
+boiled urad dal (split black lentils): 1
+mixed sprouts ((moong  matki  chana  chawli etc.)): 1
+sprouted kala chana (brown chick peas): 1
+sprouted kabuli chana (white chick peas): 1
+sprouted peanuts: 1
+red chutney: 1
+roasted onion (sliced): 1
+fresh kokum: 1
+soaked vaal (field beans/ butter beans): 1
+kokum ((optional)): 1
+chopped jaggery (gur) ((optional)): 1
+boiled sprouted vaal (field beans/ butter beans): 1
+chaas: 1
+fried green chilli (refer handy tip): 1
+soaked toovar (arhar) dal: 1
+french beans (cut into 1? pieces): 1
+valor papdi (washed and stringed): 1
+chopped valor papdi: 1
+ridge gourd (turai): 1
+bhakri: 1
+boiled sweet potato (shakarkand): 1
+kodri (varagu) (cleaned and washed): 1
+satay sticks (wooden skewers): 1
+oil (for tempering and greasing): 1
+mixed vegetable strips ((capsicum  cauliflower and baby corn)): 1
+frankie masala: 1
+french beans (juliennes): 1
+veg manchurian: 1
+basic kolhapuri gravy: 1
+chopped and boiled mixed vegetables ((french beans  cauliflower  carrot  green peas)): 1
+tomato cubes ((deseeded)): 1
+cucumber cubes ((deseeded)): 1
+chopped mixed vegetables ((carrots  french beans  green peas)): 1
+long grain rice (basmati chawal) (soaked for 15 minutes): 1
+sweet corn kernels (makai ke dane) (dissolved in 2 tbsp water): 1
+bread sticks (broken into 25 mm. (1?)): 1
+fried onions (lightly crushed): 1
+cheese slices (diagonally cut into halves): 1
+whole wheat noodles: 1
+green chutney (for topping): 1
+sliced yellow cucumber: 1
+boiled beetroot (slices): 1
+sev (for topping): 1
+soaked rice (chawal): 1
+carrot (peeled and thinly sliced): 1
+1 1/2 cups cooked rice noodles: 1
+sliced and blanched baby corn (cut into 25 mm (1?) pieces): 1
+blanched baby corn (cut into 13 mm ( 1/2?) pieces): 1
+chopped and boiled mixed vegetables ((carrots  french beans  cauliflower  green peas)): 1
+chopped and boiled mixed vegetables ((carrots  green peas  french beans)): 1
+chopped mixed vegetables ((french beans and carrot)): 1
+barley (jau) (soaked for 2 hours and drained): 1
+yeast marmite: 1
+blanched and chopped spinach (palak) (blanched  drained and finely chopped): 1
+plain flour (maida) (or): 1
+red chilli sauce (to serve): 1
+plain flour (maida) (optional): 1
+tomato (cut into strips): 1
+cooked long grained rice (basmati): 1
+salt (or as advised by dietician / doctor): 1
+ginger (adrak) (cut into thin strips): 1
+triangular bread slice: 1
+sandwich masala (for sprinkling): 1
+idli batter (readily available in the market): 1
+diagonally cut and boiled mixed vegetables ((baby corn  carrots  french beans and cauliflower)): 1
+diagonally cut and parboiled mixed vegetables (( carrots  french beans  baby corn)): 1
+diagonally cut and parboiled mixed vegetables ((carrots  french beans  baby corn)): 1
+cream (wafer biscuits): 1
+sliced french beans: 1
+cornflour (mixed with 1/2 cup of): 1
+french beans (diagonally cut): 1
+carrot (diagonally cut): 1
+1 bay leaf: 1
+boiled mixed vegetables ((carrots  french beans  green peas  cauliflower etc.)): 1
+paneer (cottage cheese) (cut into 12 mm. ( 1/2) cubes): 1
+lasagne sheets (readily available in the market): 1
+diagonally cut capsicum: 1
+boiled and fried potato cubes: 1
+spring onion whites: 1
+spring onions (greens): 1
+butter (for greasing and spreading): 1
+dahiwali pudina ki chutney: 1
+chopped mixed vegetables (( french beans  carrot and green peas)): 1
+rice noodles (or crushed): 1
+boiled arborio rice: 1
+chopped celery (ajmoda) (or 1/2 tsp dry): 1
+sandwich masala (for sprinkling  recipe above): 1
+satay sticks (wooden skewers) (or wooden skewer): 1
+paneer (cottage cheese) cubes ((25 mm. (1) dices)): 1
+paneer (cottage cheese) cubes (cut into 25 mm. (1?)): 1
+red capsicum (deseeded and cut into 25 mm. (1?) cubes): 1
+onion (peeled and cut into 25 mm. (1?) cubes): 1
+capsicum (deseeded and cut into 25 mm. (?) cubes): 1
+satay sticks (wooden skewers) (or wooden skewers): 1
+tomato ketchup (and): 1
+blanched mixed vegetables ((carrots  cauliflower  french beans etc.)): 1
+makhani sauce: 1
+chopped galangal (thai ginger): 1
+lemongrass (hare chai ki patti) (cut into 2): 1
+tomato (deseeded and chopped): 1
+coriander (dhania) (sprigs): 1
+chopped and boiled mixed vegetables (carrtos green peas french beans): 1
+whole wheat vermicelli (semiya) (broken into 1” pieces): 1
+potato (cut lengthwise): 1
+cauliflower (cut into strips): 1
+french beans (cut into 25 mm. (1?) pieces diagonally): 1
+carrot (cut into 25 mm. (1?) pieces diagonally): 1
+carrot roundels (parboiled): 1
+sliced baby corn (parboiled): 1
+cornflour (dissolved in 1 cup water): 1
+burnt garlic fried rice: 1
+(sweet corn: 1
+basic spinach gravy: 1
+baby corn (cut into 25 mm. (1?) cubes): 1
+brinjal (baingan / eggplant) (cut into 5 mm. (1?) cubes): 1
+french beans (stringed and cut into 25 mm. (1?) pieces): 1
+whole dry kashmiri red chillies: 1
+lemon leaf ((optional)): 1
+coriander (dhania) (with stem): 1
+diagonally cut and parboiled mixed vegetables: 1
+boiled baby corn (cut into thin strips or 1/4 cup  peeled  boiled and cut into thin strips): 1
+carrot (peeled  boiled and cut into thin strips): 1
+cucumber (peeled and cut into thin strips): 1
+beetroot (boiled  peeled and cut into thin strips): 1
+green curry paste: 1
+chopped lemon grass (hare chai ki patti) (stalk): 1
+boiled potato (cut into long strips like french fries): 1
+ice (to serve): 1
+vermicelli (semiya) (broken into 2 pieces): 1
+baharat: 1
+sweet corn roundels: 1
+shitake mushrooms: 1
+cornflour (dissolved in 1 tablespoon water): 1
+worcestershire sauce ((optional)): 1
+tomato juice: 1
+celery (ajmoda) salt ((optional)): 1
+rocket leaves (arugula) (leaves  torn into pieces): 1
+faraali chivda: 1
+strawberry ((optional)): 1
+grapes (cut into halves horizontally): 1
+dessert apples: 1
+walnuts (akhrot) (coarsely crushed): 1
+walnuts (akhrot) (crushed): 1
+crumbled paneer (cottage cheese) (preferably made with): 1
+sesame (til) oil (for brushing and greasing): 1
+water chestnut strips: 1
+fresh water chestnut (singhada) (peeled and sliced): 1
+fresh water chestnut (singhada): 1
+watermelon (tarbuj): 1
+chopped watermelon (tarbuj) (deseeded): 1
+strawberry (halved): 1
+sprite: 1
+watermelon (tarbuj) (sliced in flat pieces  desseded): 1
+rocket leaves (arugula) (leaves  washed  and cut in big pieces): 1
+walnuts (akhrot) ()  broken into pieces): 1
+watermelon (tarbuj) cubes (deseeded): 1
+watermelon (tarbuj) wedge: 1
+chopped white jamun: 1
+puffed wheat: 1
+whey: 1
+strawberry (cut into halves): 1
+fresh cream (chilled): 1
+tempered white chocolate: 1
+boiled mixed vegetables ((french beans  carrots and green peas)): 1
+soaked masoor (whole red lentil): 1
+boiled sweet corn kernels (makai ke dane) (optional): 1
+garlic tomato chutney: 1
+3 cups cooked brown rice: 1
+boiled peanuts: 1
+red pumpkin (bhopla / kaddu) (cubes): 1
+whole wheat pasta ((spaghetti)): 1
+low fat milk ((99.7 % fat-free)): 1
+blanched carrot (strips): 1
+maize flour (makai ka atta) (optional): 1
+whole wheat: 1
+low calorie thousand island dressing: 1
+wheat (gehun) (soaked for 6 hours and drained): 1
+yellow moong dal (split yellow gram) (soaked for 15 to 20 minutes and drained): 1
+whole dry kashmiri red chilli (soaked  drained and chopped): 1
+tomato ketchup (restricted usage for health): 1
+boiled and mashed yam (suran): 1
+yellow moong dal (split yellow gram) (soaked for 2 hours): 1
+mango (or): 1
+mango puree (or): 1
+cream cracker biscuit (/): 1
+brown rice (soaked for 10 minutes and drained): 1
+milk ((99.9% fat-free  readily available in the market)): 1
+oil (for cooking the): 1
+salt (for cooking): 1
+pickled vegetables: 1
+baharat or garam masala: 1
+chopped apple ((unpeeled and deseeded)): 1
+baguette ((cut into 8 slices)): 1
+sesame seeds (til) (for sprinkling): 1

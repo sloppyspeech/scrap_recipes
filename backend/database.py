@@ -61,8 +61,18 @@ CREATE INDEX IF NOT EXISTS idx_ingredients_name ON ingredients(name);
 CREATE INDEX IF NOT EXISTS idx_ingredients_recipe ON ingredients(recipe_id);
 CREATE INDEX IF NOT EXISTS idx_recipe_tags_recipe ON recipe_tags(recipe_id);
 CREATE INDEX IF NOT EXISTS idx_recipe_tags_tag ON recipe_tags(tag_id);
-CREATE INDEX IF NOT EXISTS idx_recipe_categories_recipe ON recipe_categories(recipe_id);
 CREATE INDEX IF NOT EXISTS idx_recipe_categories_category ON recipe_categories(category_id);
+
+CREATE TABLE IF NOT EXISTS ingredient_calories (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    original_name TEXT UNIQUE NOT NULL,
+    clean_name TEXT,
+    quantity_str TEXT,
+    calories REAL,
+    category TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_ing_cal_orig ON ingredient_calories(original_name);
 """
 
 FTS_SQL = """
@@ -260,7 +270,58 @@ async def search_recipes(
                         filtered.append(r)
             recipes = filtered
 
-        return {"recipes": recipes, "total": total, "page": page, "page_size": page_size}
+    finally:
+        await db.close()
+
+
+async def search_ingredient_calories(
+    q: str = "",
+    page: int = 1,
+    page_size: int = 20,
+):
+    """Search ingredient calories table."""
+    db = await get_db()
+    try:
+        conditions = []
+        params = []
+
+        if q:
+            # Simple LIKE search on both original and clean name
+            search_key = f"%{q.strip()}%"
+            conditions.append("(original_name LIKE ? OR clean_name LIKE ? OR category LIKE ?)")
+            params.extend([search_key, search_key, search_key])
+            
+        where = " AND ".join(conditions) if conditions else "1=1"
+        
+        # Count
+        count_sql = f"SELECT COUNT(*) FROM ingredient_calories WHERE {where}"
+        cursor = await db.execute(count_sql, params)
+        total = (await cursor.fetchone())[0]
+        
+        # Data
+        offset = (page - 1) * page_size
+        sql = f"""
+            SELECT id, original_name, clean_name, quantity_str, calories, category 
+            FROM ingredient_calories 
+            WHERE {where}
+            ORDER BY original_name ASC
+            LIMIT ? OFFSET ?
+        """
+        cursor = await db.execute(sql, params + [page_size, offset])
+        rows = await cursor.fetchall()
+        
+        ingredients = []
+        for r in rows:
+            ingredients.append({
+                "id": r[0],
+                "original_name": r[1],
+                "clean_name": r[2],
+                "quantity": r[3],
+                "calories": r[4],
+                "category": r[5]
+            })
+            
+        return {"ingredients": ingredients, "total": total, "page": page, "page_size": page_size}
     finally:
         await db.close()
 

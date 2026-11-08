@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import theme from './theme';
 import SearchPage from './pages/SearchPage';
 import RecipePage from './pages/RecipePage';
+import CaloriesPage from './pages/CaloriesPage';
 import AdminPage from './pages/AdminPage';
 
 function NavBar() {
@@ -59,6 +60,16 @@ function NavBar() {
             </Button>
             <Button
               as={RouterLink}
+              to="/calories"
+              variant={isActive('/calories') ? 'solid' : 'ghost'}
+              colorScheme={isActive('/calories') ? 'saffron' : 'gray'}
+              size="sm"
+              borderRadius="full"
+            >
+              🍎 Calories
+            </Button>
+            <Button
+              as={RouterLink}
               to="/admin"
               variant={isActive('/admin') ? 'solid' : 'ghost'}
               colorScheme={isActive('/admin') ? 'saffron' : 'gray'}
@@ -97,6 +108,7 @@ function AnimatedRoutes() {
       >
         <Routes location={location}>
           <Route path="/" element={<SearchPage />} />
+          <Route path="/calories" element={<CaloriesPage />} />
           <Route path="/recipe/:id" element={<RecipePage />} />
           <Route path="/admin" element={<AdminPage />} />
         </Routes>

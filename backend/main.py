@@ -58,6 +58,17 @@ class NaturalSearchRequest(BaseModel):
 
 # ─── Search Endpoints ──────────────────────────────────────────────
 
+@app.get("/api/ingredients/search")
+async def api_search_ingredients(
+    q: str = Query("", description="Ingredient name search"),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(20, ge=1, le=100),
+):
+    """Search for ingredient calorie details."""
+    from backend.database import search_ingredient_calories
+    return await search_ingredient_calories(q, page, page_size)
+
+
 @app.get("/api/recipes/search")
 async def api_search_recipes(
     q: str = Query("", description="Recipe name search"),
